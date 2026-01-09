@@ -408,7 +408,11 @@
                         {% for email in items %}
                         <div class="email-card px-6 py-4">
                             <h4 class="font-medium text-gray-800 mb-2">{{ email.subject[:150] }}{% if email.subject|length > 150 %}...{% endif %}</h4>
+                            {% if email.summary %}
+                            <p class="text-gray-700 text-sm mb-2 bg-indigo-50 p-3 rounded-lg border-l-4 border-indigo-400">{{ email.summary }}</p>
+                            {% else %}
                             <p class="text-gray-600 text-sm mb-2">{{ email.content[:300]|e }}{% if email.content|length > 300 %}...{% endif %}</p>
+                            {% endif %}
                             {% if email.links %}
                             <div class="flex flex-wrap gap-2 mt-2">
                                 {% for link in email.links %}
@@ -563,7 +567,11 @@
                         <div class="flex-grow">
                             <span class="inline-block px-2 py-1 text-xs font-medium bg-indigo-100 text-indigo-800 rounded mb-2">${escapeHtml(email.category)}</span>
                             <h4 class="font-medium text-gray-800 mb-2">${escapeHtml(email.subject.substring(0, 150))}${email.subject.length > 150 ? '...' : ''}</h4>
-                            <p class="text-gray-600 text-sm mb-2">${escapeHtml(email.content.substring(0, 400))}${email.content.length > 400 ? '...' : ''}</p>
+                            ${email.summary ? `
+                                <p class="text-gray-700 text-sm mb-2 bg-indigo-50 p-3 rounded-lg border-l-4 border-indigo-400">${escapeHtml(email.summary)}</p>
+                            ` : `
+                                <p class="text-gray-600 text-sm mb-2">${escapeHtml(email.content.substring(0, 400))}${email.content.length > 400 ? '...' : ''}</p>
+                            `}
                             ${email.links && email.links.length > 0 ? `
                                 <div class="flex flex-wrap gap-2 mt-2">
                                     ${email.links.slice(0, 5).map(link => `
