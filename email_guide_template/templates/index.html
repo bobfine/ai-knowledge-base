@@ -1,0 +1,606 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Development Guide 2025 - Comprehensive Resource</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <style>
+        .gradient-bg {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        }
+        .category-card:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 40px rgba(0,0,0,0.15);
+        }
+        .email-card {
+            transition: all 0.2s ease;
+        }
+        .email-card:hover {
+            background-color: #f9fafb;
+        }
+        .tab-active {
+            border-bottom: 3px solid #6366f1;
+            color: #6366f1;
+        }
+        .sidebar {
+            position: sticky;
+            top: 20px;
+        }
+        html {
+            scroll-behavior: smooth;
+        }
+        .prose-content {
+            line-height: 1.8;
+        }
+        .prose-content h3 {
+            margin-top: 1.5rem;
+            margin-bottom: 0.75rem;
+        }
+        .prose-content ul {
+            list-style-type: disc;
+            padding-left: 1.5rem;
+        }
+        .prose-content li {
+            margin-bottom: 0.5rem;
+        }
+        .tool-badge {
+            display: inline-block;
+            padding: 0.25rem 0.75rem;
+            border-radius: 9999px;
+            font-size: 0.75rem;
+            font-weight: 600;
+            margin-right: 0.5rem;
+            margin-bottom: 0.5rem;
+        }
+    </style>
+</head>
+<body class="bg-gray-50 min-h-screen">
+    <header class="gradient-bg text-white py-16">
+        <div class="container mx-auto px-6">
+            <h1 class="text-4xl md:text-5xl font-bold mb-4">AI Development Guide 2025</h1>
+            <p class="text-xl opacity-90 mb-6">A comprehensive resource compiled from {{ total_emails }} curated emails covering the latest in AI tools, techniques, and best practices.</p>
+            <div class="flex flex-wrap gap-4 mb-6">
+                <div class="bg-white bg-opacity-20 rounded-lg px-4 py-2">
+                    <span class="text-2xl font-bold">{{ total_emails }}</span>
+                    <span class="text-sm opacity-80 block">Emails Analyzed</span>
+                </div>
+                <div class="bg-white bg-opacity-20 rounded-lg px-4 py-2">
+                    <span class="text-2xl font-bold">{{ categories|length }}</span>
+                    <span class="text-sm opacity-80 block">Topic Categories</span>
+                </div>
+                <div class="bg-white bg-opacity-20 rounded-lg px-4 py-2">
+                    <span class="text-2xl font-bold">{{ total_links }}</span>
+                    <span class="text-sm opacity-80 block">Resource Links</span>
+                </div>
+            </div>
+            
+            <div class="bg-white bg-opacity-10 rounded-xl p-4">
+                <div class="flex flex-col md:flex-row gap-3">
+                    <div class="flex-grow relative">
+                        <input type="text" id="searchInput" placeholder="Search emails... (e.g., cursor AND agent, openai OR claude, NOT beta)" 
+                            class="w-full px-4 py-3 rounded-lg text-gray-800 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-indigo-400">
+                        <svg class="absolute right-3 top-3 w-6 h-6 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path>
+                        </svg>
+                    </div>
+                    <button onclick="performSearch()" class="bg-indigo-600 hover:bg-indigo-700 text-white px-6 py-3 rounded-lg font-medium transition-colors">
+                        Search
+                    </button>
+                    <button onclick="clearSearch()" class="bg-white bg-opacity-20 hover:bg-opacity-30 text-white px-4 py-3 rounded-lg font-medium transition-colors">
+                        Clear
+                    </button>
+                </div>
+                <p class="text-indigo-200 text-sm mt-2">Use AND, OR, NOT for boolean search. Example: "cursor AND agent" or "openai OR gpt NOT beta"</p>
+            </div>
+        </div>
+    </header>
+    
+    <div id="searchResults" class="hidden container mx-auto px-6 py-8">
+        <div class="bg-white rounded-xl shadow-lg p-6">
+            <div class="flex justify-between items-center mb-4">
+                <h2 class="text-2xl font-bold text-gray-800">Search Results</h2>
+                <span id="resultCount" class="text-gray-600"></span>
+            </div>
+            <div id="searchResultsList" class="divide-y divide-gray-100"></div>
+        </div>
+    </div>
+
+    <nav class="bg-white shadow-sm sticky top-0 z-50">
+        <div class="container mx-auto px-6">
+            <div class="flex space-x-6 overflow-x-auto py-4">
+                <a href="#overview" class="text-gray-700 hover:text-indigo-600 whitespace-nowrap font-medium">Overview</a>
+                <a href="#key-tools" class="text-gray-700 hover:text-indigo-600 whitespace-nowrap font-medium">Key Tools</a>
+                <a href="#categories" class="text-gray-700 hover:text-indigo-600 whitespace-nowrap font-medium">All Topics</a>
+                <a href="#best-practices" class="text-gray-700 hover:text-indigo-600 whitespace-nowrap font-medium">Best Practices</a>
+                <a href="#resources" class="text-gray-700 hover:text-indigo-600 whitespace-nowrap font-medium">Learning Resources</a>
+            </div>
+        </div>
+    </nav>
+
+    <main class="container mx-auto px-6 py-12">
+        <section id="overview" class="mb-16">
+            <h2 class="text-3xl font-bold mb-8 text-gray-800">Executive Overview</h2>
+            <div class="bg-white rounded-xl shadow-lg p-8 prose-content">
+                <p class="text-lg text-gray-700 mb-6">
+                    This guide synthesizes insights from {{ total_emails }} AI-focused emails collected between September 2024 and January 2026.
+                    The content covers the rapidly evolving landscape of AI-powered development tools, from code assistants to no-code builders,
+                    prompt engineering techniques, and emerging paradigms like "vibe coding."
+                </p>
+                
+                <h3 class="text-xl font-semibold text-gray-800">Key Trends Identified</h3>
+                <ul class="text-gray-700 mb-6">
+                    <li><strong>Vibe Coding Revolution:</strong> Natural language to working software is now mainstream, with tools like Cursor, Claude Code, and Lovable leading the charge.</li>
+                    <li><strong>MCP (Model Context Protocol):</strong> A new standard for connecting AI agents to external tools and data sources.</li>
+                    <li><strong>Multi-Agent Workflows:</strong> Delegating different tasks (frontend, backend, testing) to specialized AI agents.</li>
+                    <li><strong>Context Engineering:</strong> Moving beyond simple prompts to systematic context management for AI systems.</li>
+                    <li><strong>No-Code AI Builders:</strong> Platforms like Google Opal, Bolt, and Lovable democratizing app development.</li>
+                </ul>
+
+                <h3 class="text-xl font-semibold text-gray-800">Top Categories by Volume</h3>
+                <div class="grid grid-cols-2 md:grid-cols-4 gap-4 mt-4">
+                    {% for cat, items in categories.items() %}
+                    {% if loop.index <= 8 %}
+                    <div class="bg-gradient-to-br from-indigo-50 to-purple-50 rounded-lg p-4">
+                        <div class="text-2xl font-bold text-indigo-600">{{ items|length }}</div>
+                        <div class="text-sm text-gray-600">{{ cat }}</div>
+                    </div>
+                    {% endif %}
+                    {% endfor %}
+                </div>
+            </div>
+        </section>
+
+        <section id="key-tools" class="mb-16">
+            <h2 class="text-3xl font-bold mb-8 text-gray-800">Essential AI Development Tools</h2>
+            
+            <div class="grid md:grid-cols-2 gap-8">
+                <div class="bg-white rounded-xl shadow-lg p-6 category-card transition-all">
+                    <div class="flex items-center mb-4">
+                        <div class="w-12 h-12 bg-indigo-100 rounded-lg flex items-center justify-center mr-4">
+                            <svg class="w-6 h-6 text-indigo-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"></path>
+                            </svg>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-bold text-gray-800">Claude Code</h3>
+                            <span class="text-sm text-gray-500">by Anthropic</span>
+                        </div>
+                    </div>
+                    <p class="text-gray-600 mb-4">
+                        Anthropic's agentic coding assistant. Uses CLAUDE.md files for project context, supports sub-agents for complex tasks,
+                        and integrates with MCP servers for extended capabilities.
+                    </p>
+                    <div class="flex flex-wrap">
+                        <span class="tool-badge bg-green-100 text-green-800">Agentic Coding</span>
+                        <span class="tool-badge bg-blue-100 text-blue-800">MCP Support</span>
+                        <span class="tool-badge bg-purple-100 text-purple-800">Multi-Agent</span>
+                    </div>
+                </div>
+
+                <div class="bg-white rounded-xl shadow-lg p-6 category-card transition-all">
+                    <div class="flex items-center mb-4">
+                        <div class="w-12 h-12 bg-green-100 rounded-lg flex items-center justify-center mr-4">
+                            <svg class="w-6 h-6 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
+                            </svg>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-bold text-gray-800">Cursor</h3>
+                            <span class="text-sm text-gray-500">AI-Native IDE</span>
+                        </div>
+                    </div>
+                    <p class="text-gray-600 mb-4">
+                        The leading AI-native IDE with Agent Mode for multi-file tasks, Composer model for fast generation,
+                        and deep codebase understanding via @-mentions.
+                    </p>
+                    <div class="flex flex-wrap">
+                        <span class="tool-badge bg-green-100 text-green-800">Agent Mode</span>
+                        <span class="tool-badge bg-blue-100 text-blue-800">Plan Mode</span>
+                        <span class="tool-badge bg-purple-100 text-purple-800">Multi-Model</span>
+                    </div>
+                </div>
+
+                <div class="bg-white rounded-xl shadow-lg p-6 category-card transition-all">
+                    <div class="flex items-center mb-4">
+                        <div class="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mr-4">
+                            <svg class="w-6 h-6 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 5a1 1 0 011-1h14a1 1 0 011 1v2a1 1 0 01-1 1H5a1 1 0 01-1-1V5zM4 13a1 1 0 011-1h6a1 1 0 011 1v6a1 1 0 01-1 1H5a1 1 0 01-1-1v-6zM16 13a1 1 0 011-1h2a1 1 0 011 1v6a1 1 0 01-1 1h-2a1 1 0 01-1-1v-6z"></path>
+                            </svg>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-bold text-gray-800">Google Opal</h3>
+                            <span class="text-sm text-gray-500">No-Code AI App Builder</span>
+                        </div>
+                    </div>
+                    <p class="text-gray-600 mb-4">
+                        Google's experimental no-code AI mini-app builder. Create functional apps from natural language descriptions
+                        with visual workflows and instant sharing. Available in Gemini app.
+                    </p>
+                    <div class="flex flex-wrap">
+                        <span class="tool-badge bg-green-100 text-green-800">No-Code</span>
+                        <span class="tool-badge bg-blue-100 text-blue-800">Visual Editor</span>
+                        <span class="tool-badge bg-purple-100 text-purple-800">Gemini Integration</span>
+                    </div>
+                </div>
+
+                <div class="bg-white rounded-xl shadow-lg p-6 category-card transition-all">
+                    <div class="flex items-center mb-4">
+                        <div class="w-12 h-12 bg-pink-100 rounded-lg flex items-center justify-center mr-4">
+                            <svg class="w-6 h-6 text-pink-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"></path>
+                            </svg>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-bold text-gray-800">Lovable</h3>
+                            <span class="text-sm text-gray-500">AI App Builder</span>
+                        </div>
+                    </div>
+                    <p class="text-gray-600 mb-4">
+                        Full-stack AI app builder that generates React + Tailwind applications from natural language.
+                        Includes GitHub sync, instant deployment, and Supabase backend integration.
+                    </p>
+                    <div class="flex flex-wrap">
+                        <span class="tool-badge bg-green-100 text-green-800">Full-Stack</span>
+                        <span class="tool-badge bg-blue-100 text-blue-800">React/Tailwind</span>
+                        <span class="tool-badge bg-purple-100 text-purple-800">GitHub Sync</span>
+                    </div>
+                </div>
+
+                <div class="bg-white rounded-xl shadow-lg p-6 category-card transition-all">
+                    <div class="flex items-center mb-4">
+                        <div class="w-12 h-12 bg-yellow-100 rounded-lg flex items-center justify-center mr-4">
+                            <svg class="w-6 h-6 text-yellow-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path>
+                            </svg>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-bold text-gray-800">Gemini Design MCP</h3>
+                            <span class="text-sm text-gray-500">Frontend AI Agent</span>
+                        </div>
+                    </div>
+                    <p class="text-gray-600 mb-4">
+                        Premium frontend design generation for AI agents. Delegate all UI/design work to Gemini while your main agent
+                        handles backend logic. Mobile-optimized with smart breakpoints.
+                    </p>
+                    <div class="flex flex-wrap">
+                        <span class="tool-badge bg-green-100 text-green-800">Frontend Focus</span>
+                        <span class="tool-badge bg-blue-100 text-blue-800">MCP Server</span>
+                        <span class="tool-badge bg-purple-100 text-purple-800">Design Generation</span>
+                    </div>
+                </div>
+
+                <div class="bg-white rounded-xl shadow-lg p-6 category-card transition-all">
+                    <div class="flex items-center mb-4">
+                        <div class="w-12 h-12 bg-orange-100 rounded-lg flex items-center justify-center mr-4">
+                            <svg class="w-6 h-6 text-orange-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"></path>
+                            </svg>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-bold text-gray-800">Bolt / Bolt.new</h3>
+                            <span class="text-sm text-gray-500">Rapid Web App Builder</span>
+                        </div>
+                    </div>
+                    <p class="text-gray-600 mb-4">
+                        Browser-based AI app builder for creating full web applications directly in your browser.
+                        Popular for rapid prototyping and quick MVPs without local development setup.
+                    </p>
+                    <div class="flex flex-wrap">
+                        <span class="tool-badge bg-green-100 text-green-800">Browser-Based</span>
+                        <span class="tool-badge bg-blue-100 text-blue-800">Instant Deploy</span>
+                        <span class="tool-badge bg-purple-100 text-purple-800">No Setup</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="best-practices" class="mb-16">
+            <h2 class="text-3xl font-bold mb-8 text-gray-800">Best Practices & Techniques</h2>
+            
+            <div class="bg-white rounded-xl shadow-lg p-8 mb-8">
+                <h3 class="text-2xl font-bold text-gray-800 mb-6">Vibe Coding Best Practices</h3>
+                <div class="prose-content text-gray-700">
+                    <p class="mb-4">
+                        Vibe coding is a chatbot-based approach where you describe projects to an LLM which generates source code.
+                        Named Collins Dictionary's Word of the Year 2025, it's transforming how developers work.
+                    </p>
+                    
+                    <div class="grid md:grid-cols-2 gap-6 mt-6">
+                        <div class="bg-green-50 rounded-lg p-4">
+                            <h4 class="font-bold text-green-800 mb-2">When to Use</h4>
+                            <ul class="text-green-700 text-sm">
+                                <li>Rapid prototyping and MVPs</li>
+                                <li>Personal tools and automation scripts</li>
+                                <li>Weekend projects and experiments</li>
+                                <li>Learning new technologies quickly</li>
+                            </ul>
+                        </div>
+                        <div class="bg-red-50 rounded-lg p-4">
+                            <h4 class="font-bold text-red-800 mb-2">When to Avoid</h4>
+                            <ul class="text-red-700 text-sm">
+                                <li>Safety-critical applications</li>
+                                <li>Production systems requiring high security</li>
+                                <li>Complex multi-file architectures without review</li>
+                                <li>Projects with poorly documented libraries</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="bg-white rounded-xl shadow-lg p-8 mb-8">
+                <h3 class="text-2xl font-bold text-gray-800 mb-6">Claude Code Configuration</h3>
+                <div class="prose-content text-gray-700">
+                    <p class="mb-4">
+                        The CLAUDE.md file is your project's "memory bank" for persistent context. Structure it using the What/Why/How framework:
+                    </p>
+                    
+                    <div class="bg-gray-900 rounded-lg p-4 text-sm text-gray-100 font-mono overflow-x-auto mb-4">
+                        <pre># WHAT (Tech Stack & Structure)
+- Next.js 14 + TypeScript
+- Monorepo: /apps (web, mobile), /packages (ui, utils, db)
+
+# WHY (Purpose & Function)
+- B2B SaaS product for project management
+- Focus: teams of 10-50 people
+
+# HOW (Commands & Workflow)
+- Package manager: bun (not npm)
+- Run tests: bun test
+- Dev server: bun dev</pre>
+                    </div>
+
+                    <h4 class="font-bold text-gray-800 mt-6 mb-2">Extended Thinking Keywords</h4>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="tool-badge bg-gray-200 text-gray-800">think</span>
+                        <span class="tool-badge bg-blue-200 text-blue-800">think hard</span>
+                        <span class="tool-badge bg-purple-200 text-purple-800">think harder</span>
+                        <span class="tool-badge bg-red-200 text-red-800">ultrathink</span>
+                    </div>
+                    <p class="text-sm text-gray-600 mt-2">Use progressively stronger keywords for complex reasoning tasks (costs more tokens).</p>
+                </div>
+            </div>
+
+            <div class="bg-white rounded-xl shadow-lg p-8">
+                <h3 class="text-2xl font-bold text-gray-800 mb-6">Prompt Engineering Techniques</h3>
+                <div class="prose-content text-gray-700">
+                    <div class="grid md:grid-cols-2 gap-6">
+                        <div class="border rounded-lg p-4">
+                            <h4 class="font-bold text-indigo-600 mb-2">1. XML Tags for Structure</h4>
+                            <p class="text-sm">Use &lt;task&gt;, &lt;context&gt;, &lt;constraints&gt;, and &lt;output_format&gt; tags to organize complex prompts.</p>
+                        </div>
+                        <div class="border rounded-lg p-4">
+                            <h4 class="font-bold text-indigo-600 mb-2">2. Few-Shot Examples</h4>
+                            <p class="text-sm">Show 2-3 actual examples of desired output. "Show, don't tell" improves consistency dramatically.</p>
+                        </div>
+                        <div class="border rounded-lg p-4">
+                            <h4 class="font-bold text-indigo-600 mb-2">3. Chain-of-Thought</h4>
+                            <p class="text-sm">Ask the AI to solve problems in stages. "Let's solve this step by step" reduces errors by ~50%.</p>
+                        </div>
+                        <div class="border rounded-lg p-4">
+                            <h4 class="font-bold text-indigo-600 mb-2">4. Context Front-Loading</h4>
+                            <p class="text-sm">Place domain-specific context at the start of prompts. Performance drops dramatically without it.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="categories" class="mb-16">
+            <h2 class="text-3xl font-bold mb-8 text-gray-800">All Topics & Emails</h2>
+            
+            <div class="space-y-8">
+                {% for cat_name, items in categories.items() %}
+                <div class="bg-white rounded-xl shadow-lg overflow-hidden" id="cat-{{ loop.index }}">
+                    <div class="bg-gradient-to-r from-indigo-500 to-purple-500 px-6 py-4 cursor-pointer" onclick="toggleCategory('cat-content-{{ loop.index }}', 'toggle-icon-{{ loop.index }}')">
+                        <div class="flex justify-between items-center">
+                            <div>
+                                <h3 class="text-xl font-bold text-white">{{ cat_name }}</h3>
+                                <p class="text-indigo-100 text-sm">{{ items|length }} emails</p>
+                            </div>
+                            <svg id="toggle-icon-{{ loop.index }}" class="w-6 h-6 text-white transform transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                            </svg>
+                        </div>
+                    </div>
+                    <div id="cat-content-{{ loop.index }}" class="divide-y divide-gray-100 max-h-screen overflow-y-auto hidden">
+                        {% for email in items %}
+                        <div class="email-card px-6 py-4">
+                            <h4 class="font-medium text-gray-800 mb-2">{{ email.subject[:150] }}{% if email.subject|length > 150 %}...{% endif %}</h4>
+                            {% if email.summary %}
+                            <p class="text-gray-700 text-sm mb-2 bg-indigo-50 p-3 rounded-lg border-l-4 border-indigo-400">{{ email.summary }}</p>
+                            {% else %}
+                            <p class="text-gray-600 text-sm mb-2">{{ email.content[:300]|e }}{% if email.content|length > 300 %}...{% endif %}</p>
+                            {% endif %}
+                            {% if email.links %}
+                            <div class="flex flex-wrap gap-2 mt-2">
+                                {% for link in email.links %}
+                                <a href="{{ link }}" target="_blank" class="text-xs text-indigo-600 hover:text-indigo-800 underline truncate max-w-xs">{{ link[:60] }}{% if link|length > 60 %}...{% endif %}</a>
+                                {% endfor %}
+                            </div>
+                            {% endif %}
+                            <div class="text-xs text-gray-400 mt-2">{{ email.date }}</div>
+                        </div>
+                        {% endfor %}
+                    </div>
+                </div>
+                {% endfor %}
+            </div>
+        </section>
+
+        <section id="resources" class="mb-16">
+            <h2 class="text-3xl font-bold mb-8 text-gray-800">Learning Resources</h2>
+            
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <a href="https://github.com/anthropics/prompt-eng-interactive-tutorial" target="_blank" class="bg-white rounded-xl shadow-lg p-6 hover:shadow-xl transition-shadow">
+                    <h3 class="text-lg font-bold text-gray-800 mb-2">Anthropic Prompt Engineering Course</h3>
+                    <p class="text-gray-600 text-sm mb-4">Free 9-chapter interactive course covering beginner to advanced prompt engineering techniques.</p>
+                    <span class="text-indigo-600 text-sm font-medium">github.com/anthropics &rarr;</span>
+                </a>
+
+                <a href="https://www.anthropic.com/engineering/claude-code-best-practices" target="_blank" class="bg-white rounded-xl shadow-lg p-6 hover:shadow-xl transition-shadow">
+                    <h3 class="text-lg font-bold text-gray-800 mb-2">Claude Code Best Practices</h3>
+                    <p class="text-gray-600 text-sm mb-4">Official Anthropic guide for agentic coding with Claude Code, including CLAUDE.md configuration.</p>
+                    <span class="text-indigo-600 text-sm font-medium">anthropic.com &rarr;</span>
+                </a>
+
+                <a href="https://developers.google.com/opal" target="_blank" class="bg-white rounded-xl shadow-lg p-6 hover:shadow-xl transition-shadow">
+                    <h3 class="text-lg font-bold text-gray-800 mb-2">Google Opal Documentation</h3>
+                    <p class="text-gray-600 text-sm mb-4">Official docs for Google's no-code AI mini-app builder, now integrated with Gemini.</p>
+                    <span class="text-indigo-600 text-sm font-medium">developers.google.com &rarr;</span>
+                </a>
+
+                <a href="https://gemini-design-mcp.com/" target="_blank" class="bg-white rounded-xl shadow-lg p-6 hover:shadow-xl transition-shadow">
+                    <h3 class="text-lg font-bold text-gray-800 mb-2">Gemini Design MCP</h3>
+                    <p class="text-gray-600 text-sm mb-4">Premium frontend design generation for AI agents. Delegate UI work to Gemini.</p>
+                    <span class="text-indigo-600 text-sm font-medium">gemini-design-mcp.com &rarr;</span>
+                </a>
+
+                <a href="https://cursor.com/features" target="_blank" class="bg-white rounded-xl shadow-lg p-6 hover:shadow-xl transition-shadow">
+                    <h3 class="text-lg font-bold text-gray-800 mb-2">Cursor Features</h3>
+                    <p class="text-gray-600 text-sm mb-4">Explore the AI-native IDE with Agent Mode, Composer, and deep codebase understanding.</p>
+                    <span class="text-indigo-600 text-sm font-medium">cursor.com &rarr;</span>
+                </a>
+
+                <a href="https://lovable.dev/" target="_blank" class="bg-white rounded-xl shadow-lg p-6 hover:shadow-xl transition-shadow">
+                    <h3 class="text-lg font-bold text-gray-800 mb-2">Lovable</h3>
+                    <p class="text-gray-600 text-sm mb-4">Build full-stack React apps from natural language with instant deployment and GitHub sync.</p>
+                    <span class="text-indigo-600 text-sm font-medium">lovable.dev &rarr;</span>
+                </a>
+            </div>
+        </section>
+    </main>
+
+    <footer class="bg-gray-800 text-white py-12">
+        <div class="container mx-auto px-6 text-center">
+            <p class="text-gray-400 mb-4">Generated from {{ total_emails }} curated AI development emails</p>
+            <p class="text-sm text-gray-500">Data collected September 2024 - January 2026</p>
+        </div>
+    </footer>
+
+    <script>
+        const allEmails = {{ emails_json|safe }};
+        
+        function toggleCategory(contentId, iconId) {
+            const content = document.getElementById(contentId);
+            const icon = document.getElementById(iconId);
+            
+            if (content.classList.contains('hidden')) {
+                content.classList.remove('hidden');
+                icon.classList.add('rotate-180');
+            } else {
+                content.classList.add('hidden');
+                icon.classList.remove('rotate-180');
+            }
+        }
+
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+        
+        document.getElementById('searchInput').addEventListener('keypress', function(e) {
+            if (e.key === 'Enter') {
+                performSearch();
+            }
+        });
+        
+        function parseBoolean(query) {
+            query = query.trim();
+            if (!query) return () => true;
+            
+            const orGroups = query.split(/\s+OR\s+/i);
+            
+            return (text) => {
+                text = text.toLowerCase();
+                
+                return orGroups.some(group => {
+                    const andTerms = group.split(/\s+AND\s+/i);
+                    
+                    return andTerms.every(term => {
+                        term = term.trim();
+                        
+                        if (term.toUpperCase().startsWith('NOT ')) {
+                            const notTerm = term.substring(4).trim().toLowerCase();
+                            return !text.includes(notTerm);
+                        }
+                        
+                        return text.includes(term.toLowerCase());
+                    });
+                });
+            };
+        }
+        
+        function performSearch() {
+            const query = document.getElementById('searchInput').value;
+            const matcher = parseBoolean(query);
+            
+            const results = allEmails.filter(email => {
+                const searchText = (email.subject + ' ' + email.content + ' ' + (email.links || []).join(' ')).toLowerCase();
+                return matcher(searchText);
+            });
+            
+            displayResults(results, query);
+        }
+        
+        function displayResults(results, query) {
+            const container = document.getElementById('searchResults');
+            const list = document.getElementById('searchResultsList');
+            const count = document.getElementById('resultCount');
+            
+            container.classList.remove('hidden');
+            count.textContent = `${results.length} email${results.length !== 1 ? 's' : ''} found`;
+            
+            if (results.length === 0) {
+                list.innerHTML = '<p class="text-gray-500 py-4">No emails match your search criteria.</p>';
+                return;
+            }
+            
+            list.innerHTML = results.map(email => `
+                <div class="email-card py-4">
+                    <div class="flex items-start justify-between">
+                        <div class="flex-grow">
+                            <span class="inline-block px-2 py-1 text-xs font-medium bg-indigo-100 text-indigo-800 rounded mb-2">${escapeHtml(email.category)}</span>
+                            <h4 class="font-medium text-gray-800 mb-2">${escapeHtml(email.subject.substring(0, 150))}${email.subject.length > 150 ? '...' : ''}</h4>
+                            ${email.summary ? `
+                                <p class="text-gray-700 text-sm mb-2 bg-indigo-50 p-3 rounded-lg border-l-4 border-indigo-400">${escapeHtml(email.summary)}</p>
+                            ` : `
+                                <p class="text-gray-600 text-sm mb-2">${escapeHtml(email.content.substring(0, 400))}${email.content.length > 400 ? '...' : ''}</p>
+                            `}
+                            ${email.links && email.links.length > 0 ? `
+                                <div class="flex flex-wrap gap-2 mt-2">
+                                    ${email.links.slice(0, 5).map(link => `
+                                        <a href="${escapeHtml(link)}" target="_blank" class="text-xs text-indigo-600 hover:text-indigo-800 underline truncate max-w-xs">${escapeHtml(link.substring(0, 60))}${link.length > 60 ? '...' : ''}</a>
+                                    `).join('')}
+                                    ${email.links.length > 5 ? `<span class="text-xs text-gray-400">+${email.links.length - 5} more</span>` : ''}
+                                </div>
+                            ` : ''}
+                            <div class="text-xs text-gray-400 mt-2">${escapeHtml(email.date || '')}</div>
+                        </div>
+                    </div>
+                </div>
+            `).join('');
+            
+            container.scrollIntoView({ behavior: 'smooth' });
+        }
+        
+        function clearSearch() {
+            document.getElementById('searchInput').value = '';
+            document.getElementById('searchResults').classList.add('hidden');
+            document.getElementById('searchResultsList').innerHTML = '';
+        }
+        
+        function escapeHtml(text) {
+            if (!text) return '';
+            const div = document.createElement('div');
+            div.textContent = text;
+            return div.innerHTML;
+        }
+    </script>
+</body>
+</html>
