@@ -22,28 +22,56 @@ def decode_mime_header(header):
             decoded_parts.append(part)
     return ''.join(decoded_parts)
 
+def strip_html_tags(html_content):
+    """Remove HTML tags and decode entities."""
+    clean = re.sub(r'<[^>]+>', ' ', html_content)
+    clean = re.sub(r'&nbsp;', ' ', clean)
+    clean = re.sub(r'&amp;', '&', clean)
+    clean = re.sub(r'&lt;', '<', clean)
+    clean = re.sub(r'&gt;', '>', clean)
+    clean = re.sub(r'&quot;', '"', clean)
+    clean = re.sub(r'&#39;', "'", clean)
+    clean = re.sub(r'\s+', ' ', clean)
+    return clean.strip()
+
 def extract_text_content(msg):
-    """Extract plain text content from email message."""
+    """Extract text content from email message, with HTML fallback."""
     text_content = ""
+    html_content = ""
+    
     if msg.is_multipart():
         for part in msg.walk():
             content_type = part.get_content_type()
-            if content_type == 'text/plain':
-                payload = part.get_payload(decode=True)
-                if payload:
-                    charset = part.get_content_charset() or 'utf-8'
-                    try:
-                        text_content += payload.decode(charset, errors='replace')
-                    except:
-                        text_content += payload.decode('utf-8', errors='replace')
+            payload = part.get_payload(decode=True)
+            if payload:
+                charset = part.get_content_charset() or 'utf-8'
+                try:
+                    decoded = payload.decode(charset, errors='replace')
+                except:
+                    decoded = payload.decode('utf-8', errors='replace')
+                
+                if content_type == 'text/plain':
+                    text_content += decoded
+                elif content_type == 'text/html' and not text_content:
+                    html_content = decoded
     else:
         payload = msg.get_payload(decode=True)
         if payload:
+            content_type = msg.get_content_type()
             charset = msg.get_content_charset() or 'utf-8'
             try:
-                text_content = payload.decode(charset, errors='replace')
+                decoded = payload.decode(charset, errors='replace')
             except:
-                text_content = payload.decode('utf-8', errors='replace')
+                decoded = payload.decode('utf-8', errors='replace')
+            
+            if content_type == 'text/plain':
+                text_content = decoded
+            elif content_type == 'text/html':
+                html_content = decoded
+    
+    if not text_content and html_content:
+        text_content = strip_html_tags(html_content)
+    
     return text_content
 
 def extract_links(text):
