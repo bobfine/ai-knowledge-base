@@ -48,5 +48,24 @@ Server runs on port 5000.
 9. No-Code/Low-Code Builders (49 emails)
 10. And more...
 
+## Reusing for a New Email Set
+
+To create a new guide from a different mbox file:
+
+1. **Fork this project** in Replit
+2. **Add your mbox file** to the `attached_assets/` folder
+3. **Run the setup script**:
+   ```bash
+   python setup_new_guide.py
+   ```
+   This will:
+   - Parse your emails
+   - Generate AI summaries
+   - Update the guide title
+   - Prepare everything for viewing
+
+4. **Restart the app** to see your new content
+
 ## Recent Changes
+- **Jan 2026**: Added AI-generated summaries and boolean search
 - **Jan 2026**: Initial creation - parsed mbox file and built comprehensive guide
