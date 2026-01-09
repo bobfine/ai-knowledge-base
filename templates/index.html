@@ -60,7 +60,7 @@
         <div class="container mx-auto px-6">
             <h1 class="text-4xl md:text-5xl font-bold mb-4">AI Development Guide 2025</h1>
             <p class="text-xl opacity-90 mb-6">A comprehensive resource compiled from {{ total_emails }} curated emails covering the latest in AI tools, techniques, and best practices.</p>
-            <div class="flex flex-wrap gap-4">
+            <div class="flex flex-wrap gap-4 mb-6">
                 <div class="bg-white bg-opacity-20 rounded-lg px-4 py-2">
                     <span class="text-2xl font-bold">{{ total_emails }}</span>
                     <span class="text-sm opacity-80 block">Emails Analyzed</span>
@@ -74,8 +74,37 @@
                     <span class="text-sm opacity-80 block">Resource Links</span>
                 </div>
             </div>
+            
+            <div class="bg-white bg-opacity-10 rounded-xl p-4">
+                <div class="flex flex-col md:flex-row gap-3">
+                    <div class="flex-grow relative">
+                        <input type="text" id="searchInput" placeholder="Search emails... (e.g., cursor AND agent, openai OR claude, NOT beta)" 
+                            class="w-full px-4 py-3 rounded-lg text-gray-800 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-indigo-400">
+                        <svg class="absolute right-3 top-3 w-6 h-6 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path>
+                        </svg>
+                    </div>
+                    <button onclick="performSearch()" class="bg-indigo-600 hover:bg-indigo-700 text-white px-6 py-3 rounded-lg font-medium transition-colors">
+                        Search
+                    </button>
+                    <button onclick="clearSearch()" class="bg-white bg-opacity-20 hover:bg-opacity-30 text-white px-4 py-3 rounded-lg font-medium transition-colors">
+                        Clear
+                    </button>
+                </div>
+                <p class="text-indigo-200 text-sm mt-2">Use AND, OR, NOT for boolean search. Example: "cursor AND agent" or "openai OR gpt NOT beta"</p>
+            </div>
         </div>
     </header>
+    
+    <div id="searchResults" class="hidden container mx-auto px-6 py-8">
+        <div class="bg-white rounded-xl shadow-lg p-6">
+            <div class="flex justify-between items-center mb-4">
+                <h2 class="text-2xl font-bold text-gray-800">Search Results</h2>
+                <span id="resultCount" class="text-gray-600"></span>
+            </div>
+            <div id="searchResultsList" class="divide-y divide-gray-100"></div>
+        </div>
+    </div>
 
     <nav class="bg-white shadow-sm sticky top-0 z-50">
         <div class="container mx-auto px-6">
@@ -447,6 +476,8 @@
     </footer>
 
     <script>
+        const allEmails = {{ emails_json|safe }};
+        
         function toggleCategory(contentId, iconId) {
             const content = document.getElementById(contentId);
             const icon = document.getElementById(iconId);
@@ -468,6 +499,100 @@
                 });
             });
         });
+        
+        document.getElementById('searchInput').addEventListener('keypress', function(e) {
+            if (e.key === 'Enter') {
+                performSearch();
+            }
+        });
+        
+        function parseBoolean(query) {
+            query = query.trim();
+            if (!query) return () => true;
+            
+            const orGroups = query.split(/\s+OR\s+/i);
+            
+            return (text) => {
+                text = text.toLowerCase();
+                
+                return orGroups.some(group => {
+                    const andTerms = group.split(/\s+AND\s+/i);
+                    
+                    return andTerms.every(term => {
+                        term = term.trim();
+                        
+                        if (term.toUpperCase().startsWith('NOT ')) {
+                            const notTerm = term.substring(4).trim().toLowerCase();
+                            return !text.includes(notTerm);
+                        }
+                        
+                        return text.includes(term.toLowerCase());
+                    });
+                });
+            };
+        }
+        
+        function performSearch() {
+            const query = document.getElementById('searchInput').value;
+            const matcher = parseBoolean(query);
+            
+            const results = allEmails.filter(email => {
+                const searchText = (email.subject + ' ' + email.content + ' ' + (email.links || []).join(' ')).toLowerCase();
+                return matcher(searchText);
+            });
+            
+            displayResults(results, query);
+        }
+        
+        function displayResults(results, query) {
+            const container = document.getElementById('searchResults');
+            const list = document.getElementById('searchResultsList');
+            const count = document.getElementById('resultCount');
+            
+            container.classList.remove('hidden');
+            count.textContent = `${results.length} email${results.length !== 1 ? 's' : ''} found`;
+            
+            if (results.length === 0) {
+                list.innerHTML = '<p class="text-gray-500 py-4">No emails match your search criteria.</p>';
+                return;
+            }
+            
+            list.innerHTML = results.map(email => `
+                <div class="email-card py-4">
+                    <div class="flex items-start justify-between">
+                        <div class="flex-grow">
+                            <span class="inline-block px-2 py-1 text-xs font-medium bg-indigo-100 text-indigo-800 rounded mb-2">${escapeHtml(email.category)}</span>
+                            <h4 class="font-medium text-gray-800 mb-2">${escapeHtml(email.subject.substring(0, 150))}${email.subject.length > 150 ? '...' : ''}</h4>
+                            <p class="text-gray-600 text-sm mb-2">${escapeHtml(email.content.substring(0, 400))}${email.content.length > 400 ? '...' : ''}</p>
+                            ${email.links && email.links.length > 0 ? `
+                                <div class="flex flex-wrap gap-2 mt-2">
+                                    ${email.links.slice(0, 5).map(link => `
+                                        <a href="${escapeHtml(link)}" target="_blank" class="text-xs text-indigo-600 hover:text-indigo-800 underline truncate max-w-xs">${escapeHtml(link.substring(0, 60))}${link.length > 60 ? '...' : ''}</a>
+                                    `).join('')}
+                                    ${email.links.length > 5 ? `<span class="text-xs text-gray-400">+${email.links.length - 5} more</span>` : ''}
+                                </div>
+                            ` : ''}
+                            <div class="text-xs text-gray-400 mt-2">${escapeHtml(email.date || '')}</div>
+                        </div>
+                    </div>
+                </div>
+            `).join('');
+            
+            container.scrollIntoView({ behavior: 'smooth' });
+        }
+        
+        function clearSearch() {
+            document.getElementById('searchInput').value = '';
+            document.getElementById('searchResults').classList.add('hidden');
+            document.getElementById('searchResultsList').innerHTML = '';
+        }
+        
+        function escapeHtml(text) {
+            if (!text) return '';
+            const div = document.createElement('div');
+            div.textContent = text;
+            return div.innerHTML;
+        }
     </script>
 </body>
 </html>

@@ -18,6 +18,7 @@ A comprehensive web-based guide that organizes and summarizes information from 5
 ## Key Features
 - **541 emails analyzed** across 16 topic categories
 - **1253 resource links** extracted
+- **Boolean keyword search** - supports AND, OR, NOT operators
 - Interactive navigation with smooth scrolling
 - Organized by topics: Claude/Anthropic, OpenAI, Cursor, Vibe Coding, etc.
 - Best practices and prompt engineering techniques
