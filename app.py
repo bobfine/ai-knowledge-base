@@ -1,7 +1,12 @@
-from flask import Flask, render_template, jsonify
+from flask import Flask, render_template, jsonify, send_file
 import json
+import os
 
 app = Flask(__name__)
+
+@app.route('/download/template')
+def download_template():
+    return send_file('email_guide_template.zip', as_attachment=True, download_name='email_guide_template.zip')
 
 @app.route('/')
 def index():
