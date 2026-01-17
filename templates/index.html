@@ -112,7 +112,6 @@
                 <a href="#overview" class="text-gray-700 hover:text-indigo-600 whitespace-nowrap font-medium">Overview</a>
                 <a href="#key-tools" class="text-gray-700 hover:text-indigo-600 whitespace-nowrap font-medium">Key Tools</a>
                 <a href="#categories" class="text-gray-700 hover:text-indigo-600 whitespace-nowrap font-medium">All Topics</a>
-                <a href="#best-practices" class="text-gray-700 hover:text-indigo-600 whitespace-nowrap font-medium">Best Practices</a>
                 <a href="#resources" class="text-gray-700 hover:text-indigo-600 whitespace-nowrap font-medium">Learning Resources</a>
             </div>
         </div>
@@ -290,98 +289,6 @@
                         <span class="tool-badge bg-green-100 text-green-800">Browser-Based</span>
                         <span class="tool-badge bg-blue-100 text-blue-800">Instant Deploy</span>
                         <span class="tool-badge bg-purple-100 text-purple-800">No Setup</span>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section id="best-practices" class="mb-16">
-            <h2 class="text-3xl font-bold mb-8 text-gray-800">Best Practices & Techniques</h2>
-            
-            <div class="bg-white rounded-xl shadow-lg p-8 mb-8">
-                <h3 class="text-2xl font-bold text-gray-800 mb-6">Vibe Coding Best Practices</h3>
-                <div class="prose-content text-gray-700">
-                    <p class="mb-4">
-                        Vibe coding is a chatbot-based approach where you describe projects to an LLM which generates source code.
-                        Named Collins Dictionary's Word of the Year 2025, it's transforming how developers work.
-                    </p>
-                    
-                    <div class="grid md:grid-cols-2 gap-6 mt-6">
-                        <div class="bg-green-50 rounded-lg p-4">
-                            <h4 class="font-bold text-green-800 mb-2">When to Use</h4>
-                            <ul class="text-green-700 text-sm">
-                                <li>Rapid prototyping and MVPs</li>
-                                <li>Personal tools and automation scripts</li>
-                                <li>Weekend projects and experiments</li>
-                                <li>Learning new technologies quickly</li>
-                            </ul>
-                        </div>
-                        <div class="bg-red-50 rounded-lg p-4">
-                            <h4 class="font-bold text-red-800 mb-2">When to Avoid</h4>
-                            <ul class="text-red-700 text-sm">
-                                <li>Safety-critical applications</li>
-                                <li>Production systems requiring high security</li>
-                                <li>Complex multi-file architectures without review</li>
-                                <li>Projects with poorly documented libraries</li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="bg-white rounded-xl shadow-lg p-8 mb-8">
-                <h3 class="text-2xl font-bold text-gray-800 mb-6">Claude Code Configuration</h3>
-                <div class="prose-content text-gray-700">
-                    <p class="mb-4">
-                        The CLAUDE.md file is your project's "memory bank" for persistent context. Structure it using the What/Why/How framework:
-                    </p>
-                    
-                    <div class="bg-gray-900 rounded-lg p-4 text-sm text-gray-100 font-mono overflow-x-auto mb-4">
-                        <pre># WHAT (Tech Stack & Structure)
-- Next.js 14 + TypeScript
-- Monorepo: /apps (web, mobile), /packages (ui, utils, db)
-
-# WHY (Purpose & Function)
-- B2B SaaS product for project management
-- Focus: teams of 10-50 people
-
-# HOW (Commands & Workflow)
-- Package manager: bun (not npm)
-- Run tests: bun test
-- Dev server: bun dev</pre>
-                    </div>
-
-                    <h4 class="font-bold text-gray-800 mt-6 mb-2">Extended Thinking Keywords</h4>
-                    <div class="flex flex-wrap gap-2">
-                        <span class="tool-badge bg-gray-200 text-gray-800">think</span>
-                        <span class="tool-badge bg-blue-200 text-blue-800">think hard</span>
-                        <span class="tool-badge bg-purple-200 text-purple-800">think harder</span>
-                        <span class="tool-badge bg-red-200 text-red-800">ultrathink</span>
-                    </div>
-                    <p class="text-sm text-gray-600 mt-2">Use progressively stronger keywords for complex reasoning tasks (costs more tokens).</p>
-                </div>
-            </div>
-
-            <div class="bg-white rounded-xl shadow-lg p-8">
-                <h3 class="text-2xl font-bold text-gray-800 mb-6">Prompt Engineering Techniques</h3>
-                <div class="prose-content text-gray-700">
-                    <div class="grid md:grid-cols-2 gap-6">
-                        <div class="border rounded-lg p-4">
-                            <h4 class="font-bold text-indigo-600 mb-2">1. XML Tags for Structure</h4>
-                            <p class="text-sm">Use &lt;task&gt;, &lt;context&gt;, &lt;constraints&gt;, and &lt;output_format&gt; tags to organize complex prompts.</p>
-                        </div>
-                        <div class="border rounded-lg p-4">
-                            <h4 class="font-bold text-indigo-600 mb-2">2. Few-Shot Examples</h4>
-                            <p class="text-sm">Show 2-3 actual examples of desired output. "Show, don't tell" improves consistency dramatically.</p>
-                        </div>
-                        <div class="border rounded-lg p-4">
-                            <h4 class="font-bold text-indigo-600 mb-2">3. Chain-of-Thought</h4>
-                            <p class="text-sm">Ask the AI to solve problems in stages. "Let's solve this step by step" reduces errors by ~50%.</p>
-                        </div>
-                        <div class="border rounded-lg p-4">
-                            <h4 class="font-bold text-indigo-600 mb-2">4. Context Front-Loading</h4>
-                            <p class="text-sm">Place domain-specific context at the start of prompts. Performance drops dramatically without it.</p>
-                        </div>
                     </div>
                 </div>
             </div>
