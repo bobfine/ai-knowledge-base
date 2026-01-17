@@ -121,6 +121,14 @@ def categorize_email(subject, content):
         categories.append('LLM & Models')
     if any(word in text for word in ['nvidia', 'hardware', 'compute']):
         categories.append('AI Hardware & Compute')
+    if any(word in text for word in ['research', 'paper', 'study', 'stanford', 'report', 'arxiv', 'publication']):
+        categories.append('AI Research & Reports')
+    if any(word in text for word in ['perplexity', 'notebooklm', 'devin', 'windsurf', 'codeium', 'tabnine', 'sourcegraph']):
+        categories.append('AI Tools & Platforms')
+    if any(word in text for word in ['audio', 'music', 'voice', 'speech', 'tts', 'whisper', 'sound']):
+        categories.append('AI Audio & Music')
+    if any(word in text for word in ['automation', 'automate', 'workflow', 'n8n', 'zapier', 'make.com']):
+        categories.append('AI Automation & Workflows')
     
     if not categories:
         categories.append('General AI')

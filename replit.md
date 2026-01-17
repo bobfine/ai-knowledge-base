@@ -50,14 +50,18 @@ Server runs on port 5000.
 6. Prompt Engineering (81 emails)
 7. OpenAI & GPT (80 emails)
 8. LLM & Models (75 emails)
-9. Learning Resources (62 emails)
-10. No-Code/Low-Code AI Builders (52 emails)
-11. AI for Business (52 emails)
-12. Physical AI & Robotics (28 emails)
-13. MCP (Model Context Protocol) (25 emails)
-14. Vibe Coding (25 emails)
-15. AI Hardware & Compute (24 emails)
-16. General AI (175 emails) - Uncategorized
+9. AI Research & Reports (62 emails) - Papers, studies, Stanford reports
+10. Learning Resources (62 emails)
+11. No-Code/Low-Code AI Builders (52 emails)
+12. AI for Business (52 emails)
+13. AI Automation & Workflows (40 emails) - n8n, Zapier, workflow automation
+14. AI Audio & Music (28 emails) - Voice, speech, music generation
+15. Physical AI & Robotics (28 emails)
+16. MCP (Model Context Protocol) (25 emails)
+17. Vibe Coding (25 emails)
+18. AI Hardware & Compute (24 emails)
+19. AI Tools & Platforms (15 emails) - Perplexity, Devin, NotebookLM
+20. General AI (152 emails) - Uncategorized
 
 ## Adding New Emails (Incremental Update)
 
