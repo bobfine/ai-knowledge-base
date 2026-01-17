@@ -8269,5 +8269,1021 @@
       "Google & Gemini"
     ],
     "summary": "The email provides a link to a Google search for step-by-step beginner app development tutorials using Firebase Studio. It is intended to guide newcomers through the process of building apps with Firebase, a popular backend platform. The linked search likely includes various resources and instructional content to help users get started with app development."
+  },
+  {
+    "subject": "Repeating your prompt can make LLMs significantly more accurate.  Google just showed a trivial change that wins 47 of 70 tests.  No extra tokens. No added latency. Zero losses reported.  𝗣𝗿𝗼𝗺𝗽𝘁 𝗿𝗲𝗽𝗲𝘁𝗶𝘁𝗶𝗼𝗻 𝗶𝗺𝗽𝗿𝗼𝘃𝗲𝘀 𝗮𝗰𝗰𝘂𝗿𝗮𝗰𝘆 The method is simple.",
+    "date": "Sat, 10 Jan 2026 17:00:35 -0500",
+    "from": "Bob Fine <bob@coolbluemedia.net>",
+    "content": "LiorOnAI (@Lior Alexander) posted: Repeating your prompt can make LLMs\r\nsignificantly more accurate.\r\n\r\nGoogle just showed a trivial change that wins 47 of 70 tests.\r\n\r\nNo extra tokens. No added latency. Zero losses reported.\r\n\r\n𝗣𝗿𝗼𝗺𝗽𝘁 𝗿𝗲𝗽𝗲𝘁𝗶𝘁𝗶𝗼𝗻 𝗶𝗺𝗽𝗿𝗼𝘃𝗲𝘀 𝗮𝗰𝗰𝘂𝗿𝗮𝗰𝘆\r\nThe method is simple. https://x.com/lioronai/status/2010018978630901892?s=51",
+    "links": [
+      "https://x.com/lioronai/status/2010018978630901892?s=51"
+    ],
+    "categories": [
+      "Google & Gemini",
+      "Prompt Engineering",
+      "LLM & Models"
+    ],
+    "summary": "Repeating the prompt when using large language models (LLMs) can significantly improve their accuracy, as demonstrated by Google achieving better results in 47 out of 70 tests without increasing token usage or latency. This simple technique, highlighted by Lior Alexander on Twitter, offers a straightforward way to enhance LLM performance with no reported downsides. The linked tweet provides further details on this prompt repetition method."
+  },
+  {
+    "subject": "Best free vibe coding setup:  > IDE: Antigravity (they always give\r\n freebies) > LLM: Gemini (you can have multiple accounts) > Database: Supabase\r\n (free tier is excellent) > Hosting: Vercel (easy and free to publish) > Nano\r\n Banana Pro: (free image and ui gen)  Anything I missed?",
+    "date": "Sat, 10 Jan 2026 17:02:54 -0500",
+    "from": "Bob Fine <bob@coolbluemedia.net>",
+    "content": "meta_alchemist (@Meta Alchemist) posted: Best free vibe coding setup:\r\n\r\n> IDE: Antigravity (they always give freebies)\r\n> LLM: Gemini (you can have multiple accounts)\r\n> Database: Supabase (free tier is excellent)\r\n> Hosting: Vercel (easy and free to publish)\r\n> Nano Banana Pro: (free image and ui gen)\r\n\r\nAnything I missed?\r\nhttps://x.com/meta_alchemist/status/2009883791301767652?s=51",
+    "links": [
+      "https://x.com/meta_alchemist/status/2009883791301767652?s=51"
+    ],
+    "categories": [
+      "Google & Gemini",
+      "AI Coding IDEs",
+      "Vibe Coding",
+      "AI Visual Tools",
+      "LLM & Models"
+    ],
+    "summary": "The email shares a recommended free coding setup featuring Antigravity IDE, Gemini LLM with multi-account support, Supabase’s robust free database tier, Vercel for easy free hosting, and Nano Banana Pro for free image and UI generation. It invites recipients to suggest any additional tools that might enhance this setup. The included link directs to the original social media post detailing these recommendations."
+  },
+  {
+    "subject": "whenever you see a great ai-generated online, do this :  - copy+paste\r\n in gemini - use this prompt : \"extract this visual style as JSON structured\r\n data: colors, typography, composition, effects...\" - save this context file\r\n and inject it whenever you want to recreate this style",
+    "date": "Sat, 10 Jan 2026 17:41:43 -0500",
+    "from": "Bob Fine <bob@coolbluemedia.net>",
+    "content": "EXM7777 (@Machina) posted: whenever you see a great ai-generated online, do\r\nthis :\r\n\r\n- copy+paste in gemini\r\n- use this prompt : \"extract this visual style as JSON structured data:\r\ncolors, typography, composition, effects...\"\r\n- save this context file and inject it whenever you want to recreate this\r\nstyle https://x.com/exm7777/status/2009731409741787297?s=51",
+    "links": [
+      "https://x.com/exm7777/status/2009731409741787297?s=51"
+    ],
+    "categories": [
+      "Google & Gemini",
+      "Prompt Engineering",
+      "AI Visual Tools"
+    ],
+    "summary": "The email shares a tip from EXM7777 on how to capture and reuse AI-generated visual styles using Gemini. By copying the design, prompting Gemini to extract the style as JSON data—including colors, typography, composition, and effects—and saving this context file, users can easily recreate the style later. The linked tweet likely demonstrates or elaborates on this process."
+  },
+  {
+    "subject": "insane  This new paper is basically saying  Cells can now be\r\n \"prompted\" like LLMs.  STACK is a foundation model for biology trained on 149\r\n million human single cells.  Instead of treating each cell in isolation, it\r\n understands cells in context, like how tokens make sense inside a",
+    "date": "Sat, 10 Jan 2026 17:27:32 -0500",
+    "from": "Bob Fine <bob@coolbluemedia.net>",
+    "content": "Dr_Singularity (@Dr Singularity) posted: insane\r\n\r\nThis new paper is basically saying\r\n\r\nCells can now be \"prompted\" like LLMs.\r\n\r\nSTACK is a foundation model for biology trained on 149 million human single\r\ncells.\r\n\r\nInstead of treating each cell in isolation, it understands cells in\r\ncontext, like how tokens make sense inside a\r\nhttps://x.com/dr_singularity/status/2009764555778400337?s=51",
+    "links": [
+      "https://x.com/dr_singularity/status/2009764555778400337?s=51"
+    ],
+    "categories": [
+      "AI Coding IDEs",
+      "Prompt Engineering",
+      "LLM & Models"
+    ],
+    "summary": "A new paper introduces STACK, a foundation model for biology trained on 149 million human single cells, which can \"prompt\" cells similarly to how large language models (LLMs) process tokens. Unlike previous approaches that analyze cells individually, STACK understands cells in their biological context, enhancing insights into cellular behavior. The linked tweet likely provides further details on this breakthrough."
+  },
+  {
+    "subject": "\"claude can't handle big codebases\"  WRONG‼️ YOU JUST NEVER GAVE IT A MAP 😤  INTRODUCING THE CARTOGRAPHER 🗺️  This skill deploys parallel Sonnet subagents to analyze your ENTIRE codebase and generate a complete architecture doc!   Git Link In Replies 👇",
+    "date": "Wed, 14 Jan 2026 19:01:14 -0500",
+    "from": "Bob Fine <bob@coolbluemedia.net>",
+    "content": "KingBootoshi (@BOOTOSHI 👑) posted: \"claude can't handle big codebases\"\r\n\r\nWRONG‼️ YOU JUST NEVER GAVE IT A MAP 😤\r\n\r\nINTRODUCING THE CARTOGRAPHER 🗺️\r\n\r\nThis skill deploys parallel Sonnet subagents to analyze your ENTIRE\r\ncodebase and generate a complete architecture doc!\r\n\r\nGit Link In Replies 👇\r\nhttps://x.com/kingbootoshi/status/2011205064724267245?s=51",
+    "links": [
+      "https://x.com/kingbootoshi/status/2011205064724267245?s=51"
+    ],
+    "categories": [
+      "Claude & Anthropic",
+      "AI Agents"
+    ],
+    "summary": "The email introduces \"The Cartographer,\" a new tool that uses parallel Sonnet subagents to analyze large codebases and produce comprehensive architecture documentation, countering claims that Claude struggles with big projects. A GitHub link to the tool is provided in the referenced tweet by KingBootoshi. This solution offers an effective way to map and understand complex codebases."
+  },
+  {
+    "subject": "Something we've been trying out the last few days: instead of prompt\r\n stuffing https://t.co/aRKc8WX81O (especially in subfolders), add skills to\r\n the repository.  So far the results seem better.  Its totally possible its\r\n entirely behavioral (\"just tell it to use the skill\" vs",
+    "date": "Sat, 10 Jan 2026 16:58:55 -0500",
+    "from": "Bob Fine <bob@coolbluemedia.net>",
+    "content": "zeeg (@David Cramer) posted: Something we've been trying out the last few\r\ndays: instead of prompt stuffing https://t.co/aRKc8WX81O (especially in\r\nsubfolders), add skills to the repository.\r\n\r\nSo far the results seem better.\r\n\r\nIts totally possible its entirely behavioral (\"just tell it to use the\r\nskill\" vs https://x.com/zeeg/status/2009885405269692576?s=51",
+    "links": [
+      "https://t.co/aRKc8WX81O",
+      "https://x.com/zeeg/status/2009885405269692576?s=51"
+    ],
+    "categories": [
+      "Prompt Engineering"
+    ],
+    "summary": "David Cramer (@zeeg) shared that instead of prompt stuffing—especially within subfolders—they have been adding skills directly to the repository, which has yielded better results. He suggests the improvement might be behavioral, simply by explicitly instructing the system to use the skill rather than relying on prompt context. The linked tweets likely provide examples or further discussion of this approach."
+  },
+  {
+    "subject": "i created the most powerful Claude Code workflow i've ever built.  introducing /apex skill:  runs 10 autonomous steps from feature → PR:  → init branch → analyze code → plan feature → execute → validate → review → fix issues → add tests → verify tests → create PR",
+    "date": "Wed, 14 Jan 2026 18:53:32 -0500",
+    "from": "Bob Fine <bob@coolbluemedia.net>",
+    "content": "melvynxdev (@Melvyn • Builder) posted: i created the most powerful Claude\r\nCode workflow i've ever built.\r\n\r\nintroducing /apex skill:\r\n\r\nruns 10 autonomous steps from feature → PR:\r\n\r\n→ init branch\r\n→ analyze code\r\n→ plan feature\r\n→ execute\r\n→ validate\r\n→ review\r\n→ fix issues\r\n→ add tests\r\n→ verify tests\r\n→ create PR https://x.com/melvynxdev/status/2011242872297886149?s=51",
+    "links": [
+      "https://x.com/melvynxdev/status/2011242872297886149?s=51"
+    ],
+    "categories": [
+      "Claude & Anthropic",
+      "No-Code/Low-Code AI Builders"
+    ],
+    "summary": "Melvynxdev introduced the /apex skill, a powerful Claude Code workflow that autonomously executes 10 steps from feature creation to pull request, including branch initialization, code analysis, planning, execution, validation, review, issue fixing, testing, and PR creation. This workflow streamlines development by automating the entire feature-to-PR process. More details and updates are available on Melvynxdev’s Twitter post linked in the email."
+  },
+  {
+    "subject": "https://t.co/PsQRSN8RTH",
+    "date": "Sat, 10 Jan 2026 16:56:47 -0500",
+    "from": "Bob Fine <bob@coolbluemedia.net>",
+    "content": "TheZvi (@Zvi Mowshowitz) posted: https://t.co/PsQRSN8RTH\r\nhttps://x.com/thezvi/status/2009679078832378090?s=51",
+    "links": [
+      "https://x.com/thezvi/status/2009679078832378090?s=51",
+      "https://t.co/PsQRSN8RTH"
+    ],
+    "categories": [
+      "General AI"
+    ],
+    "summary": "The email references a tweet by TheZvi (Zvi Mowshowitz) shared via the link https://x.com/thezvi/status/2009679078832378090, likely discussing a specific topic or insight from his commentary. The included shortened URL (https://t.co/PsQRSN8RTH) directs to the same tweet, suggesting the main focus is on his latest thoughts or analysis shared on Twitter."
+  },
+  {
+    "subject": "introducing agent-loops + ui viewer  i gave droid+gpt5.2 codex dannys tweet https://t.co/y7VlcoCPjh   asked to reverse engineer it  then rebuilt matts loop system (gh issue → pr) https://t.co/xJ8ZqQqe5B  hooked them together so you can run loops by creating issues locally, on gh",
+    "date": "Thu, 15 Jan 2026 21:43:25 -0500",
+    "from": "Bob Fine <bob@coolbluemedia.net>",
+    "content": "bentossell (@Ben Tossell) posted: introducing agent-loops + ui viewer\r\n\r\ni gave droid+gpt5.2 codex dannys tweet https://t.co/y7VlcoCPjh\r\n\r\nasked to reverse engineer it\r\n\r\nthen rebuilt matts loop system (gh issue → pr) https://t.co/xJ8ZqQqe5B\r\n\r\nhooked them together so you can run loops by creating issues locally, on gh\r\nhttps://x.com/bentossell/status/2011800318367953051?s=51",
+    "links": [
+      "https://x.com/bentossell/status/2011800318367953051?s=51",
+      "https://t.co/xJ8ZqQqe5B",
+      "https://t.co/y7VlcoCPjh"
+    ],
+    "categories": [
+      "OpenAI & GPT",
+      "AI Agents"
+    ],
+    "summary": "Ben Tossell introduced a new system called agent-loops combined with a UI viewer, which integrates Droid and GPT-5.2 Codex to reverse engineer a tweet and rebuild Matt's GitHub loop system that converts issues into pull requests. This setup allows users to run automated loops by creating issues locally or on GitHub, streamlining development workflows."
+  },
+  {
+    "subject": "If you're building with Claude Code, you'll want to bookmark this\r\n site.  A full agent marketplace of 60,000+ Claude Skills that are ready for\r\n use now.  https:// skillsmp. com/",
+    "date": "Wed, 14 Jan 2026 18:50:45 -0500",
+    "from": "Bob Fine <bob@coolbluemedia.net>",
+    "content": "milesdeutscher (@Miles Deutscher) posted: If you're building with Claude\r\nCode, you'll want to bookmark this site.\r\n\r\nA full agent marketplace of 60,000+ Claude Skills that are ready for use\r\nnow.\r\n\r\nhttps:// skillsmp. com/\r\nhttps://x.com/milesdeutscher/status/2011542096164036702?s=51",
+    "links": [
+      "https://x.com/milesdeutscher/status/2011542096164036702?s=51"
+    ],
+    "categories": [
+      "Claude & Anthropic",
+      "AI Agents"
+    ],
+    "summary": "The email highlights a valuable resource for developers using Claude Code: a marketplace hosting over 60,000 ready-to-use Claude Skills. The provided link (https://skillsmp.com/) directs to this extensive agent marketplace, offering a wide range of tools to enhance Claude-based projects. Additionally, a related tweet by Miles Deutscher shares more context about this resource."
+  },
+  {
+    "subject": "Build App + Database + Hosting Using Google Antigravity | End‑to‑End App Development",
+    "date": "Sun, 11 Jan 2026 17:59:26 +0000",
+    "from": "Bob Fine <bob@coolbluemedia.net>",
+    "content": "https://youtu.be/wAbl1qxl52s",
+    "links": [
+      "https://youtu.be/wAbl1qxl52s"
+    ],
+    "categories": [
+      "Google & Gemini"
+    ],
+    "summary": "This email introduces a tutorial video on building an app with integrated database and hosting using Google Antigravity, showcasing an end-to-end app development process. The linked YouTube video provides a step-by-step guide to leveraging Google Antigravity for streamlined app creation and deployment."
+  },
+  {
+    "subject": "https://t.co/9DEbRzSxS2",
+    "date": "Tue, 13 Jan 2026 21:30:27 -0500",
+    "from": "Bob Fine <bob@coolbluemedia.net>",
+    "content": "startupideaspod (@The Startup Ideas Podcast (SIP) 🧃) posted:\r\nhttps://t.co/9DEbRzSxS2\r\nhttps://x.com/startupideaspod/status/2011121459226427835?s=51",
+    "links": [
+      "https://t.co/9DEbRzSxS2",
+      "https://x.com/startupideaspod/status/2011121459226427835?s=51"
+    ],
+    "categories": [
+      "AI Coding IDEs",
+      "AI for Business"
+    ],
+    "summary": "The Startup Ideas Podcast shared a new episode or content link focused on startup ideas and entrepreneurship. The provided URLs likely lead to their latest podcast episode or related discussion on Twitter, offering insights and inspiration for aspiring entrepreneurs."
+  },
+  {
+    "subject": "BREAKING: AI can now build you a business in 24 hours.  Here are 16\r\n insane Grok 4 prompts to turn any idea into income in 2026: (Save for later)",
+    "date": "Sat, 10 Jan 2026 16:58:22 -0500",
+    "from": "Bob Fine <bob@coolbluemedia.net>",
+    "content": "hasantoxr (@Hasan Toor) posted: BREAKING: AI can now build you a business\r\nin 24 hours.\r\n\r\nHere are 16 insane Grok 4 prompts to turn any idea into income in 2026:\r\n(Save for later) https://x.com/hasantoxr/status/2009252731857621128?s=51",
+    "links": [
+      "https://x.com/hasantoxr/status/2009252731857621128?s=51"
+    ],
+    "categories": [
+      "AI Coding IDEs",
+      "Prompt Engineering",
+      "AI for Business"
+    ],
+    "summary": "The email highlights a breakthrough where AI can create a business within 24 hours using Grok 4 prompts. It shares a link to Hasan Toor’s post featuring 16 powerful prompts designed to transform any idea into income in 2026. Recipients are encouraged to save the prompts for future use."
+  },
+  {
+    "subject": "Ok Claude Code is insane.  People can't stop building and getting productivity superpowers.  10 wild examples. Bookmark this👇",
+    "date": "Sat, 10 Jan 2026 16:57:48 -0500",
+    "from": "Bob Fine <bob@coolbluemedia.net>",
+    "content": "minchoi (@Min Choi) posted: Ok Claude Code is insane.\r\n\r\nPeople can't stop building and getting productivity superpowers.\r\n\r\n10 wild examples. Bookmark this👇\r\nhttps://x.com/minchoi/status/2009661613792719324?s=51",
+    "links": [
+      "https://x.com/minchoi/status/2009661613792719324?s=51"
+    ],
+    "categories": [
+      "Claude & Anthropic"
+    ],
+    "summary": "The email highlights a tweet by Min Choi showcasing 10 impressive examples of how people are leveraging Claude Code to significantly boost productivity. It emphasizes the rapid innovation and creative applications emerging around this tool. The included link directs to the original tweet featuring these examples for further inspiration."
+  },
+  {
+    "subject": "Adding AI-generated FAQs to existing pages can dramatically boost featured snippets.  Even without changing any other content.  In a recent test: 45 pages → 28 featured snippets in just 10 weeks.  Here’s the step-by-step FAQ strategy that actually works 🧵👇",
+    "date": "Sat, 10 Jan 2026 17:42:12 -0500",
+    "from": "Bob Fine <bob@coolbluemedia.net>",
+    "content": "noelcetaSEO (@Noel Ceta) posted: Adding AI-generated FAQs to existing pages\r\ncan dramatically boost featured snippets.\r\n\r\nEven without changing any other content.\r\n\r\nIn a recent test: 45 pages → 28 featured snippets in just 10 weeks.\r\n\r\nHere’s the step-by-step FAQ strategy that actually works 🧵👇\r\nhttps://x.com/noelcetaseo/status/2010056558403527018?s=51",
+    "links": [
+      "https://x.com/noelcetaseo/status/2010056558403527018?s=51"
+    ],
+    "categories": [
+      "General AI"
+    ],
+    "summary": "SEO expert Noel Ceta shares that adding AI-generated FAQs to existing web pages can significantly increase the number of featured snippets, demonstrated by a test where 45 pages gained 28 featured snippets in 10 weeks without other content changes. The linked Twitter thread provides a detailed, step-by-step FAQ strategy to achieve these results."
+  },
+  {
+    "subject": "i've helped 50+ business owners escape \"n8n hell\"  the problem isn't\r\n you. it's that every tutorial is built for developers.  \"just parse the JSON\"\r\n \"configure your webhook\" \"set up an HTTP request node\"  if you don't know\r\n what those words mean, you're stuck before you start.",
+    "date": "Sat, 10 Jan 2026 17:03:42 -0500",
+    "from": "Bob Fine <bob@coolbluemedia.net>",
+    "content": "NoahEpstein_ (@Nozz) posted: i've helped 50+ business owners escape \"n8n\r\nhell\"\r\n\r\nthe problem isn't you. it's that every tutorial is built for developers.\r\n\r\n\"just parse the JSON\"\r\n\"configure your webhook\"\r\n\"set up an HTTP request node\"\r\n\r\nif you don't know what those words mean, you're stuck before you start.\r\nhttps://x.com/noahepstein_/status/2009965976000081962?s=51",
+    "links": [
+      "https://x.com/noahepstein_/status/2009965976000081962?s=51"
+    ],
+    "categories": [
+      "Learning Resources",
+      "AI for Business"
+    ],
+    "summary": "Noah Epstein highlights the challenge non-developers face when using n8n automation tools, as most tutorials assume technical knowledge with terms like \"parse the JSON\" and \"configure your webhook.\" He has helped over 50 business owners overcome this barrier, emphasizing that the difficulty lies in the developer-focused instructions rather than the users themselves. The linked tweet likely expands on his experience and advice for making n8n more accessible."
+  },
+  {
+    "subject": "Claude Code is sandboxed to your current directory.  Building an web\r\n app that imports from a shared SDK that's outside the current directory?\r\n   /add-dir ../sdk  Now Claude sees both and can read and edit both. No\r\n symlinks. No switching sessions.",
+    "date": "Sat, 10 Jan 2026 17:32:45 -0500",
+    "from": "Bob Fine <bob@coolbluemedia.net>",
+    "content": "adocomplete (@Ado) posted: Claude Code is sandboxed to your current\r\ndirectory.\r\n\r\nBuilding an web app that imports from a shared SDK that's outside the\r\ncurrent directory?\r\n\r\n/add-dir ../sdk\r\n\r\nNow Claude sees both and can read and edit both. No symlinks. No switching\r\nsessions. https://x.com/adocomplete/status/2009741551753449849?s=51",
+    "links": [
+      "https://x.com/adocomplete/status/2009741551753449849?s=51"
+    ],
+    "categories": [
+      "Claude & Anthropic",
+      "AI Coding IDEs"
+    ],
+    "summary": "Claude Code is sandboxed to the current directory, but you can now use the command \"/add-dir ../sdk\" to include and access a shared SDK located outside that directory. This allows Claude to read and edit files from both locations seamlessly without needing symlinks or switching sessions. The linked tweet likely demonstrates or announces this new feature."
+  },
+  {
+    "subject": "Fun experiment: you can now automate content production with Claude Cowork.  I gave Claude a browser and asked it to: 1) Find a NeurIPS best paper 2) Write a thread on it 3) Generate graphics on Krea 4) Validate its work with ChatGPT.  Shockingly, it worked! How to do it 👇",
+    "date": "Wed, 14 Jan 2026 18:54:36 -0500",
+    "from": "Bob Fine <bob@coolbluemedia.net>",
+    "content": "venturetwins (@Justine Moore) posted: Fun experiment: you can now automate\r\ncontent production with Claude Cowork.\r\n\r\nI gave Claude a browser and asked it to:\r\n1) Find a NeurIPS best paper\r\n2) Write a thread on it\r\n3) Generate graphics on Krea\r\n4) Validate its work with ChatGPT.\r\n\r\nShockingly, it worked! How to do it 👇\r\nhttps://x.com/venturetwins/status/2011474999094513881?s=51",
+    "links": [
+      "https://x.com/venturetwins/status/2011474999094513881?s=51"
+    ],
+    "categories": [
+      "Claude & Anthropic",
+      "OpenAI & GPT"
+    ],
+    "summary": "The email shares an experiment where Claude Cowork, equipped with a browser, was tasked to find a NeurIPS best paper, create a social media thread about it, generate related graphics using Krea, and validate the content with ChatGPT—successfully automating the entire content production process. The linked tweet likely provides a detailed walkthrough of this multi-step AI-driven workflow."
+  },
+  {
+    "subject": "Stop wasting hours trying to learn AI. 📘📚  I have already done it for you.  With one list. Zero confusion. And no fluff  📹 Videos:  1. LLM Introduction: https://t.co/pfFEpx4bbo  2. LLMs from Scratch: https://t.co/1bouXigDoQ  3. Agentic AI Overview (Stanford):",
+    "date": "Sat, 10 Jan 2026 17:38:09 -0500",
+    "from": "Bob Fine <bob@coolbluemedia.net>",
+    "content": "Krishnasagrawal (@Krishna Agrawal) posted: Stop wasting hours trying to\r\nlearn AI. 📘📚\r\n\r\nI have already done it for you.\r\n\r\nWith one list. Zero confusion. And no fluff\r\n\r\n📹 Videos:\r\n\r\n1. LLM Introduction: https://t.co/pfFEpx4bbo\r\n\r\n2. LLMs from Scratch: https://t.co/1bouXigDoQ\r\n\r\n3. Agentic AI Overview (Stanford):\r\nhttps://x.com/krishnasagrawal/status/2009490379821994150?s=51",
+    "links": [
+      "https://x.com/krishnasagrawal/status/2009490379821994150?s=51",
+      "https://t.co/pfFEpx4bbo",
+      "https://t.co/1bouXigDoQ"
+    ],
+    "categories": [
+      "AI Coding IDEs",
+      "AI Agents",
+      "AI Visual Tools",
+      "Learning Resources",
+      "LLM & Models"
+    ],
+    "summary": "Krishna Agrawal offers a curated, no-fluff list of resources to simplify learning about AI, specifically focusing on large language models (LLMs) and agentic AI. The email includes three key video links: an introduction to LLMs, a deep dive into building LLMs from scratch, and an overview of agentic AI from Stanford. These resources aim to save time and reduce confusion for those interested in AI fundamentals."
+  },
+  {
+    "subject": "HUGE update to Claude Code today.  You can now use Claude Code directly from the Claude Desktop app:  → With access to your local files. → No more terminal window 🔥  Install steps below ↓",
+    "date": "Sat, 10 Jan 2026 17:01:16 -0500",
+    "from": "Bob Fine <bob@coolbluemedia.net>",
+    "content": "DataChaz (@Charly Wargnier) posted: HUGE update to Claude Code today.\r\n\r\nYou can now use Claude Code directly from the Claude Desktop app:\r\n\r\n→ With access to your local files.\r\n→ No more terminal window 🔥\r\n\r\nInstall steps below ↓ https://x.com/datachaz/status/2009895380432105506?s=51",
+    "links": [
+      "https://x.com/datachaz/status/2009895380432105506?s=51"
+    ],
+    "categories": [
+      "Claude & Anthropic"
+    ],
+    "summary": "Claude Code has received a major update allowing users to run it directly within the Claude Desktop app, providing seamless access to local files and eliminating the need for a terminal window. This enhancement simplifies the user experience and streamlines workflow. Installation instructions are available via the linked tweet from DataChaz."
+  },
+  {
+    "subject": "This billionaire literally breaks down how AI will reshape software,\r\n economics, and biology in under 1 hour https://t.co/Krpp8sIgOe",
+    "date": "Thu, 15 Jan 2026 21:52:11 -0500",
+    "from": "Bob Fine <bob@coolbluemedia.net>",
+    "content": "jasminejpark (@Jasmine Park) posted: This billionaire literally breaks down\r\nhow AI will reshape software, economics, and biology in under 1 hour\r\nhttps://t.co/Krpp8sIgOe\r\nhttps://x.com/jasminejpark/status/2011638728226455988?s=51",
+    "links": [
+      "https://t.co/Krpp8sIgOe",
+      "https://x.com/jasminejpark/status/2011638728226455988?s=51"
+    ],
+    "categories": [
+      "General AI"
+    ],
+    "summary": "The email highlights a video in which a billionaire explains how artificial intelligence will transform software development, economic systems, and biological sciences in under one hour. The linked content likely features an in-depth discussion or presentation breaking down these impacts. This resource offers valuable insights into AI's future influence across multiple fields."
+  },
+  {
+    "subject": "Introducing Claude Delegator!  A Claude Code plugin that lets you use GPT 5.2 powered subagents directly within Claude Code.  Ask GPT 5.2 (via codex) to architect your code, perform security audits, or make any other changes to your codebase.  Easy installation guide below ↓",
+    "date": "Sat, 10 Jan 2026 17:35:22 -0500",
+    "from": "Bob Fine <bob@coolbluemedia.net>",
+    "content": "jarrodwatts (@Jarrod Watts) posted: Introducing Claude Delegator!\r\n\r\nA Claude Code plugin that lets you use GPT 5.2 powered subagents directly\r\nwithin Claude Code.\r\n\r\nAsk GPT 5.2 (via codex) to architect your code, perform security audits, or\r\nmake any other changes to your codebase.\r\n\r\nEasy installation guide below ↓\r\nhttps://x.com/jarrodwatts/status/2009963629500870977?s=51",
+    "links": [
+      "https://x.com/jarrodwatts/status/2009963629500870977?s=51"
+    ],
+    "categories": [
+      "Claude & Anthropic",
+      "OpenAI & GPT",
+      "AI Coding IDEs",
+      "AI Agents"
+    ],
+    "summary": "The email announces Claude Delegator, a new Claude Code plugin that integrates GPT 5.2 powered subagents to assist with tasks like code architecture and security audits directly within Claude Code. It highlights the plugin's capabilities and provides an easy installation guide via a linked tweet from the developer Jarrod Watts. This tool aims to streamline codebase management using advanced AI assistance."
+  },
+  {
+    "subject": "Introducing Agents by 21st (alpha)  We love Claude Code. We hate living in the CLI.  So we built a calm, visual client for real code work:  • works with your own Claude subscription • local work with worktrees + multiple sessions • multiple terminals per worktree • diff",
+    "date": "Tue, 13 Jan 2026 21:29:22 -0500",
+    "from": "Bob Fine <bob@coolbluemedia.net>",
+    "content": "serafimcloud (@serafim | 21st.dev) posted: Introducing Agents by 21st\r\n(alpha)\r\n\r\nWe love Claude Code.\r\nWe hate living in the CLI.\r\n\r\nSo we built a calm, visual client for real code work:\r\n\r\n• works with your own Claude subscription\r\n• local work with worktrees + multiple sessions\r\n• multiple terminals per worktree\r\n• diff https://x.com/serafimcloud/status/2010989919083147677?s=51",
+    "links": [
+      "https://x.com/serafimcloud/status/2010989919083147677?s=51"
+    ],
+    "categories": [
+      "Claude & Anthropic",
+      "AI Agents",
+      "AI Visual Tools"
+    ],
+    "summary": "21st has launched Agents (alpha), a visual client designed to enhance coding with Claude by moving away from the command-line interface. It integrates with your Claude subscription and supports local workflows using worktrees, multiple sessions, and terminals per worktree, along with diff capabilities. More details and updates can be found in the linked social media post by the developer."
+  },
+  {
+    "subject": "Claude Code is the best way to use AI.  Here's your complete guide:\r\n  1. Stop working in chat windows   Open terminal in your project folder, type\r\n claude, and it instantly has context of all your files. No more manual\r\n copy-paste.   2. Build your knowledge base first   Create four",
+    "date": "Wed, 14 Jan 2026 18:52:25 -0500",
+    "from": "Bob Fine <bob@coolbluemedia.net>",
+    "content": "aakashgupta (@Aakash Gupta) posted: Claude Code is the best way to use AI.\r\n\r\nHere's your complete guide:\r\n\r\n1. Stop working in chat windows\r\n\r\nOpen terminal in your project folder, type claude, and it instantly has\r\ncontext of all your files. No more manual copy-paste.\r\n\r\n2. Build your knowledge base first\r\n\r\nCreate four https://x.com/aakashgupta/status/2011223031662752079?s=51",
+    "links": [
+      "https://x.com/aakashgupta/status/2011223031662752079?s=51"
+    ],
+    "categories": [
+      "Claude & Anthropic",
+      "AI Coding IDEs"
+    ],
+    "summary": "The email highlights Claude Code as an efficient AI tool that integrates directly with your project folder via the terminal, eliminating the need for manual copy-pasting in chat windows. It also emphasizes the importance of building a knowledge base first to maximize its effectiveness, with further details available in a linked Twitter thread by Aakash Gupta."
+  },
+  {
+    "subject": "Student ID benefits   > Google Gemini Pro   > Student ID flight\r\n booking   > GitHub Student Pack   > GitHub Copilot   > DigitalOcean credits\r\n   > AWS Educate   > Google Cloud credits   > Microsoft Azure $100 credits   >\r\n MongoDB Atlas credits   > Heroku credits   > Vercel Pro",
+    "date": "Sat, 10 Jan 2026 17:40:00 -0500",
+    "from": "Bob Fine <bob@coolbluemedia.net>",
+    "content": "abhijitwt (@Abhijit) posted: Student ID benefits\r\n\r\n> Google Gemini Pro\r\n> Student ID flight booking\r\n> GitHub Student Pack\r\n> GitHub Copilot\r\n> DigitalOcean credits\r\n> AWS Educate\r\n> Google Cloud credits\r\n> Microsoft Azure $100 credits\r\n> MongoDB Atlas credits\r\n> Heroku credits\r\n> Vercel Pro https://x.com/abhijitwt/status/2009532719408243038?s=51",
+    "links": [
+      "https://x.com/abhijitwt/status/2009532719408243038?s=51"
+    ],
+    "categories": [
+      "Google & Gemini"
+    ],
+    "summary": "The email highlights various benefits available to students using their student ID, including access to Google Gemini Pro, discounted flight bookings, and developer tools like GitHub Student Pack and GitHub Copilot. It also lists cloud service credits from DigitalOcean, AWS Educate, Google Cloud, Microsoft Azure, MongoDB Atlas, Heroku, and Vercel Pro. The linked tweet likely provides additional details or updates on these student offers."
+  },
+  {
+    "subject": "Claude Code Skills Complete Guide:  > What are Skills? > Why use\r\n Skills? > Using Skills in Claude Code and Cowork > Writing effective skills >\r\n Skills verse, Claude. MD",
+    "date": "Tue, 13 Jan 2026 21:26:17 -0500",
+    "from": "Bob Fine <bob@coolbluemedia.net>",
+    "content": "claudecoders (@The Claude Coders) posted: Claude Code Skills Complete\r\nGuide:\r\n> What are Skills?\r\n> Why use Skills?\r\n> Using Skills in Claude Code and Cowork\r\n> Writing effective skills\r\n> Skills verse, Claude. MD\r\nhttps://x.com/claudecoders/status/2011174759422443671?s=51",
+    "links": [
+      "https://x.com/claudecoders/status/2011174759422443671?s=51"
+    ],
+    "categories": [
+      "Claude & Anthropic",
+      "AI Coding IDEs"
+    ],
+    "summary": "The email shares a comprehensive guide from Claude Coders on Claude Code Skills, covering what skills are, their benefits, how to use them in Claude Code and Cowork, and tips for writing effective skills. It also introduces the concept of the \"Skills verse\" in Claude. The linked post on X.com provides detailed insights and examples for users interested in enhancing their use of Claude Code Skills."
+  },
+  {
+    "subject": "okay, so @vercel's new agent browser is pretty stinkin great.\r\n  https://t.co/FfyoARDd86  substantially faster than playwright and is clearly\r\n optimized for AI use.  well done, folks!",
+    "date": "Thu, 15 Jan 2026 21:48:04 -0500",
+    "from": "Bob Fine <bob@coolbluemedia.net>",
+    "content": "Shpigford (@Josh Pigford) posted: okay, so @vercel's new agent browser is\r\npretty stinkin great.\r\n\r\nhttps://t.co/FfyoARDd86\r\n\r\nsubstantially faster than playwright and is clearly optimized for AI use.\r\n\r\nwell done, folks! https://x.com/shpigford/status/2011522613991129265?s=51",
+    "links": [
+      "https://x.com/shpigford/status/2011522613991129265?s=51",
+      "https://t.co/FfyoARDd86"
+    ],
+    "categories": [
+      "AI Agents"
+    ],
+    "summary": "Josh Pigford praises Vercel's new agent browser for being significantly faster than Playwright and optimized for AI applications. The linked tweet and article highlight its performance improvements and suitability for AI-driven tasks, marking it as a notable advancement in browser automation tools."
+  },
+  {
+    "subject": "🚨 RIP Prompt Engineering  Enter Context Engineering 2.0   It completely reframes how we think about human-AI interactions.   This is what you need to know (28 page PDF):",
+    "date": "Sat, 10 Jan 2026 16:59:37 -0500",
+    "from": "Bob Fine <bob@coolbluemedia.net>",
+    "content": "mdancho84 (@🔥 Matt Dancho (Business Science) 🔥) posted: 🚨 RIP Prompt\r\nEngineering\r\n\r\nEnter Context Engineering 2.0\r\n\r\nIt completely reframes how we think about human-AI interactions.\r\n\r\nThis is what you need to know (28 page PDF):\r\nhttps://x.com/mdancho84/status/2009968282854367337?s=51",
+    "links": [
+      "https://x.com/mdancho84/status/2009968282854367337?s=51"
+    ],
+    "categories": [
+      "Prompt Engineering",
+      "AI for Business"
+    ],
+    "summary": "The email announces a shift from traditional prompt engineering to \"Context Engineering 2.0,\" presenting a new framework for enhancing human-AI interactions. It highlights a detailed 28-page PDF shared by Matt Dancho that explains this transformative approach. The linked content likely provides an in-depth exploration of the concept and its implications."
+  },
+  {
+    "subject": "https://t.co/t9cMI8iWzS",
+    "date": "Sat, 10 Jan 2026 17:05:07 -0500",
+    "from": "Bob Fine <bob@coolbluemedia.net>",
+    "content": "alexwg (@Dr. Alex Wissner-Gross) posted: https://t.co/t9cMI8iWzS\r\nhttps://x.com/alexwg/status/2010013885303075047?s=51",
+    "links": [
+      "https://t.co/t9cMI8iWzS",
+      "https://x.com/alexwg/status/2010013885303075047?s=51"
+    ],
+    "categories": [
+      "General AI"
+    ],
+    "summary": "Dr. Alex Wissner-Gross shared a post on X (formerly Twitter) linked at https://t.co/t9cMI8iWzS, which likely contains insights or commentary on a scientific or technological topic given his expertise. The linked tweet (https://x.com/alexwg/status/2010013885303075047) provides the original content or discussion point he is highlighting."
+  },
+  {
+    "subject": "This is a real world Ralph loop, shipping a new feature.   Check out how it’s using the agent-browser skill to do acceptance tests in the browser.   I’m using /handoff in Amp instead of a bash loop with amp -x.   This gives me observability into the actual execution of each loop,",
+    "date": "Thu, 15 Jan 2026 21:47:06 -0500",
+    "from": "Bob Fine <bob@coolbluemedia.net>",
+    "content": "ryancarson (@Ryan Carson) posted: This is a real world Ralph loop, shipping\r\na new feature.\r\n\r\nCheck out how it’s using the agent-browser skill to do acceptance tests in\r\nthe browser.\r\n\r\nI’m using /handoff in Amp instead of a bash loop with amp -x.\r\n\r\nThis gives me observability into the actual execution of each loop,\r\nhttps://x.com/ryancarson/status/2011936020174959005?s=51",
+    "links": [
+      "https://x.com/ryancarson/status/2011936020174959005?s=51"
+    ],
+    "categories": [
+      "AI Agents"
+    ],
+    "summary": "Ryan Carson demonstrates a real-world Ralph loop for shipping a new feature, utilizing the agent-browser skill to perform acceptance tests directly in the browser. Instead of a traditional bash loop with amp -x, he uses the /handoff command in Amp, which provides better observability into each loop's execution. The linked tweet likely showcases this process in action."
+  },
+  {
+    "subject": "Claude Code with Opus-4.5 is basically AGI. Here's how to feel the\r\n AGI (with expert @carlvellotti):  11:04 - Setting Up MCPs 28:00 - Using\r\n Skills 38:00 - APIs 44:12 - Writing Docs 1:08:08 - GitHub Integration",
+    "date": "Tue, 13 Jan 2026 21:35:04 -0500",
+    "from": "Bob Fine <bob@coolbluemedia.net>",
+    "content": "aakashgupta (@Aakash Gupta) posted: Claude Code with Opus-4.5 is basically\r\nAGI. Here's how to feel the AGI (with expert @carlvellotti):\r\n\r\n11:04 - Setting Up MCPs\r\n28:00 - Using Skills\r\n38:00 - APIs\r\n44:12 - Writing Docs\r\n1:08:08 - GitHub Integration\r\nhttps://x.com/aakashgupta/status/2010863662924497205?s=51",
+    "links": [
+      "https://x.com/aakashgupta/status/2010863662924497205?s=51"
+    ],
+    "categories": [
+      "Claude & Anthropic",
+      "MCP (Model Context Protocol)"
+    ],
+    "summary": "The email highlights a detailed walkthrough by Aakash Gupta and expert Carl Vellotti demonstrating how Claude Code with Opus-4.5 functions as an advanced AGI. Key segments cover setting up MCPs, using skills, APIs, writing documentation, and GitHub integration, with a linked video on X (Twitter) providing the full tutorial."
+  },
+  {
+    "subject": "Platform for prompt management and evaluation  https://t.co/1tiueCCv2G",
+    "date": "Sat, 10 Jan 2026 17:41:06 -0500",
+    "from": "Bob Fine <bob@coolbluemedia.net>",
+    "content": "tom_doerr (@Tom Dörr) posted: Platform for prompt management and evaluation\r\n\r\nhttps://t.co/1tiueCCv2G\r\nhttps://x.com/tom_doerr/status/2009935534009765904?s=51",
+    "links": [
+      "https://t.co/1tiueCCv2G",
+      "https://x.com/tom_doerr/status/2009935534009765904?s=51"
+    ],
+    "categories": [
+      "Prompt Engineering"
+    ],
+    "summary": "Tom Dörr shared a platform designed for managing and evaluating prompts, likely aimed at improving prompt engineering workflows. The linked content (https://t.co/1tiueCCv2G) presumably provides access to or details about this tool, while the X.com link directs to the original announcement tweet for further context."
+  },
+  {
+    "subject": "theres going to be morons making $50k/month doing absolutely nothing\r\n  not exaggerating  they'll set up claude cowork once and it'll run their\r\n entire business while they sleep  let me explain how this works because most\r\n people still dont get it:  you give claude access to a folder",
+    "date": "Wed, 14 Jan 2026 18:55:32 -0500",
+    "from": "Bob Fine <bob@coolbluemedia.net>",
+    "content": "scaling_shields (@James Shields) posted: theres going to be morons making\r\n$50k/month doing absolutely nothing\r\n\r\nnot exaggerating\r\n\r\nthey'll set up claude cowork once and it'll run their entire business while\r\nthey sleep\r\n\r\nlet me explain how this works because most people still dont get it:\r\n\r\nyou give claude access to a folder\r\nhttps://x.com/scaling_shields/status/2011409515896606917?s=51",
+    "links": [
+      "https://x.com/scaling_shields/status/2011409515896606917?s=51"
+    ],
+    "categories": [
+      "Claude & Anthropic",
+      "AI for Business"
+    ],
+    "summary": "The email discusses how individuals can potentially earn $50k per month passively by setting up Claude Cowork, an AI tool, to manage their business operations autonomously. By granting Claude access to a specific folder, it can run the entire business without ongoing effort. The linked tweet likely elaborates on this automated business model and its simplicity."
+  },
+  {
+    "subject": "This AI workflow creates $10k product animations from a single photo 🤯  Nano Banana + Veo 3 just replaced your 3D artist.  Cinematic \"exploded view\" animations. Studio-quality output. Under 10 minutes.  Perfect for e-comm brands & agencies who want premium product videos without",
+    "date": "Sat, 10 Jan 2026 17:30:51 -0500",
+    "from": "Bob Fine <bob@coolbluemedia.net>",
+    "content": "mikefutia (@Mike Futia) posted: This AI workflow creates $10k product\r\nanimations from a single photo 🤯\r\n\r\nNano Banana + Veo 3 just replaced your 3D artist.\r\n\r\nCinematic \"exploded view\" animations. Studio-quality output. Under 10\r\nminutes.\r\n\r\nPerfect for e-comm brands & agencies who want premium product videos\r\nwithout https://x.com/mikefutia/status/2009755676630012234?s=51",
+    "links": [
+      "https://x.com/mikefutia/status/2009755676630012234?s=51"
+    ],
+    "categories": [
+      "AI Coding IDEs",
+      "AI Visual Tools"
+    ],
+    "summary": "This email highlights an AI workflow combining Nano Banana and Veo 3 that generates high-quality, cinematic \"exploded view\" product animations from a single photo in under 10 minutes, effectively replacing the need for a 3D artist. It is ideal for e-commerce brands and agencies seeking premium product videos quickly and affordably. The linked tweet likely showcases a demonstration or example of this innovative animation process."
+  },
+  {
+    "subject": "𝗢𝗹𝗶𝘃𝗲𝗿 𝗛𝘀𝘂’𝘀 𝗹𝗮𝘁𝗲𝘀𝘁 𝗽𝗶𝗲𝗰𝗲 𝗼𝗻 𝘁𝗵𝗲 𝗽𝗵𝘆𝘀𝗶𝗰𝗮𝗹 𝗔𝗜 𝗱𝗲𝗽𝗹𝗼𝘆𝗺𝗲𝗻𝘁 𝗴𝗮𝗽 𝗶𝘀 𝗼𝗻𝗲 𝗼𝗳 𝘁𝗵𝗲 𝗺𝗼𝘀𝘁 𝗰𝗼𝗺𝗽𝗿𝗲𝗵𝗲𝗻𝘀𝗶𝘃𝗲 𝗯𝗿𝗲𝗮𝗸𝗱𝗼𝘄𝗻𝘀 𝗜’𝘃𝗲 𝘀𝗲𝗲𝗻 𝗼𝗳 𝘄𝗵𝗲𝗿𝗲 𝗿𝗼𝗯𝗼𝘁𝗶𝗰𝘀 𝗮𝗰𝘁𝘂𝗮𝗹𝗹𝘆 𝘀𝘁𝗮𝗻𝗱𝘀",
+    "date": "Thu, 15 Jan 2026 21:51:12 -0500",
+    "from": "Bob Fine <bob@coolbluemedia.net>",
+    "content": "stepjamUK (@Stephen James) posted: 𝗢𝗹𝗶𝘃𝗲𝗿 𝗛𝘀𝘂’𝘀 𝗹𝗮𝘁𝗲𝘀𝘁\r\n𝗽𝗶𝗲𝗰𝗲 𝗼𝗻 𝘁𝗵𝗲 𝗽𝗵𝘆𝘀𝗶𝗰𝗮𝗹 𝗔𝗜 𝗱𝗲𝗽𝗹𝗼𝘆𝗺𝗲𝗻𝘁 𝗴𝗮𝗽\r\n𝗶𝘀 𝗼𝗻𝗲 𝗼𝗳 𝘁𝗵𝗲 𝗺𝗼𝘀𝘁 𝗰𝗼𝗺𝗽𝗿𝗲𝗵𝗲𝗻𝘀𝗶𝘃𝗲\r\n𝗯𝗿𝗲𝗮𝗸𝗱𝗼𝘄𝗻𝘀 𝗜’𝘃𝗲 𝘀𝗲𝗲𝗻 𝗼𝗳 𝘄𝗵𝗲𝗿𝗲 𝗿𝗼𝗯𝗼𝘁𝗶𝗰𝘀\r\n𝗮𝗰𝘁𝘂𝗮𝗹𝗹𝘆 𝘀𝘁𝗮𝗻𝗱𝘀\r\nhttps://x.com/stepjamuk/status/2011815640529846787?s=51",
+    "links": [
+      "https://x.com/stepjamuk/status/2011815640529846787?s=51"
+    ],
+    "categories": [
+      "General AI"
+    ],
+    "summary": "Oliver Hsu’s latest article offers a thorough analysis of the physical AI deployment gap, detailing the current challenges and realities in robotics implementation. Shared by Stephen James, the piece provides one of the most comprehensive perspectives on where robotics technology truly stands today. The linked tweet likely highlights key insights or excerpts from this in-depth breakdown."
+  },
+  {
+    "subject": "My Ralph Wiggum breakdown went viral.  It's a keep-it-simple-stupid\r\n approach to AI coding that lets you ship while you sleep.  So here's a full\r\n explanation, example code, and demo.",
+    "date": "Sat, 10 Jan 2026 16:55:23 -0500",
+    "from": "Bob Fine <bob@coolbluemedia.net>",
+    "content": "mattpocockuk (@Matt Pocock) posted: My Ralph Wiggum breakdown went viral.\r\n\r\nIt's a keep-it-simple-stupid approach to AI coding that lets you ship while\r\nyou sleep.\r\n\r\nSo here's a full explanation, example code, and demo.\r\nhttps://x.com/mattpocockuk/status/2008200878633931247?s=51",
+    "links": [
+      "https://x.com/mattpocockuk/status/2008200878633931247?s=51"
+    ],
+    "categories": [
+      "General AI"
+    ],
+    "summary": "Matt Pocock's viral \"Ralph Wiggum\" method presents a simple, effective approach to AI coding that enables developers to deploy projects effortlessly, even while sleeping. The email includes a full explanation, example code, and a demo, accessible via the linked tweet for those interested in implementing this streamlined technique."
+  },
+  {
+    "subject": "https://t.co/GwvusqFhDy",
+    "date": "Wed, 14 Jan 2026 18:56:35 -0500",
+    "from": "Bob Fine <bob@coolbluemedia.net>",
+    "content": "gregisenberg (@GREG ISENBERG) posted: https://t.co/GwvusqFhDy\r\nhttps://x.com/gregisenberg/status/2011461812890329313?s=51",
+    "links": [
+      "https://x.com/gregisenberg/status/2011461812890329313?s=51",
+      "https://t.co/GwvusqFhDy"
+    ],
+    "categories": [
+      "General AI"
+    ],
+    "summary": "The email highlights a recent post by Greg Isenberg shared via Twitter (x.com), linking to his latest update or commentary. The content likely involves insights or news relevant to his followers, accessible through the provided link for further details."
+  },
+  {
+    "subject": "Ambitious friends with bold ideas, I highly recommend considering applying for one of these... up to $100k with no strings attached (and the community is incredible)  → https://t.co/KVsPV9je16",
+    "date": "Sat, 10 Jan 2026 17:37:06 -0500",
+    "from": "Bob Fine <bob@coolbluemedia.net>",
+    "content": "jonnym1ller (@Jonny Miller) posted: Ambitious friends with bold ideas, I\r\nhighly recommend considering applying for one of these... up to $100k with\r\nno strings attached (and the community is incredible)\r\n\r\n→ https://t.co/KVsPV9je16\r\nhttps://x.com/jonnym1ller/status/2009648148000448567?s=51",
+    "links": [
+      "https://x.com/jonnym1ller/status/2009648148000448567?s=51",
+      "https://t.co/KVsPV9je16"
+    ],
+    "categories": [
+      "AI Coding IDEs"
+    ],
+    "summary": "Jonny Miller is encouraging ambitious individuals with bold ideas to apply for a funding opportunity offering up to $100,000 with no strings attached. He also highlights the supportive and incredible community associated with this program. More details and the application can be found through the provided link."
+  },
+  {
+    "subject": "Coding agents are changing how software gets built. Here are some\r\n best practices on how the Cursor team leverages agents effectively: https://t.co/4fLpQlTIlM",
+    "date": "Sat, 10 Jan 2026 17:12:55 -0500",
+    "from": "Bob Fine <bob@coolbluemedia.net>",
+    "content": "kristaletz (@krista) posted: Coding agents are changing how software gets\r\nbuilt. Here are some best practices on how the Cursor team leverages agents\r\neffectively: https://t.co/4fLpQlTIlM\r\nhttps://x.com/kristaletz/status/2009784985251688658?s=51",
+    "links": [
+      "https://t.co/4fLpQlTIlM",
+      "https://x.com/kristaletz/status/2009784985251688658?s=51"
+    ],
+    "categories": [
+      "AI Coding IDEs",
+      "AI Agents"
+    ],
+    "summary": "The email highlights how coding agents are transforming software development, sharing best practices from the Cursor team on effectively leveraging these agents. It includes a link to a detailed thread by Krista Letz that explores practical strategies and insights for integrating coding agents into workflows. The external links direct to the original Twitter post and the related discussion thread."
+  },
+  {
+    "subject": "R.I.P. basic prompting.  MIT just dropped a technique that makes ChatGPT reason like a team of experts instead of one overconfident intern.  It’s called “Recursive Meta-Cognition” and it outperforms standard prompts by 110%.  Here’s the prompt (and why this changes everything) 👇",
+    "date": "Thu, 15 Jan 2026 21:44:47 -0500",
+    "from": "Bob Fine <bob@coolbluemedia.net>",
+    "content": "godofprompt (@God of Prompt) posted: R.I.P. basic prompting.\r\n\r\nMIT just dropped a technique that makes ChatGPT reason like a team of\r\nexperts instead of one overconfident intern.\r\n\r\nIt’s called “Recursive Meta-Cognition” and it outperforms standard prompts\r\nby 110%.\r\n\r\nHere’s the prompt (and why this changes everything) 👇\r\nhttps://x.com/godofprompt/status/2011850737354228039?s=51",
+    "links": [
+      "https://x.com/godofprompt/status/2011850737354228039?s=51"
+    ],
+    "categories": [
+      "OpenAI & GPT",
+      "AI Coding IDEs",
+      "Prompt Engineering"
+    ],
+    "summary": "MIT has introduced a new prompting technique called “Recursive Meta-Cognition” that enables ChatGPT to reason more effectively by simulating a team of experts rather than a single source, improving performance by 110% over standard prompts. This breakthrough significantly enhances AI reasoning capabilities, marking a major advancement in prompt engineering. The linked tweet provides the exact prompt and explains its transformative impact."
+  },
+  {
+    "subject": "https://t.co/iGYM1PJnxv",
+    "date": "Sat, 10 Jan 2026 17:26:12 -0500",
+    "from": "Bob Fine <bob@coolbluemedia.net>",
+    "content": "RLanceMartin (@Lance Martin) posted: https://t.co/iGYM1PJnxv\r\nhttps://x.com/rlancemartin/status/2009683038272401719?s=51",
+    "links": [
+      "https://x.com/rlancemartin/status/2009683038272401719?s=51",
+      "https://t.co/iGYM1PJnxv"
+    ],
+    "categories": [
+      "General AI"
+    ],
+    "summary": "The email highlights a recent post by RLanceMartin shared via a Twitter link (https://x.com/rlancemartin/status/2009683038272401719). The content likely features insights or updates from Lance Martin, though specific details are not provided in the email itself. Recipients are encouraged to visit the link for the full context."
+  },
+  {
+    "subject": "✍️ over 80% of the vibe coded apps have critical security vulnerabilities  here is the checklist to make sure your app doesn't have this:  (don't jut bookmark this, copy them into your .cursorrules file)",
+    "date": "Wed, 14 Jan 2026 18:59:05 -0500",
+    "from": "Bob Fine <bob@coolbluemedia.net>",
+    "content": "burakeregar (@Burak Eregar) posted: ✍️ over 80% of the vibe coded apps have\r\ncritical security vulnerabilities\r\n\r\nhere is the checklist to make sure your app doesn't have this:\r\n\r\n(don't jut bookmark this, copy them into your .cursorrules file)\r\nhttps://x.com/burakeregar/status/2011056036673961998?s=51",
+    "links": [
+      "https://x.com/burakeregar/status/2011056036673961998?s=51"
+    ],
+    "categories": [
+      "AI Coding IDEs"
+    ],
+    "summary": "Burak Eregar highlights that over 80% of vibe coded apps contain critical security vulnerabilities and shares a practical checklist to help developers secure their applications. He advises copying the checklist directly into the .cursorrules file rather than just bookmarking it. The linked tweet provides detailed guidance for implementing these security measures."
+  },
+  {
+    "subject": "New blog post: https://t.co/nQJlDfqSIo",
+    "date": "Wed, 14 Jan 2026 19:13:58 -0500",
+    "from": "Bob Fine <bob@coolbluemedia.net>",
+    "content": "dkundel (@dominik kundel) posted: New blog post: https://t.co/nQJlDfqSIo\r\nhttps://x.com/dkundel/status/2010846158499827831?s=51",
+    "links": [
+      "https://x.com/dkundel/status/2010846158499827831?s=51",
+      "https://t.co/nQJlDfqSIo"
+    ],
+    "categories": [
+      "General AI"
+    ],
+    "summary": "Dominik Kundel shared a new blog post, accessible via the provided link (https://t.co/nQJlDfqSIo). The tweet linked (https://x.com/dkundel/status/2010846158499827831) announces and directs followers to this latest content update."
+  },
+  {
+    "subject": "\"i vibecoded my app but idk marketing\"⁣ ⁣ this is a valid excuse to be stuck for maybe like, 1 day⁣ ⁣ then just hire people to do (and teach you) marketing. this guy had 0 marketing experience so he hired 12 upwork contractors to do google ads, seo, etc⁣ ⁣ went from 0 to",
+    "date": "Sat, 10 Jan 2026 17:17:34 -0500",
+    "from": "Bob Fine <bob@coolbluemedia.net>",
+    "content": "JosephKChoi (@Joseph) posted: \"i vibecoded my app but idk marketing\"⁣\r\n⁣\r\nthis is a valid excuse to be stuck for maybe like, 1 day⁣\r\n⁣\r\nthen just hire people to do (and teach you) marketing. this guy had 0\r\nmarketing experience so he hired 12 upwork contractors to do google ads,\r\nseo, etc⁣\r\n⁣\r\nwent from 0 to https://x.com/josephkchoi/status/2009740007511101530?s=51",
+    "links": [
+      "https://x.com/josephkchoi/status/2009740007511101530?s=51"
+    ],
+    "categories": [
+      "Google & Gemini"
+    ],
+    "summary": "The email highlights a common challenge for app creators who lack marketing expertise, suggesting that after a brief pause, they should hire and learn from marketing professionals. It shares an example of someone with no marketing experience who successfully scaled their app from zero by employing 12 Upwork contractors for Google Ads, SEO, and other marketing tasks. The linked tweet likely showcases this growth journey or results."
+  },
+  {
+    "subject": "Robotic Companies in the United States  With global headquarters that\r\n are in the US.",
+    "date": "Wed, 14 Jan 2026 18:54:07 -0500",
+    "from": "Bob Fine <bob@coolbluemedia.net>",
+    "content": "rohanpaul_ai (@Rohan Paul) posted: Robotic Companies in the United States\r\n\r\nWith global headquarters that are in the US.\r\nhttps://x.com/rohanpaul_ai/status/2011272059733885139?s=51",
+    "links": [
+      "https://x.com/rohanpaul_ai/status/2011272059733885139?s=51"
+    ],
+    "categories": [
+      "Physical AI & Robotics"
+    ],
+    "summary": "The email highlights a post by Rohan Paul listing robotic companies headquartered in the United States. The linked tweet likely provides detailed information or a curated list of these US-based robotics firms with global headquarters in the country. This resource is useful for those interested in the American robotics industry landscape."
+  },
+  {
+    "subject": "Build App + Database + Hosting Using Google Antigravity | End-to-End\r\n App Development",
+    "date": "Sun, 11 Jan 2026 18:02:32 +0000",
+    "from": "Bob Fine <bob@coolbluemedia.net>",
+    "content": "https://lilys.ai/en/notes/google-antigravity-20260106/google-antigravity-app-development",
+    "links": [
+      "https://lilys.ai/en/notes/google-antigravity-20260106/google-antigravity-app-development"
+    ],
+    "categories": [
+      "Google & Gemini"
+    ],
+    "summary": "This email introduces a comprehensive guide on building an app, database, and hosting solution using Google Antigravity, highlighting an end-to-end app development approach. The linked article on lilys.ai provides detailed insights and practical steps for leveraging Google Antigravity technology to streamline the entire development process."
+  },
+  {
+    "subject": "Claude Code can replace 80% of your workflow if you configure it right.  Here’s the setup that turns Claude Code into a true Work Operating System:  1. MCPs  MCPs give Claude access to everything you use. Slack, Notion, Google Drive, databases, CRMs, project management tools,",
+    "date": "Thu, 15 Jan 2026 21:45:54 -0500",
+    "from": "Bob Fine <bob@coolbluemedia.net>",
+    "content": "aakashgupta (@Aakash Gupta) posted: Claude Code can replace 80% of your\r\nworkflow if you configure it right.\r\n\r\nHere’s the setup that turns Claude Code into a true Work Operating System:\r\n\r\n1. MCPs\r\n\r\nMCPs give Claude access to everything you use. Slack, Notion, Google Drive,\r\ndatabases, CRMs, project management tools,\r\nhttps://x.com/aakashgupta/status/2011509363601518943?s=51",
+    "links": [
+      "https://x.com/aakashgupta/status/2011509363601518943?s=51"
+    ],
+    "categories": [
+      "Claude & Anthropic",
+      "Google & Gemini",
+      "MCP (Model Context Protocol)"
+    ],
+    "summary": "The email highlights how configuring Claude Code with MCPs (Multi-Channel Plugins) can transform it into a comprehensive Work Operating System by integrating tools like Slack, Notion, Google Drive, and various databases and CRMs. This setup enables Claude Code to handle up to 80% of your workflow efficiently. The linked tweet likely provides additional insights or examples of this configuration in action."
+  },
+  {
+    "subject": "Agent Coding Lifehack  I feel a bit guilty for using this one, but\r\n what the hell.   When I'm asking the agents to do a massive\r\n comparison/revision loop, which normally arises when I have a massive\r\n markdown plan and I've gotten elaborate feedback on it from GPT Pro in the webapp,",
+    "date": "Sat, 10 Jan 2026 17:24:46 -0500",
+    "from": "Bob Fine <bob@coolbluemedia.net>",
+    "content": "doodlestein (@Jeffrey Emanuel) posted: Agent Coding Lifehack\r\n\r\nI feel a bit guilty for using this one, but what the hell.\r\n\r\nWhen I'm asking the agents to do a massive comparison/revision loop, which\r\nnormally arises when I have a massive markdown plan and I've gotten\r\nelaborate feedback on it from GPT Pro in the webapp,\r\nhttps://x.com/doodlestein/status/2009849615059660901?s=51",
+    "links": [
+      "https://x.com/doodlestein/status/2009849615059660901?s=51"
+    ],
+    "categories": [
+      "OpenAI & GPT",
+      "AI Agents"
+    ],
+    "summary": "The email shares a coding lifehack from Jeffrey Emanuel (@doodlestein) for efficiently managing extensive comparison and revision loops in agent workflows, especially after receiving detailed feedback on large markdown plans via GPT Pro in the web app. The linked tweet likely provides additional context or examples of this technique in action."
+  },
+  {
+    "subject": "a quick opus 4.5 vibecoding tip  ask claude to make state machine\r\n diagrams of existing components  this causes it to map out all paths (which,\r\n it will default to being lazy otherwise) but also helps you verify if it's\r\n doing things correctly at a systems level",
+    "date": "Sat, 10 Jan 2026 17:09:12 -0500",
+    "from": "Bob Fine <bob@coolbluemedia.net>",
+    "content": "mert (@mert | helius) posted: a quick opus 4.5 vibecoding tip\r\n\r\nask claude to make state machine diagrams of existing components\r\n\r\nthis causes it to map out all paths (which, it will default to being lazy\r\notherwise) but also helps you verify if it's doing things correctly at a\r\nsystems level https://x.com/mert/status/2009986072953126935?s=51",
+    "links": [
+      "https://x.com/mert/status/2009986072953126935?s=51"
+    ],
+    "categories": [
+      "Claude & Anthropic",
+      "Vibe Coding"
+    ],
+    "summary": "The email shares a tip for using Opus 4.5 vibecoding: asking Claude to generate state machine diagrams of existing components. This approach forces Claude to map out all possible paths, preventing it from being lazy, and helps verify the system's correctness at a higher level. The linked tweet likely provides additional context or examples of this technique in practice."
+  },
+  {
+    "subject": "Top 12 Replit Alternatives & Competitors in 2026",
+    "date": "Sun, 11 Jan 2026 18:04:56 +0000",
+    "from": "Bob Fine <bob@coolbluemedia.net>",
+    "content": "https://www.superblocks.com/blog/replit-alternatives",
+    "links": [
+      "https://www.superblocks.com/blog/replit-alternatives"
+    ],
+    "categories": [
+      "No-Code/Low-Code AI Builders"
+    ],
+    "summary": "The email highlights the top 12 alternatives and competitors to Replit in 2026, providing options for users seeking different coding platforms. It includes a link to a detailed blog post on Superblocks.com that reviews and compares these alternatives, helping developers find the best fit for their programming needs."
+  },
+  {
+    "subject": "A lot of people responded to this with \"compaction in codex is\r\n actually terrific - no issues\"  While I don't fully agree, it is true that\r\n given a really great plan, without interruption, codex can go a long while\r\n and perform well.  That said, when you start iterating with codex,",
+    "date": "Thu, 15 Jan 2026 21:50:03 -0500",
+    "from": "Bob Fine <bob@coolbluemedia.net>",
+    "content": "pvncher (@eric provencher) posted: A lot of people responded to this with\r\n\"compaction in codex is actually terrific - no issues\"\r\n\r\nWhile I don't fully agree, it is true that given a really great plan,\r\nwithout interruption, codex can go a long while and perform well.\r\n\r\nThat said, when you start iterating with codex,\r\nhttps://x.com/pvncher/status/2011974764282204384?s=51",
+    "links": [
+      "https://x.com/pvncher/status/2011974764282204384?s=51"
+    ],
+    "categories": [
+      "OpenAI & GPT"
+    ],
+    "summary": "The email discusses differing opinions on compaction performance in Codex, acknowledging that with an optimal plan and no interruptions, Codex can perform well for extended periods. However, challenges arise when iterating with Codex, implying potential issues during ongoing updates or changes. The linked tweet likely elaborates on these observations and community responses."
+  },
+  {
+    "subject": "I cleaned up a few notes & created a new version for those who prefer\r\n to read webpages over markdown readme files - https://t.co/O2tVevJeO2",
+    "date": "Sat, 10 Jan 2026 17:12:16 -0500",
+    "from": "Bob Fine <bob@coolbluemedia.net>",
+    "content": "ClaytonFarr (@Clayton Farr) posted: I cleaned up a few notes & created a\r\nnew version for those who prefer to read webpages over markdown readme\r\nfiles - https://t.co/O2tVevJeO2\r\nhttps://x.com/claytonfarr/status/2010087612216946792?s=51",
+    "links": [
+      "https://x.com/claytonfarr/status/2010087612216946792?s=51",
+      "https://t.co/O2tVevJeO2"
+    ],
+    "categories": [
+      "General AI"
+    ],
+    "summary": "Clayton Farr shared an updated and cleaned-up version of his notes, now available as a webpage for those who prefer reading online rather than in markdown readme files. The linked webpage offers a more accessible format for reviewing the content. The original tweet and webpage link provide direct access to the updated notes."
+  },
+  {
+    "subject": "Thinking about https://t.co/uMtNJBK2US vs https://t.co/dO80TLtudN\r\n  Feature Ralph: upfront planning via PRD's, big chunks of ambitious work\r\n  Backlog Ralph: point it at your GitHub issues list, make repro's, close\r\n issues, initiate discussions  Run both in parallel",
+    "date": "Sat, 10 Jan 2026 17:39:28 -0500",
+    "from": "Bob Fine <bob@coolbluemedia.net>",
+    "content": "mattpocockuk (@Matt Pocock) posted: Thinking about https://t.co/uMtNJBK2US\r\nvs https://t.co/dO80TLtudN\r\n\r\nFeature Ralph: upfront planning via PRD's, big chunks of ambitious work\r\n\r\nBacklog Ralph: point it at your GitHub issues list, make repro's, close\r\nissues, initiate discussions\r\n\r\nRun both in parallel\r\nhttps://x.com/mattpocockuk/status/2010005065268932658?s=51",
+    "links": [
+      "https://t.co/uMtNJBK2US",
+      "https://x.com/mattpocockuk/status/2010005065268932658?s=51",
+      "https://t.co/dO80TLtudN"
+    ],
+    "categories": [
+      "General AI"
+    ],
+    "summary": "The email discusses two approaches to project management: \"Feature Ralph,\" which focuses on upfront planning using Product Requirement Documents (PRDs) for ambitious work, and \"Backlog Ralph,\" which manages tasks directly through GitHub issues by reproducing, closing, and discussing them. It suggests running both methods in parallel to balance structured planning with agile issue tracking. The included links likely reference detailed discussions or examples of these approaches."
+  },
+  {
+    "subject": "Everyone loves @opencode now what?  I have published a universal\r\n setup to start your project with opencode. Similar to the one that I\r\n published for claude code.  https://t.co/pgQunuJd95",
+    "date": "Sat, 10 Jan 2026 17:37:45 -0500",
+    "from": "Bob Fine <bob@coolbluemedia.net>",
+    "content": "cloudxdev (@CloudAI-X) posted: Everyone loves @opencode now what?\r\n\r\nI have published a universal setup to start your project with opencode.\r\nSimilar to the one that I published for claude code.\r\n\r\nhttps://t.co/pgQunuJd95\r\nhttps://x.com/cloudxdev/status/2009983575094100184?s=51",
+    "links": [
+      "https://x.com/cloudxdev/status/2009983575094100184?s=51",
+      "https://t.co/pgQunuJd95"
+    ],
+    "categories": [
+      "Claude & Anthropic"
+    ],
+    "summary": "Cloudxdev has released a universal setup guide to help users start projects with @opencode, similar to a previous setup created for Claude code. The shared link likely provides detailed instructions or resources for this setup, making it easier for developers to begin using @opencode effectively."
+  },
+  {
+    "subject": "Droid is currently rank 1 on the terminal-bench 2.0 benchmark using\r\n GPT 5.2.  Claude Code with Opus 4.5 is rank 20.  It feels hard to believe it\r\n can be that much better, but today feels like a good day to try it out!",
+    "date": "Sat, 10 Jan 2026 17:28:28 -0500",
+    "from": "Bob Fine <bob@coolbluemedia.net>",
+    "content": "jarrodwatts (@Jarrod Watts) posted: Droid is currently rank 1 on the\r\nterminal-bench 2.0 benchmark using GPT 5.2.\r\n\r\nClaude Code with Opus 4.5 is rank 20.\r\n\r\nIt feels hard to believe it can be that much better, but today feels like a\r\ngood day to try it out!\r\nhttps://x.com/jarrodwatts/status/2009938269992300708?s=51",
+    "links": [
+      "https://x.com/jarrodwatts/status/2009938269992300708?s=51"
+    ],
+    "categories": [
+      "Claude & Anthropic",
+      "OpenAI & GPT"
+    ],
+    "summary": "Droid, powered by GPT 5.2, currently holds the top position on the terminal-bench 2.0 benchmark, while Claude Code with Opus 4.5 ranks 20th. The significant performance gap is surprising, prompting interest in testing Droid's capabilities. The linked tweet likely provides additional details or commentary on these benchmark results."
+  },
+  {
+    "subject": "https://t.co/Drd9T4nCMJ",
+    "date": "Tue, 13 Jan 2026 21:25:01 -0500",
+    "from": "Bob Fine <bob@coolbluemedia.net>",
+    "content": "eyad_khrais (@Eyad) posted: https://t.co/Drd9T4nCMJ\r\nhttps://x.com/eyad_khrais/status/2010810802023141688?s=51",
+    "links": [
+      "https://x.com/eyad_khrais/status/2010810802023141688?s=51",
+      "https://t.co/Drd9T4nCMJ"
+    ],
+    "categories": [
+      "General AI"
+    ],
+    "summary": "The email highlights a tweet by Eyad Khrais, linked for direct viewing on X (formerly Twitter). The content likely features an update or insight shared by Eyad, though specific details are not provided in the email itself. Recipients are encouraged to follow the link to see the full post."
+  },
+  {
+    "subject": "Complete Beginners Guide to Claude Code.  > Intro to Claude Code  >\r\n Easiest way to use Claude Code  > Planning and Thinking > Good vs Bad Prompts\r\n  > When things go wrong > Getting Better over time",
+    "date": "Tue, 13 Jan 2026 21:34:19 -0500",
+    "from": "Bob Fine <bob@coolbluemedia.net>",
+    "content": "claudecoders (@The Claude Coders) posted: Complete Beginners Guide to\r\nClaude Code.\r\n\r\n> Intro to Claude Code\r\n> Easiest way to use Claude Code\r\n> Planning and Thinking\r\n> Good vs Bad Prompts\r\n> When things go wrong\r\n> Getting Better over time\r\nhttps://x.com/claudecoders/status/2010641700545528134?s=51",
+    "links": [
+      "https://x.com/claudecoders/status/2010641700545528134?s=51"
+    ],
+    "categories": [
+      "Claude & Anthropic",
+      "AI Coding IDEs",
+      "Prompt Engineering"
+    ],
+    "summary": "The email shares a Complete Beginners Guide to Claude Code from The Claude Coders, covering key topics such as an introduction to Claude Code, best practices for usage, planning and prompt crafting, troubleshooting, and improving skills over time. The linked post on X (formerly Twitter) provides detailed insights and practical tips for new users to effectively work with Claude Code."
+  },
+  {
+    "subject": "in opencode v1.1.11  you can now use your ChatGPT Plus/Pro plans in\r\n OpenCode  /connect to set it up",
+    "date": "Sat, 10 Jan 2026 17:43:50 -0500",
+    "from": "Bob Fine <bob@coolbluemedia.net>",
+    "content": "thdxr (@dax) posted: in opencode v1.1.11\r\n\r\nyou can now use your ChatGPT Plus/Pro plans in OpenCode\r\n\r\n/connect to set it up https://x.com/thdxr/status/2009803906461905202?s=51",
+    "links": [
+      "https://x.com/thdxr/status/2009803906461905202?s=51"
+    ],
+    "categories": [
+      "OpenAI & GPT"
+    ],
+    "summary": "OpenCode version 1.1.11 now supports integration with ChatGPT Plus and Pro plans, allowing users to connect their subscriptions directly within the app. To enable this feature, users can use the /connect command as detailed in the linked announcement on X (formerly Twitter)."
+  },
+  {
+    "subject": "is gracenote available for free.via an api music - Google Search",
+    "date": "Wed, 14 Jan 2026 23:37:00 +0000",
+    "from": "Bob Fine <bob@coolbluemedia.net>",
+    "content": "https://www.google.com/search?q=is+gracenote+available+for+free.via+an+api+music&sca_esv=047bacf7e2b6b142&rlz=1CDGOYI_enUS715US720&hl=en-US&ei=KShoaabWJbKq5NoPltHh2QE&oq=is+gracenote+available+for+free.via+an+api+music&gs_lp=EhNtb2JpbGUtZ3dzLXdpei1zZXJwIjBpcyBncmFjZW5vdGUgYXZhaWxhYmxlIGZvciBmcmVlLnZpYSBhbiBhcGkgbXVzaWMyBRAhGKABMgUQIRigATIFECEYoAEyBRAhGKABMggQABiABBiiBEibP1C6GVjFJnACeAGQAQCYAX2gAZgGqgEDMC43uAEDyAEA-AEBmAIJoAK2BsICChAAGLADGNYEGEfCAgUQIRirApgDAIgGAZAGCJIHAzIuN6AH2yKyBwMwLje4B6cGwgcHMC41LjMuMcgHHIAIAA&sclient=mobile-gws-wiz-serp",
+    "links": [
+      "https://www.google.com/search?q=is+gracenote+available+for+free.via+an+api+music&sca_esv=047bacf7e2b6b142&rlz=1CDGOYI_enUS715US720&hl=en-US&ei=KShoaabWJbKq5NoPltHh2QE&oq=is+gracenote+available+for+free.via+an+api+music&gs_lp=EhNtb2JpbGUtZ3dzLXdpei1zZXJwIjBpcyBncmFjZW5vdGUgYXZhaWxhYmxlIGZvciBmcmVlLnZpYSBhbiBhcGkgbXVzaWMyBRAhGKABMgUQIRigATIFECEYoAEyBRAhGKABMggQABiABBiiBEibP1C6GVjFJnACeAGQAQCYAX2gAZgGqgEDMC43uAEDyAEA-AEBmAIJoAK2BsICChAAGLADGNYEGEfCAgUQIRirApgDAIgGAZAGCJIHAzIuN6AH2yKyBwMwLje4B6cGwgcHMC41LjMuMcgHHIAIAA&sclient=mobile-gws-wiz-serp"
+    ],
+    "categories": [
+      "Google & Gemini"
+    ],
+    "summary": "The email references a Google search inquiry about whether Gracenote's music data API is available for free. The linked search results likely provide information on Gracenote's API access policies, indicating that Gracenote typically offers its music metadata services through paid licensing rather than free API access. Users interested in free music APIs may need to explore alternative providers."
+  },
+  {
+    "subject": "besides replit what other platforms provide database options - Google Search",
+    "date": "Sun, 11 Jan 2026 17:55:28 +0000",
+    "from": "Bob Fine <bob@coolbluemedia.net>",
+    "content": "https://www.google.com/search?q=besides+replit+what+other+platforms+provide+database+options&sca_esv=d50a49532b9b8e2e&rlz=1CDGOYI_enUS715US720&hl=en-US&ei=YONjac2fNLaj5NoPo-vQ6AE&oq=besides+replit%2C+what+other+platforms+provide+database+op&gs_lp=EhNtb2JpbGUtZ3dzLXdpei1zZXJwIjhiZXNpZGVzIHJlcGxpdCwgd2hhdCBvdGhlciBwbGF0Zm9ybXMgcHJvdmlkZSBkYXRhYmFzZSBvcCoCCAAyBRAhGKABMgUQIRigATIFECEYoAEyBRAhGKABMgUQIRirAjIFECEYqwIyBRAAGO8FSK6OAlD0C1iC_QFwEHgBkAEAmAHSAaAB1zeqAQczMi4zNi4xuAEByAEA-AEBmAJVoAL9OKgCD8ICEBAAGAMYtAIY6gIYjwHYAQHCAhAQLhgDGLQCGOoCGI8B2AEBwgILEAAYgAQYkQIYigXCAg4QABiABBixAxiDARiKBcICCxAuGIAEGLEDGIMBwgIOEC4YgAQYsQMYgwEYigXCAgUQLhiABMICCxAuGIAEGNEDGMcBwgIKEAAYgAQYQxiKBcICDRAuGIAEGEMY5QQYigXCAhMQLhiABBixAxjRAxhDGMcBGIoFwgIFEAAYgATCAggQABiABBjJA8ICCxAAGIAEGJIDGIoFwgIVEAAYgAQYsQMYQxiKBRhGGPkBGKMFwgIIEAAYgAQYsQPCAhgQABiABBixAxhDGIoFGEYY-QEYjAXYAQHCAg0QABiABBixAxhDGIoFwgIEEAAYA8ICCxAAGIAEGIYDGIoFwgIIEAAYgAQYogTCAgYQABgWGB7CAgUQIRifBcICBxAhGKABGArCAgcQIRgKGKsCwgIIEAAYogQYiQWYAwTxBaXfghbARN9XugYECAEYCpIHBzQ3LjM3LjGgB975ArIHBzMxLjM3LjG4B9U4wgcJOC42NC4xMi4xyAebAYAIAA&sclient=mobile-gws-wiz-serp",
+    "links": [
+      "https://www.google.com/search?q=besides+replit+what+other+platforms+provide+database+options&sca_esv=d50a49532b9b8e2e&rlz=1CDGOYI_enUS715US720&hl=en-US&ei=YONjac2fNLaj5NoPo-vQ6AE&oq=besides+replit%2C+what+other+platforms+provide+database+op&gs_lp=EhNtb2JpbGUtZ3dzLXdpei1zZXJwIjhiZXNpZGVzIHJlcGxpdCwgd2hhdCBvdGhlciBwbGF0Zm9ybXMgcHJvdmlkZSBkYXRhYmFzZSBvcCoCCAAyBRAhGKABMgUQIRigATIFECEYoAEyBRAhGKABMgUQIRirAjIFECEYqwIyBRAAGO8FSK6OAlD0C1iC_QFwEHgBkAEAmAHSAaAB1zeqAQczMi4zNi4xuAEByAEA-AEBmAJVoAL9OKgCD8ICEBAAGAMYtAIY6gIYjwHYAQHCAhAQLhgDGLQCGOoCGI8B2AEBwgILEAAYgAQYkQIYigXCAg4QABiABBixAxiDARiKBcICCxAuGIAEGLEDGIMBwgIOEC4YgAQYsQMYgwEYigXCAgUQLhiABMICCxAuGIAEGNEDGMcBwgIKEAAYgAQYQxiKBcICDRAuGIAEGEMY5QQYigXCAhMQLhiABBixAxjRAxhDGMcBGIoFwgIFEAAYgATCAggQABiABBjJA8ICCxAAGIAEGJIDGIoFwgIVEAAYgAQYsQMYQxiKBRhGGPkBGKMFwgIIEAAYgAQYsQPCAhgQABiABBixAxhDGIoFGEYY-QEYjAXYAQHCAg0QABiABBixAxhDGIoFwgIEEAAYA8ICCxAAGIAEGIYDGIoFwgIIEAAYgAQYogTCAgYQABgWGB7CAgUQIRifBcICBxAhGKABGArCAgcQIRgKGKsCwgIIEAAYogQYiQWYAwTxBaXfghbARN9XugYECAEYCpIHBzQ3LjM3LjGgB975ArIHBzMxLjM3LjG4B9U4wgcJOC42NC4xMi4xyAebAYAIAA&sclient=mobile-gws-wiz-serp"
+    ],
+    "categories": [
+      "Google & Gemini",
+      "AI Coding IDEs",
+      "No-Code/Low-Code AI Builders"
+    ],
+    "summary": "The email references a Google search query exploring alternative platforms to Replit that offer database options. The linked search results likely provide a list and comparison of various development platforms with integrated database services, helping users find suitable alternatives for database hosting and management."
+  },
+  {
+    "subject": "https://t.co/KHd6UCwObk",
+    "date": "Tue, 13 Jan 2026 21:19:06 -0500",
+    "from": "Bob Fine <bob@coolbluemedia.net>",
+    "content": "aiedge_ (@AI Edge) posted: https://t.co/KHd6UCwObk\r\nhttps://x.com/aiedge_/status/2011108297152082250?s=51",
+    "links": [
+      "https://x.com/aiedge_/status/2011108297152082250?s=51",
+      "https://t.co/KHd6UCwObk"
+    ],
+    "categories": [
+      "General AI"
+    ],
+    "summary": "The email highlights a recent post by AI Edge shared on Twitter, linked via https://t.co/KHd6UCwObk. The content likely discusses advancements or insights related to artificial intelligence technology, as indicated by the source. For detailed information, the recipient is encouraged to view the original tweet at the provided link."
+  },
+  {
+    "subject": "Persistent memory for AI agents  https://t.co/DNE4dHieu5",
+    "date": "Wed, 14 Jan 2026 18:56:56 -0500",
+    "from": "Bob Fine <bob@coolbluemedia.net>",
+    "content": "tom_doerr (@Tom Dörr) posted: Persistent memory for AI agents\r\n\r\nhttps://t.co/DNE4dHieu5\r\nhttps://x.com/tom_doerr/status/2011351264601203068?s=51",
+    "links": [
+      "https://x.com/tom_doerr/status/2011351264601203068?s=51",
+      "https://t.co/DNE4dHieu5"
+    ],
+    "categories": [
+      "AI Agents"
+    ],
+    "summary": "Tom Dörr shared insights on the concept of persistent memory for AI agents, highlighting its potential to enhance AI capabilities by enabling long-term information retention. The linked content likely discusses technical approaches or implications of integrating persistent memory in AI systems. This development could significantly improve AI performance in tasks requiring continuity and context over time."
+  },
+  {
+    "subject": "can i use gemini to document the architecture of a github repository\r\n - Google Search",
+    "date": "Sun, 11 Jan 2026 20:38:16 +0000",
+    "from": "Bob Fine <bob@coolbluemedia.net>",
+    "content": "https://www.google.com/search?q=can+i+use+gemini+to+document+the+architecture+of+a+github+repository&sca_esv=382a47cf193d7511&rlz=1CDGOYI_enUS715US720&hl=en-US&ei=eAlkad_7FsKv5NoPl-iGyAs&oq=can+i+use+gemini+to+document+the+architecture+of+a+git&gs_lp=EhNtb2JpbGUtZ3dzLXdpei1zZXJwIjZjYW4gaSB1c2UgZ2VtaW5pIHRvIGRvY3VtZW50IHRoZSBhcmNoaXRlY3R1cmUgb2YgYSBnaXQqAggBMgUQIRigATIFECEYoAEyBRAhGKABMgUQIRigATIFECEYoAFI27ADUOYLWISiA3ASeAGQAQCYAfkBoAG5NKoBBzQyLjI1LjG4AQHIAQD4AQGYAlagAvE1qAIPwgIQEAAYAxi0AhjqAhiPAdgBAcICCxAAGIAEGJECGIoFwgIKEC4YgAQYQxiKBcICCxAuGIAEGLEDGIMBwgIOEC4YgAQYsQMYgwEYigXCAg4QABiABBixAxiDARiKBcICEBAuGIAEGLEDGEMYgwEYigXCAgoQABiABBhDGIoFwgIFEC4YgATCAhEQLhiABBiRAhixAxiDARiKBcICDhAuGIAEGLEDGNEDGMcBwgIIEC4YgAQYsQPCAhEQLhiABBixAxjRAxiDARjHAcICCxAuGIAEGMcBGK8BwgIFEAAYgATCAgsQABiABBixAxiDAcICCxAuGIAEGLEDGIoFwgIIEAAYgAQYsQPCAgsQABiABBixAxiKBcICBxAAGIAEGArCAgYQABgWGB7CAgcQABiABBgNwgILEAAYgAQYhgMYigXCAgUQABjvBcICBxAhGKABGArCAgQQIRgKwgIFECEYnwXCAgUQIRirApgDBfEF_6xdlUMY8oq6BgQIARgKkgcHNjAuMjUuMaAHrcQDsgcHNDIuMjUuMbgHrjXCBwc3LjU5LjIwyAeqAYAIAA&sclient=mobile-gws-wiz-serp",
+    "links": [
+      "https://www.google.com/search?q=can+i+use+gemini+to+document+the+architecture+of+a+github+repository&sca_esv=382a47cf193d7511&rlz=1CDGOYI_enUS715US720&hl=en-US&ei=eAlkad_7FsKv5NoPl-iGyAs&oq=can+i+use+gemini+to+document+the+architecture+of+a+git&gs_lp=EhNtb2JpbGUtZ3dzLXdpei1zZXJwIjZjYW4gaSB1c2UgZ2VtaW5pIHRvIGRvY3VtZW50IHRoZSBhcmNoaXRlY3R1cmUgb2YgYSBnaXQqAggBMgUQIRigATIFECEYoAEyBRAhGKABMgUQIRigATIFECEYoAFI27ADUOYLWISiA3ASeAGQAQCYAfkBoAG5NKoBBzQyLjI1LjG4AQHIAQD4AQGYAlagAvE1qAIPwgIQEAAYAxi0AhjqAhiPAdgBAcICCxAAGIAEGJECGIoFwgIKEC4YgAQYQxiKBcICCxAuGIAEGLEDGIMBwgIOEC4YgAQYsQMYgwEYigXCAg4QABiABBixAxiDARiKBcICEBAuGIAEGLEDGEMYgwEYigXCAgoQABiABBhDGIoFwgIFEC4YgATCAhEQLhiABBiRAhixAxiDARiKBcICDhAuGIAEGLEDGNEDGMcBwgIIEC4YgAQYsQPCAhEQLhiABBixAxjRAxiDARjHAcICCxAuGIAEGMcBGK8BwgIFEAAYgATCAgsQABiABBixAxiDAcICCxAuGIAEGLEDGIoFwgIIEAAYgAQYsQPCAgsQABiABBixAxiKBcICBxAAGIAEGArCAgYQABgWGB7CAgcQABiABBgNwgILEAAYgAQYhgMYigXCAgUQABjvBcICBxAhGKABGArCAgQQIRgKwgIFECEYnwXCAgUQIRirApgDBfEF_6xdlUMY8oq6BgQIARgKkgcHNjAuMjUuMaAHrcQDsgcHNDIuMjUuMbgHrjXCBwc3LjU5LjIwyAeqAYAIAA&sclient=mobile-gws-wiz-serp"
+    ],
+    "categories": [
+      "Google & Gemini"
+    ],
+    "summary": "The email references a Google search query about using Gemini to document the architecture of a GitHub repository. It suggests exploring whether Gemini, likely a documentation or diagramming tool, can be integrated with GitHub projects to visualize or document their structure. The included link leads to search results that may provide relevant tools, tutorials, or discussions on this topic."
+  },
+  {
+    "subject": "Un mec a laissé Claude Code bosser 6 heures sans surveillance.  C'est la Ralph Wigum Loop !  Le lendemain, l'app était terminée.  Et je me suis dit un truc.  Mes clients vont bientôt pouvoir faire ça eux-mêmes.  Créer leurs propres outils. Sans moi. Sans dev. Sans budget de 30K.",
+    "date": "Sat, 10 Jan 2026 17:16:26 -0500",
+    "from": "Bob Fine <bob@coolbluemedia.net>",
+    "content": "ArbieuL (@Arbieu.L) posted: Un mec a laissé Claude Code bosser 6 heures\r\nsans surveillance.\r\nC'est la Ralph Wigum Loop !\r\n\r\nLe lendemain, l'app était terminée.\r\n\r\nEt je me suis dit un truc.\r\n\r\nMes clients vont bientôt pouvoir faire ça eux-mêmes.\r\n\r\nCréer leurs propres outils.\r\nSans moi.\r\nSans dev.\r\nSans budget de 30K. https://x.com/arbieul/status/2009896331968397751?s=51",
+    "links": [
+      "https://x.com/arbieul/status/2009896331968397751?s=51"
+    ],
+    "categories": [
+      "Claude & Anthropic"
+    ],
+    "summary": "The email shares a story about someone leaving Claude Code to work unsupervised for six hours, resulting in a completed app the next day, dubbed the \"Ralph Wiggum Loop.\" The sender reflects that soon their clients will be able to create their own tools independently—without needing developers or large budgets. The linked tweet likely illustrates this successful, autonomous app development example."
+  },
+  {
+    "subject": "Introducing the OpenAI MCP Server - one stop shop to build  with OpenAI ecosystem, ChatGPT Apps and much more! 🔥  We packed all our guides, docs, API reference,  AppsSDK, Agentic Commerce Protocol and more in one easily accessible MCP server.  Works out of the box with Codex,",
+    "date": "Sat, 10 Jan 2026 17:21:38 -0500",
+    "from": "Bob Fine <bob@coolbluemedia.net>",
+    "content": "reach_vb (@Vaibhav (VB) Srivastav) posted: Introducing the OpenAI MCP\r\nServer - one stop shop to build with OpenAI ecosystem, ChatGPT Apps and\r\nmuch more! 🔥\r\n\r\nWe packed all our guides, docs, API reference, AppsSDK, Agentic Commerce\r\nProtocol and more in one easily accessible MCP server.\r\n\r\nWorks out of the box with Codex,\r\nhttps://x.com/reach_vb/status/2009686112986337309?s=51",
+    "links": [
+      "https://x.com/reach_vb/status/2009686112986337309?s=51"
+    ],
+    "categories": [
+      "OpenAI & GPT",
+      "AI Coding IDEs",
+      "AI Agents",
+      "MCP (Model Context Protocol)"
+    ],
+    "summary": "The OpenAI MCP Server is a comprehensive platform that consolidates guides, documentation, API references, the AppsSDK, and the Agentic Commerce Protocol into one accessible server for building within the OpenAI ecosystem and ChatGPT Apps. It is designed to work seamlessly with Codex, providing developers a streamlined resource hub. More details and updates can be found in the linked social media post by the creator."
+  },
+  {
+    "subject": "Google Antigravity & Gemini 3: Build Anything For Free",
+    "date": "Sun, 11 Jan 2026 18:03:46 +0000",
+    "from": "Bob Fine <bob@coolbluemedia.net>",
+    "content": "https://www.aifire.co/p/google-antigravity-gemini-3-build-anything-for-free",
+    "links": [
+      "https://www.aifire.co/p/google-antigravity-gemini-3-build-anything-for-free"
+    ],
+    "categories": [
+      "Google & Gemini"
+    ],
+    "summary": "The email highlights Google’s Antigravity and Gemini 3 technologies, emphasizing their potential to enable users to build a wide range of projects for free. The linked article on aifire.co likely provides detailed insights and practical guidance on leveraging these tools for creative and technical development."
+  },
+  {
+    "subject": "https://t.co/4LebDfeDLY",
+    "date": "Sat, 10 Jan 2026 16:54:26 -0500",
+    "from": "Bob Fine <bob@coolbluemedia.net>",
+    "content": "Param_eth (@Param) posted: https://t.co/4LebDfeDLY\r\nhttps://x.com/param_eth/status/2009933037400928621?s=51",
+    "links": [
+      "https://x.com/param_eth/status/2009933037400928621?s=51",
+      "https://t.co/4LebDfeDLY"
+    ],
+    "categories": [
+      "General AI"
+    ],
+    "summary": "The email references a tweet by Param_eth, likely discussing a recent update or insight related to Ethereum or blockchain technology. The included links direct to Param_eth's Twitter post for detailed information and context on the topic."
+  },
+  {
+    "subject": "Want to see Ralph in action?  Here are all the issues I reported to\r\n Ralph while it was running its autonomous loop today  Same prompt, ran 50+\r\n times, closed all these issues  https://t.co/6da4foTRxg",
+    "date": "Wed, 14 Jan 2026 19:03:05 -0500",
+    "from": "Bob Fine <bob@coolbluemedia.net>",
+    "content": "mattpocockuk (@Matt Pocock) posted: Want to see Ralph in action?\r\n\r\nHere are all the issues I reported to Ralph while it was running its\r\nautonomous loop today\r\n\r\nSame prompt, ran 50+ times, closed all these issues\r\n\r\nhttps://t.co/6da4foTRxg\r\nhttps://x.com/mattpocockuk/status/2011507424016888136?s=51",
+    "links": [
+      "https://x.com/mattpocockuk/status/2011507424016888136?s=51",
+      "https://t.co/6da4foTRxg"
+    ],
+    "categories": [
+      "Prompt Engineering"
+    ],
+    "summary": "Matt Pocock demonstrated Ralph's autonomous loop by running the same prompt over 50 times and reporting various issues, all of which Ralph successfully resolved. The linked tweet and page showcase the full list of issues addressed during this process, highlighting Ralph's effectiveness in automated problem-solving."
+  },
+  {
+    "subject": "I am happy to say Claude Cowork lives up to the hype and then some  I've been putting it through its paces the last day and it's delivered on everything:  • Organized all the files on my computer • Created a media kit for sponsors • Did my taxes • Canceled unused",
+    "date": "Wed, 14 Jan 2026 19:00:05 -0500",
+    "from": "Bob Fine <bob@coolbluemedia.net>",
+    "content": "AlexFinn (@Alex Finn) posted: I am happy to say Claude Cowork lives up to\r\nthe hype and then some\r\n\r\nI've been putting it through its paces the last day and it's delivered on\r\neverything:\r\n\r\n• Organized all the files on my computer\r\n• Created a media kit for sponsors\r\n• Did my taxes\r\n• Canceled unused https://x.com/alexfinn/status/2011561836651389108?s=51",
+    "links": [
+      "https://x.com/alexfinn/status/2011561836651389108?s=51"
+    ],
+    "categories": [
+      "Claude & Anthropic",
+      "AI Hardware & Compute"
+    ],
+    "summary": "Alex Finn shares a positive review of Claude Cowork, highlighting its effectiveness in organizing computer files, creating a media kit for sponsors, managing taxes, and canceling unused services. The linked tweet likely provides additional details or examples of these tasks successfully completed by the tool. Overall, Claude Cowork is praised for exceeding expectations in productivity and organization."
+  },
+  {
+    "subject": "7 ways to vibe code better with Claude Code:  1. Use Claude Skills 2.\r\n Integrate a memory layer 3. Utilize automated pipelines 4. Connect to\r\n services via MCPs 5. Have a tasks MD file for tracking 6. Deploy 5-10 agents\r\n on repetitive stuff 7. Create a workspace & run multi-terminals",
+    "date": "Sat, 10 Jan 2026 17:40:44 -0500",
+    "from": "Bob Fine <bob@coolbluemedia.net>",
+    "content": "meta_alchemist (@Meta Alchemist) posted: 7 ways to vibe code better with\r\nClaude Code:\r\n\r\n1. Use Claude Skills\r\n2. Integrate a memory layer\r\n3. Utilize automated pipelines\r\n4. Connect to services via MCPs\r\n5. Have a tasks MD file for tracking\r\n6. Deploy 5-10 agents on repetitive stuff\r\n7. Create a workspace & run multi-terminals\r\nhttps://x.com/meta_alchemist/status/2009770740430909882?s=51",
+    "links": [
+      "https://x.com/meta_alchemist/status/2009770740430909882?s=51"
+    ],
+    "categories": [
+      "Claude & Anthropic",
+      "AI Agents",
+      "MCP (Model Context Protocol)"
+    ],
+    "summary": "The email outlines seven strategies to improve coding efficiency with Claude Code, including using Claude Skills, integrating a memory layer, automating pipelines, connecting via MCPs, tracking tasks with a markdown file, deploying multiple agents for repetitive tasks, and setting up a workspace with multi-terminals. The linked tweet from Meta Alchemist likely provides additional context or examples for these tips."
+  },
+  {
+    "subject": "https://t.co/pTHVaFbdAy",
+    "date": "Sat, 10 Jan 2026 17:21:03 -0500",
+    "from": "Bob Fine <bob@coolbluemedia.net>",
+    "content": "JulianGoldieSEO (@Julian Goldie SEO) posted: https://t.co/pTHVaFbdAy\r\nhttps://x.com/juliangoldieseo/status/2010033522220904473?s=51",
+    "links": [
+      "https://x.com/juliangoldieseo/status/2010033522220904473?s=51",
+      "https://t.co/pTHVaFbdAy"
+    ],
+    "categories": [
+      "General AI"
+    ],
+    "summary": "The email highlights a recent post by JulianGoldieSEO on X (formerly Twitter), sharing insights or updates related to SEO. The included links direct to Julian Goldie's social media status, likely offering tips or commentary on search engine optimization strategies."
+  },
+  {
+    "subject": "Ralph Wiggum in a clean UI (finally)  cook apps autonomously for\r\n hours  launch agent army  touch grass  review  ship  should i release this update?",
+    "date": "Tue, 13 Jan 2026 21:31:14 -0500",
+    "from": "Bob Fine <bob@coolbluemedia.net>",
+    "content": "0xPaulius (@Paulius 🏴‍☠️) posted: Ralph Wiggum in a clean UI (finally)\r\n\r\ncook apps autonomously for hours\r\n\r\nlaunch agent army\r\n\r\ntouch grass\r\n\r\nreview\r\n\r\nship\r\n\r\nshould i release this update?\r\nhttps://x.com/0xpaulius/status/2011017008913994088?s=51",
+    "links": [
+      "https://x.com/0xpaulius/status/2011017008913994088?s=51"
+    ],
+    "categories": [
+      "AI Agents",
+      "AI for Business"
+    ],
+    "summary": "0xPaulius shared an update showcasing a clean user interface featuring Ralph Wiggum, highlighting the ability to autonomously run apps for hours and launch an \"agent army.\" The post outlines steps from development to review and shipping, ending with a question about releasing the update. The linked tweet likely provides a visual or demo of this new UI and functionality."
   }
 ]
