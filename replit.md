@@ -6,13 +6,18 @@ A comprehensive web-based guide that organizes and summarizes information from 5
 ## Project Structure
 ```
 /
-├── app.py                 # Flask web application
-├── parse_mbox.py          # Email parser script
-├── parsed_emails.json     # Extracted email data (541 emails)
+├── app.py                      # Flask web application
+├── parse_mbox.py               # Email parser script
+├── generate_summaries.py       # AI summary generator
+├── add_mbox.py                 # INCREMENTAL UPDATE - add new mbox files
+├── setup_new_guide.py          # Fresh start setup script
+├── parsed_emails.json          # Extracted email data (541 emails)
+├── processed_mbox_files.json   # Tracks which mbox files processed
+├── PRD.md                      # Full technical documentation
 ├── templates/
-│   └── index.html         # Main guide template
+│   └── index.html              # Main guide template
 └── attached_assets/
-    └── AI_*.mbox          # Source email file
+    └── *.mbox                  # Source email file(s)
 ```
 
 ## Key Features
@@ -48,24 +53,39 @@ Server runs on port 5000.
 9. No-Code/Low-Code Builders (49 emails)
 10. And more...
 
-## Reusing for a New Email Set
+## Adding New Emails (Incremental Update)
 
-To create a new guide from a different mbox file:
+To EXPAND your knowledge base with new emails:
 
-1. **Fork this project** in Replit
-2. **Add your mbox file** to the `attached_assets/` folder
-3. **Run the setup script**:
+1. **Export new emails** to .mbox format
+2. **Add the new mbox file** to `attached_assets/` (keep existing files)
+3. **Run incremental update**:
    ```bash
-   python setup_new_guide.py
+   python add_mbox.py
    ```
    This will:
-   - Parse your emails
-   - Generate AI summaries
-   - Update the guide title
-   - Prepare everything for viewing
+   - Preserve all existing emails
+   - Parse only the new mbox file
+   - Skip duplicates automatically
+   - Generate AI summaries for new emails only
+   - Update the database
 
-4. **Restart the app** to see your new content
+4. **Restart the app** to see updated content
+
+**Cost:** ~$0.15-0.20 per 500 new emails
+
+**Search:** No reindexing needed - client-side search automatically includes new emails
+
+## Starting Fresh (New Guide)
+
+To create a completely new guide:
+
+1. **Fork this project** in Replit
+2. **Delete** `parsed_emails.json` and `processed_mbox_files.json`
+3. **Add your mbox file** to `attached_assets/`
+4. **Run**: `python setup_new_guide.py`
 
 ## Recent Changes
+- **Jan 2026**: Added incremental update workflow (add_mbox.py)
 - **Jan 2026**: Added AI-generated summaries and boolean search
 - **Jan 2026**: Initial creation - parsed mbox file and built comprehensive guide

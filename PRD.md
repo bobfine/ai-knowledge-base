@@ -367,13 +367,105 @@ Or via Replit's package manager.
 
 ---
 
-## 11. Maintenance
+## 11. Incremental Updates (Expanding the Knowledge Base)
 
-### Adding New Emails
-1. Export new emails to .mbox format
-2. Replace or append to existing .mbox file
-3. Delete `parsed_emails.json`
-4. Run `python setup_new_guide.py`
+### Overview
+The incremental update workflow allows you to add new mbox files to expand your knowledge base **without losing existing data**. This is the recommended approach for growing your email guide over time.
+
+### Key Principle: Data Preservation
+- Existing emails remain untouched
+- Only NEW emails from new mbox files are added
+- Duplicate detection prevents the same email from being added twice
+- AI summaries are generated ONLY for new emails (cost-efficient)
+
+### Workflow Script: `add_mbox.py`
+
+**Usage:**
+```bash
+python add_mbox.py
+```
+
+**What It Does:**
+1. Loads existing `parsed_emails.json` (preserves all data)
+2. Scans `attached_assets/` for NEW mbox files not yet processed
+3. Parses new mbox file(s)
+4. Deduplicates by subject + date hash (MD5)
+5. Generates AI summaries for new emails only
+6. Merges new emails with existing database
+7. Saves updated `parsed_emails.json`
+8. Tracks processed files in `processed_mbox_files.json`
+
+### Step-by-Step: Adding New Emails
+
+1. **Export new emails** to .mbox format from your email client
+
+2. **Upload to Replit**
+   - Place the new .mbox file in `attached_assets/` folder
+   - Use a unique filename (e.g., `AI_February2026.mbox`)
+
+3. **Run incremental update**
+   ```bash
+   python add_mbox.py
+   ```
+
+4. **Review output**
+   - Script shows how many new emails were added
+   - Shows duplicates that were skipped
+   - Displays updated statistics
+
+5. **Restart the web app**
+   - The guide will automatically show updated totals
+   - Search includes all new emails (no reindexing needed)
+
+### Tracking Processed Files
+
+The system tracks which mbox files have been processed:
+
+**File:** `processed_mbox_files.json`
+```json
+[
+  "attached_assets/AI_January2026.mbox",
+  "attached_assets/AI_February2026.mbox"
+]
+```
+
+**To reprocess a file:**
+- Delete `processed_mbox_files.json` and run `add_mbox.py` again
+- Or manually remove the specific file path from the JSON
+
+### Deduplication Logic
+
+Emails are considered duplicates if they have the same:
+- Subject line (case-insensitive)
+- Date header
+
+**Hash function:**
+```python
+key = f"{subject}{date}".lower().strip()
+hash = md5(key.encode())
+```
+
+### Cost Estimation
+
+AI summaries are only generated for NEW emails:
+- ~$0.15-0.20 per 500 new emails
+- Existing emails with summaries are not re-processed
+- Cost scales linearly with new email count
+
+### FAQ: Does Search Need Reindexing?
+
+**No!** The search is client-side JavaScript that loads the entire `parsed_emails.json` when the page loads. There is no separate search index to maintain.
+
+When you:
+1. Add new emails to `parsed_emails.json`
+2. Restart the web app
+3. Refresh the browser
+
+All new emails are automatically searchable. The boolean search (AND, OR, NOT) works across the full dataset instantly.
+
+---
+
+## 12. Maintenance
 
 ### Regenerating Summaries
 ```bash
@@ -381,12 +473,43 @@ Or via Replit's package manager.
 python generate_summaries.py
 ```
 
-### Updating Categories
+### Updating Categories for Existing Emails
 1. Edit keywords in `parse_mbox.py`
 2. Delete `parsed_emails.json`
-3. Re-run parser
+3. Delete `processed_mbox_files.json` (to allow reprocessing)
+4. Run `python add_mbox.py` for each mbox file
+
+### Starting Fresh
+To completely reset the knowledge base:
+```bash
+rm parsed_emails.json
+rm processed_mbox_files.json
+python setup_new_guide.py
+```
 
 ---
 
-*Document Version: 1.0*
+## 13. Architecture: How Statistics Auto-Update
+
+The totals at the top of the guide are calculated dynamically from `parsed_emails.json`:
+
+**In `app.py`:**
+```python
+return render_template('index.html', 
+    total_emails=len(emails),  # Counts all emails in JSON
+    total_links=sum(len(e.get('links', [])) for e in emails)  # Sums all links
+)
+```
+
+When you add new emails and restart the app:
+- `len(emails)` automatically includes new entries
+- Link count automatically includes new links
+- Category counts recalculate from the full dataset
+
+**No manual updates needed** - the statistics are always accurate.
+
+---
+
+*Document Version: 2.0*
 *Last Updated: January 2026*
+*Added: Incremental update workflow, deduplication, cost transparency*
