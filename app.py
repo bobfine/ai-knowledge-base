@@ -1,8 +1,17 @@
 from flask import Flask, render_template, jsonify, send_file
 import json
 import os
+from email.utils import parsedate_to_datetime
 
 app = Flask(__name__)
+
+def parse_date_safe(date_str):
+    """Parse email date string, return epoch 0 if parsing fails."""
+    try:
+        return parsedate_to_datetime(date_str)
+    except:
+        from datetime import datetime, timezone
+        return datetime(1970, 1, 1, tzinfo=timezone.utc)
 
 @app.route('/download/template')
 def download_template():
@@ -21,6 +30,9 @@ def index():
             email_with_cat = email.copy()
             email_with_cat['category'] = cat
             categories[cat].append(email_with_cat)
+    
+    for cat in categories:
+        categories[cat].sort(key=lambda e: parse_date_safe(e.get('date', '')), reverse=True)
     
     sorted_categories = dict(sorted(categories.items(), key=lambda x: -len(x[1])))
     
