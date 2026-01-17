@@ -129,6 +129,10 @@ def categorize_email(subject, content):
         categories.append('AI Audio & Music')
     if any(word in text for word in ['automation', 'automate', 'workflow', 'n8n', 'zapier', 'make.com']):
         categories.append('AI Automation & Workflows')
+    if any(word in text for word in ['introducing', 'launched', 'announcing', 'new tool', 'just released', 'now available', 'check out', 'product hunt']):
+        categories.append('New AI Tool Announcements')
+    if any(word in text for word in ['tips', 'tricks', 'commands', 'cheatsheet', 'best practices', 'how to', 'guide to', 'ways to', 'steps to', 'things you']):
+        categories.append('Developer Tips & Lists')
     
     if not categories:
         categories.append('General AI')

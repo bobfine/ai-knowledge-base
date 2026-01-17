@@ -45,7 +45,8 @@
       "Claude & Anthropic",
       "OpenAI & GPT",
       "Prompt Engineering",
-      "AI Automation & Workflows"
+      "AI Automation & Workflows",
+      "Developer Tips & Lists"
     ],
     "summary": "Dashboard & AI Automation expert Lian Lim highlights that users are underutilizing Claude Code by treating it like a basic ChatGPT with terminal access, thereby missing its powerful custom prompt configuration features. Instead of simple prompts, instructions should be placed in specific files to unlock its full capabilities, as detailed in Lim’s linked Twitter post."
   },
@@ -179,7 +180,9 @@
       "LLM & Models",
       "AI Hardware & Compute",
       "AI Research & Reports",
-      "AI Automation & Workflows"
+      "AI Automation & Workflows",
+      "New AI Tool Announcements",
+      "Developer Tips & Lists"
     ],
     "summary": "The October 2025 Google Cloud Startups Newsletter introduces a comprehensive technical guide for startups on building and deploying AI agents, covering key concepts like RAG and multimodality, and tools such as Vertex AI and ADK. It also highlights upcoming events like the live stream on Google’s Gemini innovations, the availability of Anthropic’s Claude Sonnet 4.5 on Vertex AI for advanced AI applications, and showcases Galileo’s work in creating trustworthy AI solutions with Google Cloud and NVIDIA. Startups are encouraged to access these resources to accelerate their AI development journey."
   },
@@ -195,7 +198,8 @@
     "categories": [
       "Claude & Anthropic",
       "AI Agents",
-      "AI Automation & Workflows"
+      "AI Automation & Workflows",
+      "Developer Tips & Lists"
     ],
     "summary": "The Claude Code plugin offers seven AI agents—including a code reviewer, debugger, and security auditor—along with six skills and eight automation hooks to enhance development workflows. To use it, simply clone the repository from the provided link and run Claude with the plugin in your terminal. More details and updates can be found on the developer's Twitter post linked in the email."
   },
@@ -309,7 +313,8 @@
     ],
     "categories": [
       "AI Coding IDEs",
-      "Learning Resources"
+      "Learning Resources",
+      "Developer Tips & Lists"
     ],
     "summary": "Ryan Carson shares a practical guide on effectively managing an AI developer using @cursor_ai to build large features, outlined in five simple steps. The email also offers free downloadable files to support the process. More details and the full guide can be found in his linked Twitter post."
   },
@@ -467,7 +472,8 @@
       "AI Coding IDEs",
       "AI Visual Tools",
       "AI for Business",
-      "LLM & Models"
+      "LLM & Models",
+      "New AI Tool Announcements"
     ],
     "summary": "Alibaba has launched \"Qwen,\" a powerful AI model capable of writing, generating images and videos, and performing web searches, reportedly outperforming competitors like DeepSeek, ChatGPT-o1, and Claude sonnet. The announcement includes impressive examples showcasing Qwen's versatile capabilities, detailed in a linked Twitter thread by Ihtesham Haider."
   },
@@ -710,7 +716,8 @@
     "categories": [
       "Claude & Anthropic",
       "OpenAI & GPT",
-      "AI Agents"
+      "AI Agents",
+      "Developer Tips & Lists"
     ],
     "summary": "The email announces the release of Droids, advanced software development agents outperforming Claude Code and OpenAI Codex, now ranked #1 on Terminal-Bench. It includes a link to a detailed setup guide posted by the developer, dr_cintas, on X (formerly Twitter). This marks a significant advancement in AI-powered coding tools."
   },
@@ -723,7 +730,7 @@
       "https://x.com/folaoftech/status/2008514874687758348?s=51"
     ],
     "categories": [
-      "General AI"
+      "Developer Tips & Lists"
     ],
     "summary": "A recent post by folaoftech demonstrates how to transform a Mac’s notch into a Dynamic Island feature, enhancing functionality and aesthetics. Impressively, this trick also works on Macs without a notch, offering a creative UI upgrade. The linked tweet likely provides a tutorial or demonstration of this customization."
   },
@@ -953,7 +960,7 @@
       "https://x.com/splinetool/status/1915101023649046685?s=51&t=4xfSJ1zB6QDJdxzh5O9nDQ"
     ],
     "categories": [
-      "General AI"
+      "New AI Tool Announcements"
     ],
     "summary": "Spline has introduced Hana, a new interactive canvas featuring events and states, real-time vector nets and booleans, and production-ready export capabilities. This update aims to enhance interactivity and streamline workflows for designers and developers. More details and demonstrations can be found in their announcement thread on Twitter."
   },
@@ -1144,7 +1151,8 @@
     ],
     "categories": [
       "Google & Gemini",
-      "Learning Resources"
+      "Learning Resources",
+      "Developer Tips & Lists"
     ],
     "summary": "In a 2014 masterclass, Peter Thiel explained how companies like Google, PayPal, and Facebook built monopolies by creating unique value and dominating their markets. The email highlights 11 timeless lessons from his talk, starting with the principle to first create value and then capture it. The linked tweet likely provides a detailed breakdown of these key insights."
   },
@@ -1244,7 +1252,7 @@
       "https://x.com/mattpocockuk/status/2009243550446469143?s=51"
     ],
     "categories": [
-      "General AI"
+      "Developer Tips & Lists"
     ],
     "summary": "Matt Pocock has published an in-depth 3,000-word guide detailing 11 tips for effectively using Ralph, an AI coding assistant. This resource is highly recommended for developers working with AI to enhance their coding productivity. The linked tweet likely provides direct access to the full article and additional insights."
   },
@@ -1272,7 +1280,8 @@
     "categories": [
       "Google & Gemini",
       "AI Visual Tools",
-      "AI for Business"
+      "AI for Business",
+      "Developer Tips & Lists"
     ],
     "summary": "Google provides 11 free AI tools designed to assist professionals, creators, and businesses by simplifying tasks related to content creation, visuals, and coding. These tools enhance productivity and creativity across various workflows. More details and usage tips can be found in Andrew Bolis’s Twitter post linked in the email."
   },
@@ -1372,7 +1381,8 @@
     "categories": [
       "Google & Gemini",
       "AI Coding IDEs",
-      "Learning Resources"
+      "Learning Resources",
+      "Developer Tips & Lists"
     ],
     "summary": "Google AI Developers shared a tutorial on how to \"vibe-code\" your own applications using Gemini and Cursor AI within Google AI Studio, presented by Ammaar. The linked tweet likely provides detailed guidance or a demo on leveraging these tools for app development. This resource is valuable for developers interested in integrating advanced AI coding assistance into their projects."
   },
@@ -1435,7 +1445,9 @@
       "AI Hardware & Compute",
       "AI Research & Reports",
       "AI Audio & Music",
-      "AI Automation & Workflows"
+      "AI Automation & Workflows",
+      "New AI Tool Announcements",
+      "Developer Tips & Lists"
     ],
     "summary": "Google has launched Gemini 3, a new AI model available for free trial in Google AI Studio, enabling users to bring their ideas to life with advanced AI capabilities. The email includes links to try Gemini 3 and view related resources, highlighting easy access to this latest AI innovation from Google."
   },
@@ -1581,7 +1593,8 @@
       "AI Agents",
       "MCP (Model Context Protocol)",
       "No-Code/Low-Code AI Builders",
-      "AI Visual Tools"
+      "AI Visual Tools",
+      "New AI Tool Announcements"
     ],
     "summary": "Fusion is a new tool that enables collaborative visual coding at any scale, integrating seamlessly with any GitHub repository and leveraging your existing design systems, APIs, and MCP servers. It offers Figma-like visual editing and supports agentic pull requests, allowing teams to work together from both browsers and IDEs. More features and demos are available in the linked Twitter thread by the creator, Steve8708."
   },
@@ -1675,7 +1688,9 @@
       "AI for Business",
       "LLM & Models",
       "AI Audio & Music",
-      "AI Automation & Workflows"
+      "AI Automation & Workflows",
+      "New AI Tool Announcements",
+      "Developer Tips & Lists"
     ],
     "summary": "OpenAI's recent DevDay introduced groundbreaking tools including ChatGPT Apps, AgentKit, and GPT-5 Pro, significantly enhancing AI capabilities and user interaction beyond traditional browsers. Additionally, innovations like Riverside's chat-based video editing and xAI's Grok Imagine v0.9 highlight rapid advancements in AI-driven multimedia creation. The newsletter also spotlights Lindy AI, a platform enabling users to easily build AI agents and apps through simple English commands."
   },
@@ -1715,7 +1730,8 @@
       "https://x.com/cladoai/status/1946365879152783659?s=51"
     ],
     "categories": [
-      "Prompt Engineering"
+      "Prompt Engineering",
+      "New AI Tool Announcements"
     ],
     "summary": "Clado has launched Clado Atlas, a tool that can identify any individual among the 8 billion people on Earth using just a single text prompt. This new capability is now live and accessible at atlas.clado.ai. More details and demonstrations can be found in their announcement on Twitter."
   },
@@ -2035,7 +2051,8 @@
       "https://t.co/bYwvYSNbQA"
     ],
     "categories": [
-      "AI Research & Reports"
+      "AI Research & Reports",
+      "Developer Tips & Lists"
     ],
     "summary": "This email highlights that although PDFs make up only 0.6% of web content, they contain valuable information such as academic papers, legal documents, and manuals. It shares a detailed analysis on techniques for extracting high-quality data from a massive collection of 1.3 billion PDFs. The included links lead to a deep dive thread by eliebakouch discussing methods and insights on PDF data extraction."
   },
@@ -2049,7 +2066,8 @@
     ],
     "categories": [
       "OpenAI & GPT",
-      "Learning Resources"
+      "Learning Resources",
+      "New AI Tool Announcements"
     ],
     "summary": "OpenAI has launched seven new free AI courses for 2025, making advanced AI education accessible without any payment. These courses cover essential topics for anyone looking to deepen their understanding of AI technologies. More details and course listings can be found in the linked announcement from The AI Colony."
   },
@@ -2076,7 +2094,8 @@
       "https://x.com/charliebholtz/status/1945870105109246401?s=51"
     ],
     "categories": [
-      "Claude & Anthropic"
+      "Claude & Anthropic",
+      "New AI Tool Announcements"
     ],
     "summary": "Charlie Holtz announced a new Mac app called Conductor that enables users to run multiple Claude Codes simultaneously in parallel. This tool aims to streamline workflows by managing several AI code executions at once. More details and updates can be found on Charlie Holtz’s Twitter post linked in the email."
   },
@@ -2115,7 +2134,8 @@
       "https://x.com/stash_pomichter/status/1980741077205414328?s=51"
     ],
     "categories": [
-      "Physical AI & Robotics"
+      "Physical AI & Robotics",
+      "New AI Tool Announcements"
     ],
     "summary": "The email announces an upcoming open-source release of a Spatial Memory system for robots, featuring Spatiotemporal Retrieval-Augmented Generation (RAG). This technology aims to enhance robotic memory and contextual understanding over time and space. More details can be found in the linked social media post by the developer."
   },
@@ -2424,7 +2444,8 @@
     "categories": [
       "OpenAI & GPT",
       "Google & Gemini",
-      "AI Agents"
+      "AI Agents",
+      "New AI Tool Announcements"
     ],
     "summary": "Derek Nee announced flowithOS, an agent-focused operating system featuring a new browser that outperforms competitors like OpenAI Atlas and Gemini 2.5 Pro CU with near-perfect scores. The public beta is now available for Windows and Mac users. More details can be found in his tweet linked in the email."
   },
@@ -2464,7 +2485,8 @@
       "https://x.com/deedydas/status/1915255617775972590?s=51&t=4xfSJ1zB6QDJdxzh5O9nDQ"
     ],
     "categories": [
-      "Claude & Anthropic"
+      "Claude & Anthropic",
+      "Developer Tips & Lists"
     ],
     "summary": "Deedydas shared that by simply pasting a GitHub repository link into Claude Code and asking it to \"figure out how to run this,\" the AI reliably determines how to execute the code without needing to read the README. This highlights Claude Code's capability to simplify running unfamiliar repos, potentially eliminating the need to manually parse documentation. The linked tweet showcases this user experience."
   },
@@ -2533,7 +2555,8 @@
       "Claude & Anthropic",
       "Google & Gemini",
       "Prompt Engineering",
-      "MCP (Model Context Protocol)"
+      "MCP (Model Context Protocol)",
+      "New AI Tool Announcements"
     ],
     "summary": "Ian Nuttall demonstrated a setup where Claude Code orchestrates pair programming by integrating with o3 and Gemini 2.5 through MCP, creating a collaborative coding workflow. Claude manages the overall process, delegating specific tasks to Gemini and o3, while bypassing MCP limitations using prompt files. More details and the Zen MCP tool can be found in his linked Twitter post."
   },
@@ -2687,7 +2710,8 @@
       "Google & Gemini",
       "LLM & Models",
       "AI Research & Reports",
-      "AI Tools & Platforms"
+      "AI Tools & Platforms",
+      "New AI Tool Announcements"
     ],
     "summary": "Perplexity AI has launched Deep Research, a new feature that autonomously compiles comprehensive, in-depth research reports by aggregating and analyzing hundreds of sources. Available at no extra cost for Pro subscribers, Deep Research enhances the research experience with increased search capacity and advanced reasoning. Users can try it out via Perplexity’s website and app."
   },
@@ -2802,7 +2826,9 @@
       "AI Visual Tools",
       "LLM & Models",
       "AI Research & Reports",
-      "AI Audio & Music"
+      "AI Audio & Music",
+      "New AI Tool Announcements",
+      "Developer Tips & Lists"
     ],
     "summary": "Cursor 2.0 introduces Composer, a new agentic coding model that is four times faster and designed for low-latency coding, completing most tasks in under 30 seconds. The update features a multi-agent interface allowing parallel agent workflows, an embedded browser with advanced developer tools, improved code review across the codebase, and enhancements like voice mode and better performance. More details and the download are available on Cursor’s website and blog."
   },
@@ -2952,7 +2978,8 @@
     "categories": [
       "Claude & Anthropic",
       "AI Coding IDEs",
-      "Prompt Engineering"
+      "Prompt Engineering",
+      "Developer Tips & Lists"
     ],
     "summary": "The email shares a complete beginner's guide by Robert Youssef on how to craft effective prompts for Anthropic's Claude AI to achieve 100% accuracy in its outputs. The linked Twitter thread likely provides detailed strategies and examples for prompt engineering tailored to Claude. This resource is useful for users seeking to optimize their interactions with Claude for precise results."
   },
@@ -3141,7 +3168,9 @@
       "AI Coding IDEs",
       "AI Visual Tools",
       "Learning Resources",
-      "AI Research & Reports"
+      "AI Research & Reports",
+      "New AI Tool Announcements",
+      "Developer Tips & Lists"
     ],
     "summary": "Stanford's CS336 course offers a comprehensive video guide to Karpathy's nanochat, covering essential topics such as tokenization, resource accounting, pretraining, finetuning (SFT/RLHF), key architectures, GPU usage, kernels and Triton, parallelism, and scaling laws. This resource is recommended by Akshay Pachaar and provides a detailed overview for those interested in advanced AI model development. The linked tweet likely contains direct access or additional insights about the course."
   },
@@ -3186,7 +3215,8 @@
       "https://us-21890.app.gong.io/e/unsubscribe/email?tkn=eyJlbmMiOiJBMjU2R0NNIiwiYWxnIjoiZGlyIn0..hsu0V53g6ksD9hDt._tW0gScNOlRMl794rHceu5138OJVEpyYU3weXFT2ML-v_Vd0LZjP_IvN-EDx59nfHcF-aPEXU476_a0dTb0T0ZRi02CgQBc9wsC2ApmEIE4o-qtKyH1qXrYkzxuHgLTs8RcZD4sdJyUNfb_F2K4rLLIk13arh_ObSlPQ6aFV104jYrhMv1N1ppoaLTI.sTp6fUphGozZixfbU5m4Aw&uuid=0194f04d-a33f-7b17-85cf-ec3fafdf8149"
     ],
     "categories": [
-      "AI for Business"
+      "AI for Business",
+      "New AI Tool Announcements"
     ],
     "summary": "Miriam Ariza-Francom from Reddit is following up to discuss B2B advertising opportunities on Reddit, highlighting that 75% of decision makers on the platform find Reddit’s perspectives influential for new business products and solutions. She invites Robert to schedule a meeting via a provided calendar link to explore setting up Reddit ads and engaging with this audience."
   },
@@ -3322,7 +3352,8 @@
       "AI Hardware & Compute",
       "AI Research & Reports",
       "AI Audio & Music",
-      "AI Automation & Workflows"
+      "AI Automation & Workflows",
+      "Developer Tips & Lists"
     ],
     "summary": "This email presents an updated guide comparing GPT-5, Claude 4.5, and Gemini 2.5 across 10 common AI tasks, highlighting their strengths in areas like answering questions, writing, and coding. It also includes a 20-minute video covering nine productivity-focused AI projects and tips for deep research prompting. Subscribers can watch the detailed analysis on YouTube or read the full guide via the provided links."
   },
@@ -3493,7 +3524,8 @@
       "Prompt Engineering",
       "AI Agents",
       "AI for Business",
-      "AI Hardware & Compute"
+      "AI Hardware & Compute",
+      "New AI Tool Announcements"
     ],
     "summary": "The email discusses Google's recent launch of Gemini 2.5 Computer Use, an AI capable of interacting with browsers, spreadsheets, and IDEs without scripts or hacks, signaling a shift away from traditional prompt engineering. However, it is noted that Anthropic's Claude had introduced similar computer tool-use capabilities earlier, as detailed in their documentation. The linked resources provide further insights into Gemini 2.5's features and Claude's agent tool integrations."
   },
@@ -3510,7 +3542,8 @@
       "AI Coding IDEs",
       "Prompt Engineering",
       "AI for Business",
-      "AI Hardware & Compute"
+      "AI Hardware & Compute",
+      "New AI Tool Announcements"
     ],
     "summary": "Google has launched Gemini 2.5 Computer Use, a powerful AI that can seamlessly interact with browsers, spreadsheets, and IDEs without requiring scripts or hacks, effectively ending the need for specialized prompt engineering. This advancement enables more natural and versatile AI integration across various software environments, marking a significant shift in how AI tools are utilized. Further details and demonstrations are shared in the linked Twitter thread by Louis Gleeson."
   },
@@ -3543,7 +3576,8 @@
       "Learning Resources",
       "AI for Business",
       "LLM & Models",
-      "AI Research & Reports"
+      "AI Research & Reports",
+      "New AI Tool Announcements"
     ],
     "summary": "FirstMark has released the 2025 MAD (Machine Learning, AI, and Data) Landscape, a comprehensive market map highlighting key trends and 25 strategic ideas amid the current AI funding boom and real-world deployment challenges. This eleventh edition significantly streamlines the map by reducing featured companies from over 2,000 to around 1,150, reflecting a shift from hype-driven chatbots to practical AI systems with advanced capabilities like agents, memory, and reasoning. The full landscape and insights are available at mad.firstmark.com."
   },
@@ -3638,7 +3672,8 @@
     ],
     "categories": [
       "Google & Gemini",
-      "AI Agents"
+      "AI Agents",
+      "New AI Tool Announcements"
     ],
     "summary": "Google has launched new developer tools featuring five autonomous AI agents that manage pipelines, migrations, code reviews, and dashboards, effectively reducing the need for junior developer roles. This advancement signals a significant shift in software development workflows, emphasizing the importance for tech professionals to quickly understand and adapt to these AI-driven changes. The linked tweet provides additional insights and reactions to this development."
   },
@@ -3753,7 +3788,8 @@
     "categories": [
       "AI Coding IDEs",
       "AI Visual Tools",
-      "Learning Resources"
+      "Learning Resources",
+      "Developer Tips & Lists"
     ],
     "summary": "This email highlights a 43-minute comprehensive AI video tutorial by Greg Isenberg on using Sora 2 and Veo3 tools to transform a single idea into over 1 million views. The key strategy emphasizes crafting compelling hooks—writing 10 attention-grabbing opening lines that evoke emotion, surprise, or curiosity—before engaging any AI tools. The linked tweet likely provides direct access to this tutorial and additional insights."
   },
@@ -3920,7 +3956,8 @@
     ],
     "categories": [
       "Claude & Anthropic",
-      "MCP (Model Context Protocol)"
+      "MCP (Model Context Protocol)",
+      "Developer Tips & Lists"
     ],
     "summary": "The email highlights using the Playwright MCP tool to automate testing of your app by simulating user interactions, capturing console logs, and taking screenshots. It suggests integrating Playwright with Claude to identify and fix issues, and recommends adding usage instructions to a CLAUDE.md file for better guidance. The included links likely provide further details and examples from Ian Nuttall’s related social media post."
   },
@@ -3955,7 +3992,8 @@
       "No-Code/Low-Code AI Builders",
       "AI Visual Tools",
       "LLM & Models",
-      "AI Research & Reports"
+      "AI Research & Reports",
+      "Developer Tips & Lists"
     ],
     "summary": "The email from Replit Support explains that the Replit Agent uses the Claude Sonnet 4.0 AI model to help transform user ideas into applications and assist with debugging. It provides best practices for debugging, such as using clear prompts, monitoring the console, saving checkpoints, and making incremental fixes, along with a recommended two-step prompting method to guide the Agent effectively. The included Zendesk link likely directs users to Replit’s support resources for further assistance."
   },
@@ -3977,7 +4015,8 @@
       "No-Code/Low-Code AI Builders",
       "AI Visual Tools",
       "LLM & Models",
-      "AI Research & Reports"
+      "AI Research & Reports",
+      "Developer Tips & Lists"
     ],
     "summary": "The email from Replit Support explains that the Replit Agent uses the Claude Sonnet 4.0 AI model to help transform user ideas into applications and assist with debugging. It provides best practices for effective debugging, including using clear, specific prompts, incremental changes, and detailed context, along with a recommended two-step prompting method involving an initial diagnostic plan followed by targeted fixes. The linked Zendesk URL relates to Replit’s customer support platform."
   },
@@ -3997,7 +4036,8 @@
       "No-Code/Low-Code AI Builders",
       "AI Visual Tools",
       "LLM & Models",
-      "AI Research & Reports"
+      "AI Research & Reports",
+      "Developer Tips & Lists"
     ],
     "summary": "Replit Support clarified that their Agent uses Claude Sonnet 4.0 (Agent v2), designed to convert user ideas into applications and add features via natural language. For effective debugging, they recommend clear, detailed prompts, incremental fixes, using Console and Checkpoints, and providing context with error messages and code snippets. A two-step prompting method is suggested to help the Agent research issues, create a fix plan, and then implement it systematically."
   },
@@ -4013,7 +4053,8 @@
       "Google & Gemini",
       "AI Agents",
       "No-Code/Low-Code AI Builders",
-      "LLM & Models"
+      "LLM & Models",
+      "Developer Tips & Lists"
     ],
     "summary": "The email inquires about the specific AI model powering the Replit agent, asking whether it uses Claude, OpenAI, Gemini, or another model. Additionally, it seeks recommendations for best practices or third-party tools that enhance debugging workflows when using the Replit agent."
   },
@@ -4102,7 +4143,8 @@
       "AI Agents",
       "AI Visual Tools",
       "AI Research & Reports",
-      "AI Automation & Workflows"
+      "AI Automation & Workflows",
+      "Developer Tips & Lists"
     ],
     "summary": "Cursor has introduced several new features including Plan Mode, which enables agents to deeply analyze codebases and create detailed plans before coding, and Slash Commands for creating and sharing reusable prompts within teams. Additionally, agents can now control web browsers for testing and debugging, and Bugbot automatically generates and updates GitHub PR summaries. These enhancements aim to improve workflow efficiency and collaboration."
   },
@@ -4143,7 +4185,7 @@
       "https://x.com/sysxplore/status/1935713320209891332?s=51"
     ],
     "categories": [
-      "General AI"
+      "Developer Tips & Lists"
     ],
     "summary": "The email highlights a post by sysxplore featuring 12 essential Git commands that every developer should know. The linked tweet likely provides a concise overview or list of these key Git commands to improve version control skills. This resource is useful for both beginners and experienced users looking to refresh their Git knowledge."
   },
@@ -4441,7 +4483,8 @@
       "Prompt Engineering",
       "Learning Resources",
       "LLM & Models",
-      "AI Automation & Workflows"
+      "AI Automation & Workflows",
+      "Developer Tips & Lists"
     ],
     "summary": "The email highlights a prompting masterclass by The Boring Marketer focused on vibe marketing, covering key topics such as framing prompts for large language models, reverse engineering competitor strategies, blending ROI with brand messaging, leveraging tools like Manus and O3, automating processes, and building high-converting funnels. The linked Twitter post likely provides additional insights or resources related to these marketing techniques."
   },
@@ -4455,7 +4498,8 @@
       "https://x.com/ubermenscchh/status/1976667595786035311?s=51"
     ],
     "categories": [
-      "AI Agents"
+      "AI Agents",
+      "New AI Tool Announcements"
     ],
     "summary": "The email announces the launch of OpenAgents, the first open infrastructure enabling AI agents to collaborate in networks rather than operate in isolation, marking a shift toward collective AI agent societies. This innovation promises to advance AI capabilities through cooperative interactions, as highlighted in the referenced social media announcement. The included link to the \"Ubermenscher\" wiki appears to be a thematic or symbolic reference rather than directly related to the technology."
   },
@@ -4468,7 +4512,8 @@
       "https://x.com/ubermenscchh/status/1976667595786035311?s=51"
     ],
     "categories": [
-      "AI Agents"
+      "AI Agents",
+      "New AI Tool Announcements"
     ],
     "summary": "The email announces the launch of OpenAgents, the first open infrastructure enabling AI agents to collaborate and form interconnected societies rather than operating in isolation. This marks a shift from standalone AI agents to collaborative networks, representing the future of AI development. The linked tweet by Ubermenscchh provides additional details on this breakthrough."
   },
@@ -4523,7 +4568,8 @@
     ],
     "categories": [
       "Claude & Anthropic",
-      "OpenAI & GPT"
+      "OpenAI & GPT",
+      "Developer Tips & Lists"
     ],
     "summary": "The email thread discusses a qualitative comparison between GPT-5-Codex and Claude 4.5 Sonnet for coding, with GPT-5-Codex noted for producing more rigorous, performant, and creative code. However, Andrew Conklin emphasizes the importance of focusing on actionable, periodic updates rather than frequent one-off posts to maintain productivity. The linked Twitter post likely contains the original comparison details, while the LinkedIn link directs to Andrew Conklin’s professional profile."
   },
@@ -4538,7 +4584,8 @@
     ],
     "categories": [
       "Claude & Anthropic",
-      "OpenAI & GPT"
+      "OpenAI & GPT",
+      "Developer Tips & Lists"
     ],
     "summary": "The email discusses a qualitative comparison where GPT-5-Codex is seen as producing more rigorous, performant, and creative code than Claude 4.5 Sonnet, particularly for coding tasks via their respective CLI tools. However, Andrew Conklin expresses that frequent updates and comparisons like these are not actionable for him, as he prefers to focus on deep work and periodically update his skills rather than follow every new development. The linked tweet likely contains the original comparison details, while the LinkedIn link is Andrew’s professional profile."
   },
@@ -4552,7 +4599,8 @@
     ],
     "categories": [
       "Claude & Anthropic",
-      "OpenAI & GPT"
+      "OpenAI & GPT",
+      "Developer Tips & Lists"
     ],
     "summary": "Chase Brower reports that GPT-5-Codex outperforms Claude 4.5 Sonnet for coding tasks, producing more rigorous, performant, and robust code by default. Additionally, GPT-5-Codex demonstrates greater creativity in solving complex implicit problems. The linked tweet likely provides further qualitative insights and examples comparing the two models."
   },
@@ -4566,7 +4614,8 @@
     ],
     "categories": [
       "AI Agents",
-      "Learning Resources"
+      "Learning Resources",
+      "Developer Tips & Lists"
     ],
     "summary": "Greg Isenberg shares a comprehensive and easy-to-understand tutorial on building \"AI agent swarms,\" explaining the concepts and practical steps involved. The linked post on X (formerly Twitter) provides detailed insights and guidance for developers interested in creating collaborative AI systems. This resource is valuable for anyone looking to explore multi-agent AI architectures."
   },
@@ -4662,7 +4711,8 @@
       "https://www.augmentcode.com/blog/best-practices-for-using-ai-coding-agents"
     ],
     "categories": [
-      "AI Agents"
+      "AI Agents",
+      "Developer Tips & Lists"
     ],
     "summary": "The email highlights best practices for effectively utilizing AI coding agents to enhance software development. It directs readers to a detailed blog post on augmentcode.com that covers strategies for maximizing productivity and accuracy when working with AI-driven coding tools."
   },
@@ -4721,7 +4771,9 @@
       "https://x.com/anthropicai/status/1937921801000219041?s=51"
     ],
     "categories": [
-      "Claude & Anthropic"
+      "Claude & Anthropic",
+      "New AI Tool Announcements",
+      "Developer Tips & Lists"
     ],
     "summary": "AnthropicAI has introduced two new features for their AI assistant Claude: a dedicated platform for building, hosting, and sharing AI artifacts, and the capability to embed AI functionalities directly into user creations. These enhancements aim to streamline AI integration and collaboration. More details can be found in their announcement on X (formerly Twitter)."
   },
@@ -4734,7 +4786,8 @@
       "https://x.com/dani_avila7/status/2009063826503643290?s=51"
     ],
     "categories": [
-      "Claude & Anthropic"
+      "Claude & Anthropic",
+      "New AI Tool Announcements"
     ],
     "summary": "Sentry skills have been integrated into Claude Code Templates, allowing developers to clean up AI-generated code before committing. The tool \"deslop\" effectively removes unnecessary elements such as excessive comments, defensive checks, and redundant type casts, improving code quality. More details and examples can be found in the linked tweet by dani_avila7."
   },
@@ -4856,7 +4909,8 @@
       "https://x.com/gregisenberg/status/1914302781168537702?s=51&t=4xfSJ1zB6QDJdxzh5O9nDQ"
     ],
     "categories": [
-      "AI Coding IDEs"
+      "AI Coding IDEs",
+      "Developer Tips & Lists"
     ],
     "summary": "Greg Isenberg shares a practical guide on how to \"vibe code,\" likely offering tips or strategies to improve coding flow and creativity. The linked X (formerly Twitter) post provides detailed insights or examples to help developers enhance their coding experience."
   },
@@ -4924,7 +4978,8 @@
       "OpenAI & GPT",
       "Google & Gemini",
       "AI Research & Reports",
-      "AI Tools & Platforms"
+      "AI Tools & Platforms",
+      "Developer Tips & Lists"
     ],
     "summary": "Google recently released NotebookLM, an AI tool that can automatically generate podcasts featuring two speakers discussing content from various sources such as research papers and articles. The technology is fully AI-driven and showcases impressive capabilities, with 10 example podcasts available, including one about OpenAI’s o1 drop. More details and examples can be found in Min Choi’s Twitter thread linked in the email."
   },
@@ -4951,7 +5006,8 @@
     ],
     "categories": [
       "OpenAI & GPT",
-      "AI Visual Tools"
+      "AI Visual Tools",
+      "New AI Tool Announcements"
     ],
     "summary": "Alex Finn emphasizes the importance of actively experimenting with AI tools outside of a traditional 9-5 job to maintain market value. He shares seven AI tools he tested recently, starting with the Codex plugin for Visual Studio, encouraging others to explore these innovations to stay competitive. The linked tweet likely provides further details on these recommended tools."
   },
@@ -4979,7 +5035,8 @@
     ],
     "categories": [
       "Google & Gemini",
-      "AI Agents"
+      "AI Agents",
+      "New AI Tool Announcements"
     ],
     "summary": "Google has introduced Gemini CLI, an open-source AI agent designed to streamline AI development and integration. The tool aims to provide developers with accessible, customizable AI capabilities through a command-line interface. More details and usage guidelines are available in Google's official announcement blog."
   },
@@ -4994,7 +5051,8 @@
     "categories": [
       "Google & Gemini",
       "AI Coding IDEs",
-      "AI Visual Tools"
+      "AI Visual Tools",
+      "New AI Tool Announcements"
     ],
     "summary": "Keywordian (@Ian) has released a free version of the Site Stats Database, featuring data on 10,000 domains to help users discover niche ideas, identify under-the-radar winning sites, and analyze Google algorithm update impacts. A detailed video walkthrough is available via the provided link for users to explore its features."
   },
@@ -5210,7 +5268,8 @@
     "categories": [
       "AI Agents",
       "AI for Business",
-      "AI Hardware & Compute"
+      "AI Hardware & Compute",
+      "New AI Tool Announcements"
     ],
     "summary": "Microsoft has launched a new feature called “Computer Use” for Copilot Studio, enabling AI agents to interact with any application as a human would, without requiring developer work or API integrations. This advancement significantly simplifies automation and expands the capabilities of AI agents across diverse software environments. More details and demonstrations can be found in Hasan Toor’s announcement on X (formerly Twitter)."
   },
@@ -5333,7 +5392,9 @@
     "categories": [
       "Claude & Anthropic",
       "AI Agents",
-      "MCP (Model Context Protocol)"
+      "MCP (Model Context Protocol)",
+      "New AI Tool Announcements",
+      "Developer Tips & Lists"
     ],
     "summary": "Claude AI has launched Claude Code Plugins in public beta, enabling users to install and share curated collections of slash commands, agents, MCP servers, and hooks within Claude Code. This update enhances customization and functionality for developers using the platform. More details can be found in their announcement on X (formerly Twitter)."
   },
@@ -5453,7 +5514,8 @@
       "https://x.com/thisdudelikesai/status/1914970263583855025?s=51&t=4xfSJ1zB6QDJdxzh5O9nDQ"
     ],
     "categories": [
-      "OpenAI & GPT"
+      "OpenAI & GPT",
+      "Developer Tips & Lists"
     ],
     "summary": "OpenAI is offering free access to ChatGPT Plus for students worldwide to support AI-powered education. The linked tweet provides details on how students can claim this offer and highlights the enhanced features available through ChatGPT Plus. This initiative aims to make advanced AI tools more accessible for learning purposes."
   },
@@ -5617,7 +5679,8 @@
       "AI Hardware & Compute",
       "AI Research & Reports",
       "AI Audio & Music",
-      "AI Automation & Workflows"
+      "AI Automation & Workflows",
+      "New AI Tool Announcements"
     ],
     "summary": "The AI Forum Washington, DC 2025 featured 19 sessions with AI experts discussing key themes such as the geopolitical competition between the West and China, emphasizing the need for increased AI capabilities with less regulation. The event highlighted AI as a transformative, moonshot-level technology reminiscent of the 1960s space race. Additional insights and detailed takeaways are available through the linked Constellation Research newsletter."
   },
@@ -5728,7 +5791,8 @@
       "AI Hardware & Compute",
       "AI Research & Reports",
       "AI Audio & Music",
-      "AI Automation & Workflows"
+      "AI Automation & Workflows",
+      "New AI Tool Announcements"
     ],
     "summary": "The email shares insights from the 2025 AI Forum in Washington, DC, highlighting discussions on AI as a strategic competition between the West and China, emphasizing the growing importance of data centers as national infrastructure to support AI workloads. The forum featured 19 sessions with AI experts and stressed the need for increased computational power and balanced regulation. Linked resources likely provide detailed session summaries and further analysis from Constellation Research."
   },
@@ -5839,7 +5903,8 @@
       "AI Hardware & Compute",
       "AI Research & Reports",
       "AI Audio & Music",
-      "AI Automation & Workflows"
+      "AI Automation & Workflows",
+      "New AI Tool Announcements"
     ],
     "summary": "The AI Forum Washington, DC 2025 highlighted the critical role of AI in national infrastructure, emphasizing the urgent global race for compute capacity and the doubling of power demand every 100 days. Discussions framed AI as a strategic industrial base amid geopolitical competition, particularly between the West and China, underscoring the need for comprehensive digital transformation and balanced regulation. The linked newsletter likely provides detailed session insights and strategic recommendations from AI thought leaders."
   },
@@ -5949,7 +6014,8 @@
       "AI Hardware & Compute",
       "AI Research & Reports",
       "AI Audio & Music",
-      "AI Automation & Workflows"
+      "AI Automation & Workflows",
+      "New AI Tool Announcements"
     ],
     "summary": "The AI Forum Washington, DC 2025 highlighted the critical role of AI in national infrastructure and global competitiveness, emphasizing the urgent need for expanded data center capacity and comprehensive digital transformation strategies. Discussions framed AI as a strategic industrial base and a geopolitical battleground, with the U.S. striving to maintain leadership amid rapidly accelerating technological advancements. The event underscored AI's significance not only economically but also as a key element of national defense."
   },
@@ -6047,7 +6113,8 @@
       "AI Hardware & Compute",
       "AI Research & Reports",
       "AI Audio & Music",
-      "AI Automation & Workflows"
+      "AI Automation & Workflows",
+      "New AI Tool Announcements"
     ],
     "summary": "The AI Forum Washington, DC 2025 highlighted the critical role of AI in national infrastructure, emphasizing the urgent global race for compute capacity and the strategic importance of AI leadership for the U.S. amid geopolitical tensions with China. Discussions focused on balancing innovation with regulation, contrasting the fragmented U.S. approach with Europe's AI Act, and acknowledged the unresolved challenge of AI-driven job displacement. Pragmatic use cases and insights from industry leaders underscored the transformative impact of AI across sectors."
   },
@@ -6143,7 +6210,8 @@
     "categories": [
       "Claude & Anthropic",
       "AI Coding IDEs",
-      "AI Agents"
+      "AI Agents",
+      "Developer Tips & Lists"
     ],
     "summary": "The email highlights the growing interest in Claude Code 2.0 following a notable post by Karpathy, suggesting now is an ideal time to explore it. It promotes a new blog by the sender that offers tips on maximizing the use of Claude Code 2.0 and similar AI agents, encouraging readers to check it out via the provided link. The included Twitter link likely references the original post sparking this renewed attention."
   },
@@ -6256,7 +6324,8 @@
     "categories": [
       "Claude & Anthropic",
       "OpenAI & GPT",
-      "LLM & Models"
+      "LLM & Models",
+      "Developer Tips & Lists"
     ],
     "summary": "The email discusses the growing impact of large language models (LLMs) like Claude and OpenAI on web traffic, suggesting that ranking on these platforms is becoming easier. Key strategies include creating LLM.txt files, leveraging AI-driven Reddit and Quora bots for posting, and optimizing pages for SEO to capture organic traffic. The linked tweet likely expands on these tips and the shift in SEO dynamics due to LLMs."
   },
@@ -6436,7 +6505,8 @@
       "AI Agents",
       "No-Code/Low-Code AI Builders",
       "Learning Resources",
-      "AI for Business"
+      "AI for Business",
+      "Developer Tips & Lists"
     ],
     "summary": "This email shares a tutorial episode featuring Colin Matthews, who demonstrates how to transform a basic Vibe coded prototype into a secure, fully functional SaaS app with authentication, payments, and database integration in just 40 minutes using Cursor and Claude Code. The episode covers essential SaaS components, common prototype pitfalls, and practical live demos, available on YouTube, Apple Podcasts, and Spotify. Links provide detailed timestamps and resources for building real SaaS applications efficiently."
   },
@@ -6502,7 +6572,8 @@
     ],
     "categories": [
       "AI Agents",
-      "No-Code/Low-Code AI Builders"
+      "No-Code/Low-Code AI Builders",
+      "Developer Tips & Lists"
     ],
     "summary": "Replit has launched a new feature allowing users to customize their AI Agent, enhancing personalization and functionality. Matt Palmer’s linked post provides a step-by-step guide on how to get started with this customization. This update empowers developers to tailor Agents to better fit their specific needs within the Replit platform."
   },
@@ -6640,7 +6711,8 @@
     "categories": [
       "Claude & Anthropic",
       "OpenAI & GPT",
-      "LLM & Models"
+      "LLM & Models",
+      "New AI Tool Announcements"
     ],
     "summary": "Orchidsapp is offering free unlimited credits for a limited time exclusively on their new Grok 4 Fast model, now available in the model picker. This model is reportedly nearly three times faster than GPT-5 and Claude Sonnet 4, though performance may vary. Users are encouraged to try it via the linked announcement on their social media."
   },
@@ -6667,7 +6739,8 @@
       "https://x.com/mattpheus/status/1889614028915531813?s=51&t=4xfSJ1zB6QDJdxzh5O9nDQ"
     ],
     "categories": [
-      "AI Coding IDEs"
+      "AI Coding IDEs",
+      "Developer Tips & Lists"
     ],
     "summary": "The email shares resources to better understand a plan for restructuring the global trading system, including a guide by Stephen Miran, a Trump economic advisor, and a timestamped October interview with Howard Lutnick, former Trump Commerce Secretary nominee. The provided links lead to Miran’s detailed guide and Lutnick’s interview explaining key aspects of the strategy. These sources offer insight into proposed trade policy changes under the Trump administration."
   },
@@ -6693,7 +6766,8 @@
       "https://x.com/minchoi/status/1788590100118446149?s=51&t=4xfSJ1zB6QDJdxzh5O9nDQ"
     ],
     "categories": [
-      "OpenAI & GPT"
+      "OpenAI & GPT",
+      "Developer Tips & Lists"
     ],
     "summary": "The gpt2-chatbot was unexpectedly released two days ago, quickly gaining attention for its surprisingly strong performance. Users are experimenting with it in creative ways, though the reasons behind its effectiveness remain unclear. Nine notable examples and access details are shared in Min Choi’s tweet linked in the email."
   },
@@ -6764,7 +6838,7 @@
       "https://x.com/dlnrb/status/2009008876834922949?s=51"
     ],
     "categories": [
-      "General AI"
+      "New AI Tool Announcements"
     ],
     "summary": "Autonomous, a new AI-driven financial advisor offering services with 0% advisory fees, has officially launched after operating in stealth mode. The company recently secured $15 million in funding led by Garry Tan and Y Combinator, signaling strong investor confidence. More details and the announcement can be found in the linked social media post."
   },
@@ -6820,7 +6894,8 @@
     ],
     "categories": [
       "Google & Gemini",
-      "AI for Business"
+      "AI for Business",
+      "New AI Tool Announcements"
     ],
     "summary": "Google Workspace has introduced new AI capabilities powered by Gemini to enhance productivity and business outcomes. These advancements integrate generative AI tools directly into Workspace apps, streamlining workflows and improving collaboration. More details can be found in the official announcement on the Google Workspace Blog."
   },
@@ -6859,7 +6934,7 @@
       "https://x.com/anythingai/status/1971607896493547788?s=51"
     ],
     "categories": [
-      "General AI"
+      "New AI Tool Announcements"
     ],
     "summary": "Anything Max is a new autonomous software engineer tool by AnythingAI that interacts with your app like a human, solving over 97% of the toughest bugs and independently shipping features. It is now live, and interested users can reply to the announcement email for free weekend access. More details are available on their official Twitter post linked in the email."
   },
@@ -6914,7 +6989,8 @@
       "https://x.com/dani_avila7/status/1976377295184273431?s=51"
     ],
     "categories": [
-      "Claude & Anthropic"
+      "Claude & Anthropic",
+      "Developer Tips & Lists"
     ],
     "summary": "The email explains that Claude Code Plugins operate through a Marketplace system, where users first install a marketplace and then browse available plugins. It includes a tutorial thread by Daniel San demonstrating how to install a marketplace and activate your first plugin, linked for detailed guidance."
   },
@@ -7036,7 +7112,8 @@
       "https://t.co/r1eNPOyaVX"
     ],
     "categories": [
-      "Claude & Anthropic"
+      "Claude & Anthropic",
+      "Developer Tips & Lists"
     ],
     "summary": "Katyayani Shukla (@aibytekat) shares a quick 14-minute tutorial on building mobile apps using Claude, an AI assistant. The linked content likely provides a step-by-step guide or demo to streamline app development with Claude’s capabilities. This resource is useful for developers looking to integrate AI into mobile applications efficiently."
   },
@@ -7318,7 +7395,8 @@
     "categories": [
       "AI Coding IDEs",
       "AI Visual Tools",
-      "LLM & Models"
+      "LLM & Models",
+      "New AI Tool Announcements"
     ],
     "summary": "TheWorldLabs has introduced RTFM (Real-Time Frame Model), an efficient world model capable of generating real-time video frames interactively using just a single H100 GPU. RTFM creates persistent, 3D-consistent virtual environments that can depict both real and imaginary worlds. A demo showcasing RTFM's capabilities is available via their linked social media post."
   },
@@ -7345,7 +7423,7 @@
       "https://t.co/M5laJrXpbn"
     ],
     "categories": [
-      "General AI"
+      "Developer Tips & Lists"
     ],
     "summary": "The email shares a strategy to acquire your first 100 customers using Reddit by leveraging a specific tool found at the provided link (https://t.co/M5laJrXpbn). This tool helps identify Reddit posts where users express frustration with competitors, allowing you to engage by leaving helpful comments that mention your product. The approach emphasizes targeted, value-driven outreach to attract potential customers."
   },
@@ -7360,7 +7438,8 @@
     "categories": [
       "Google & Gemini",
       "Physical AI & Robotics",
-      "LLM & Models"
+      "LLM & Models",
+      "New AI Tool Announcements"
     ],
     "summary": "The beta version of the open-source software for Reachy Mini has been released, enabling users to develop Hugging Face spaces, datasets, and models using the Google DeepMind MuJoCo simulation platform even before receiving the physical robot. This release broadens accessibility for developers to start experimenting and building in a simulated environment. More details can be found in Clement Delangue’s announcement on X (formerly Twitter)."
   },
@@ -7421,7 +7500,8 @@
       "Prompt Engineering",
       "AI Agents",
       "No-Code/Low-Code AI Builders",
-      "AI Automation & Workflows"
+      "AI Automation & Workflows",
+      "New AI Tool Announcements"
     ],
     "summary": "OpenAI Developers have launched AgentKit, a comprehensive toolkit for building, deploying, and optimizing agentic workflows. It includes ChatKit for customizable chat interfaces, an Agent Builder for visual workflow creation, Guardrails for input/output safety screening, and Evals for dataset management and prompt optimization. More details are available in their announcement on Twitter."
   },
@@ -7478,7 +7558,8 @@
       "Google & Gemini",
       "AI Agents",
       "No-Code/Low-Code AI Builders",
-      "AI for Business"
+      "AI for Business",
+      "New AI Tool Announcements"
     ],
     "summary": "Google has quietly expanded Opal, its no-code AI builder, to 15 additional countries, enabling users to create AI agents without any coding. This significant rollout, highlighted in a social media post by Alexander F Young, promises to democratize AI development. The email encourages recipients to try the tool themselves and includes professional contact information for further discussion."
   },
@@ -7494,7 +7575,8 @@
       "Google & Gemini",
       "AI Agents",
       "No-Code/Low-Code AI Builders",
-      "AI for Business"
+      "AI for Business",
+      "New AI Tool Announcements"
     ],
     "summary": "Google has quietly expanded Opal, its no-code AI builder, to 15 new countries, enabling users to create custom AI agents without any programming knowledge. This launch significantly lowers the barrier to AI development, making it accessible to a broader audience. More details and reactions can be found in Alexander F. Young’s Twitter post linked in the email."
   },
@@ -7562,7 +7644,8 @@
     "categories": [
       "AI Coding IDEs",
       "AI Visual Tools",
-      "Learning Resources"
+      "Learning Resources",
+      "Developer Tips & Lists"
     ],
     "summary": "The email highlights a 54-minute masterclass by Roberto Nickson on mastering viral IG Reels and short-form videos, shared by Greg Isenberg. Key takeaways include scripting with emotional tension, starting with a hot take to engage viewers, and a detailed walkthrough of the entire content creation process from scripting to uploading. The linked tweet likely provides additional insights or a recording of the masterclass."
   },
@@ -7740,7 +7823,9 @@
     ],
     "categories": [
       "AI for Business",
-      "AI Research & Reports"
+      "AI Research & Reports",
+      "New AI Tool Announcements",
+      "Developer Tips & Lists"
     ],
     "summary": "Stanford University has launched a free AI tool designed for researchers that generates Wikipedia-quality reports with 99% accuracy and proper citations. This tool aims to streamline research documentation and is accessible at no cost. More details and access instructions can be found via the linked announcement on Twitter."
   },
@@ -7871,7 +7956,8 @@
     "categories": [
       "AI Coding IDEs",
       "MCP (Model Context Protocol)",
-      "AI Automation & Workflows"
+      "AI Automation & Workflows",
+      "Developer Tips & Lists"
     ],
     "summary": "The email introduces a new guide to the MCP starter pack that shows how to enhance the Cline workflow by integrating web search, live documentation, and browser automation. This setup helps provide Cline with timely and relevant context to improve productivity. The included link directs to a detailed thread outlining the recommended MCP servers and integration steps."
   },
@@ -8133,7 +8219,7 @@
       "https://firebase.blog/posts/2025/04/introducing-firebase-studio/"
     ],
     "categories": [
-      "General AI"
+      "New AI Tool Announcements"
     ],
     "summary": "Firebase has launched Firebase Studio, a new integrated development environment designed to streamline app development with enhanced tools and seamless Firebase integration. The blog post details its features, including real-time database management and simplified deployment workflows, aimed at boosting developer productivity. For more information, visit the official announcement at firebase.blog."
   },
@@ -8257,7 +8343,8 @@
       "Learning Resources",
       "AI for Business",
       "LLM & Models",
-      "AI Audio & Music"
+      "AI Audio & Music",
+      "Developer Tips & Lists"
     ],
     "summary": "The email from the SmythOS team encourages engagement with their open-source repo for production-grade IVR security by starring it on GitHub and highlights several opportunities including free courses, a Discord community, an app-building challenge with prizes and hiring prospects, and access to $3M in software deals. They also invite trying their SaaS platform and emphasize ongoing support and resources to help developers build on their AI agent operating system."
   },
@@ -8332,7 +8419,7 @@
       "https://www.producthunt.com/posts/strawberry-2"
     ],
     "categories": [
-      "General AI"
+      "New AI Tool Announcements"
     ],
     "summary": "Strawberry is an AI-powered browser designed to boost productivity by saving users up to 18 hours per week. Featured on Product Hunt, it likely offers advanced features such as automated browsing tasks and smart content management to streamline online activities. More details and user reviews can be found on its Product Hunt page."
   },
@@ -8437,7 +8524,8 @@
       "AI Coding IDEs",
       "Prompt Engineering",
       "LLM & Models",
-      "AI Research & Reports"
+      "AI Research & Reports",
+      "Developer Tips & Lists"
     ],
     "summary": "A new paper introduces STACK, a foundation model for biology trained on 149 million human single cells, which can \"prompt\" cells similarly to how large language models (LLMs) process tokens. Unlike previous approaches that analyze cells individually, STACK understands cells in their biological context, enhancing insights into cellular behavior. The linked tweet likely provides further details on this breakthrough."
   },
@@ -8451,7 +8539,8 @@
     ],
     "categories": [
       "Claude & Anthropic",
-      "AI Agents"
+      "AI Agents",
+      "New AI Tool Announcements"
     ],
     "summary": "The email introduces \"The Cartographer,\" a new tool that uses parallel Sonnet subagents to analyze large codebases and produce comprehensive architecture documentation, countering claims that Claude struggles with big projects. A GitHub link to the tool is provided in the referenced tweet by KingBootoshi. This solution offers an effective way to map and understand complex codebases."
   },
@@ -8480,7 +8569,8 @@
     "categories": [
       "Claude & Anthropic",
       "No-Code/Low-Code AI Builders",
-      "AI Automation & Workflows"
+      "AI Automation & Workflows",
+      "New AI Tool Announcements"
     ],
     "summary": "Melvynxdev introduced the /apex skill, a powerful Claude Code workflow that autonomously executes 10 steps from feature creation to pull request, including branch initialization, code analysis, planning, execution, validation, review, issue fixing, testing, and PR creation. This workflow streamlines development by automating the entire feature-to-PR process. More details and updates are available on Melvynxdev’s Twitter post linked in the email."
   },
@@ -8511,7 +8601,8 @@
     "categories": [
       "OpenAI & GPT",
       "AI Agents",
-      "AI Audio & Music"
+      "AI Audio & Music",
+      "New AI Tool Announcements"
     ],
     "summary": "Ben Tossell introduced a new system called agent-loops combined with a UI viewer, which integrates Droid and GPT-5.2 Codex to reverse engineer a tweet and rebuild Matt's GitHub loop system that converts issues into pull requests. This setup allows users to run automated loops by creating issues locally or on GitHub, streamlining development workflows."
   },
@@ -8639,7 +8730,8 @@
       "Claude & Anthropic",
       "OpenAI & GPT",
       "AI Research & Reports",
-      "AI Automation & Workflows"
+      "AI Automation & Workflows",
+      "Developer Tips & Lists"
     ],
     "summary": "The email shares an experiment where Claude Cowork, equipped with a browser, was tasked to find a NeurIPS best paper, create a social media thread about it, generate related graphics using Krea, and validate the content with ChatGPT—successfully automating the entire content production process. The linked tweet likely provides a detailed walkthrough of this multi-step AI-driven workflow."
   },
@@ -8703,7 +8795,8 @@
       "OpenAI & GPT",
       "AI Coding IDEs",
       "AI Agents",
-      "AI Audio & Music"
+      "AI Audio & Music",
+      "New AI Tool Announcements"
     ],
     "summary": "The email announces Claude Delegator, a new Claude Code plugin that integrates GPT 5.2 powered subagents to assist with tasks like code architecture and security audits directly within Claude Code. It highlights the plugin's capabilities and provides an easy installation guide via a linked tweet from the developer Jarrod Watts. This tool aims to streamline codebase management using advanced AI assistance."
   },
@@ -8718,7 +8811,8 @@
     "categories": [
       "Claude & Anthropic",
       "AI Agents",
-      "AI Visual Tools"
+      "AI Visual Tools",
+      "New AI Tool Announcements"
     ],
     "summary": "21st has launched Agents (alpha), a visual client designed to enhance coding with Claude by moving away from the command-line interface. It integrates with your Claude subscription and supports local workflows using worktrees, multiple sessions, and terminals per worktree, along with diff capabilities. More details and updates can be found in the linked social media post by the developer."
   },
@@ -8814,7 +8908,8 @@
       "https://x.com/ryancarson/status/2011936020174959005?s=51"
     ],
     "categories": [
-      "AI Agents"
+      "AI Agents",
+      "New AI Tool Announcements"
     ],
     "summary": "Ryan Carson demonstrates a real-world Ralph loop for shipping a new feature, utilizing the agent-browser skill to perform acceptance tests directly in the browser. Instead of a traditional bash loop with amp -x, he uses the /handoff command in Amp, which provides better observability into each loop's execution. The linked tweet likely showcases this process in action."
   },
@@ -8828,7 +8923,8 @@
     ],
     "categories": [
       "Claude & Anthropic",
-      "MCP (Model Context Protocol)"
+      "MCP (Model Context Protocol)",
+      "Developer Tips & Lists"
     ],
     "summary": "The email highlights a detailed walkthrough by Aakash Gupta and expert Carl Vellotti demonstrating how Claude Code with Opus-4.5 functions as an advanced AGI. Key segments cover setting up MCPs, using skills, APIs, writing documentation, and GitHub integration, with a linked video on X (Twitter) providing the full tutorial."
   },
@@ -8940,7 +9036,8 @@
     ],
     "categories": [
       "AI Coding IDEs",
-      "AI Agents"
+      "AI Agents",
+      "Developer Tips & Lists"
     ],
     "summary": "The email highlights how coding agents are transforming software development, sharing best practices from the Cursor team on effectively leveraging these agents. It includes a link to a detailed thread by Krista Letz that explores practical strategies and insights for integrating coding agents into workflows. The external links direct to the original Twitter post and the related discussion thread."
   },
@@ -9192,7 +9289,8 @@
     "categories": [
       "Claude & Anthropic",
       "AI Coding IDEs",
-      "Prompt Engineering"
+      "Prompt Engineering",
+      "Developer Tips & Lists"
     ],
     "summary": "The email shares a Complete Beginners Guide to Claude Code from The Claude Coders, covering key topics such as an introduction to Claude Code, best practices for usage, planning and prompt crafting, troubleshooting, and improving skills over time. The linked post on X (formerly Twitter) provides detailed insights and practical tips for new users to effectively work with Claude Code."
   },
@@ -9304,7 +9402,8 @@
       "OpenAI & GPT",
       "AI Coding IDEs",
       "AI Agents",
-      "MCP (Model Context Protocol)"
+      "MCP (Model Context Protocol)",
+      "New AI Tool Announcements"
     ],
     "summary": "The OpenAI MCP Server is a comprehensive platform that consolidates guides, documentation, API references, the AppsSDK, and the Agentic Commerce Protocol into one accessible server for building within the OpenAI ecosystem and ChatGPT Apps. It is designed to work seamlessly with Codex, providing developers a streamlined resource hub. More details and updates can be found in the linked social media post by the creator."
   },
@@ -9376,7 +9475,8 @@
       "Claude & Anthropic",
       "AI Agents",
       "MCP (Model Context Protocol)",
-      "AI Automation & Workflows"
+      "AI Automation & Workflows",
+      "Developer Tips & Lists"
     ],
     "summary": "The email outlines seven strategies to improve coding efficiency with Claude Code, including using Claude Skills, integrating a memory layer, automating pipelines, connecting via MCPs, tracking tasks with a markdown file, deploying multiple agents for repetitive tasks, and setting up a workspace with multi-terminals. The linked tweet from Meta Alchemist likely provides additional context or examples for these tips."
   },
