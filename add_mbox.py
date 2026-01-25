@@ -24,6 +24,7 @@ import json
 import glob
 import time
 import hashlib
+from datetime import datetime
 from collections import defaultdict
 
 from parse_mbox import parse_mbox_file, categorize_email
@@ -231,6 +232,12 @@ def main():
     print(f"  Saved {len(existing_emails)} total emails")
     
     print_statistics(existing_emails)
+    
+    # Update the last modified date
+    today = datetime.now().strftime('%B %d, %Y')
+    with open('last_updated.txt', 'w') as f:
+        f.write(today)
+    print(f"\n  Updated 'Last Updated' date to: {today}")
     
     print("\n" + "=" * 50)
     print("INCREMENTAL UPDATE COMPLETE!")

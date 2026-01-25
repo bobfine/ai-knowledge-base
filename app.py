@@ -1,9 +1,17 @@
 from flask import Flask, render_template, jsonify, send_file
 import json
 import os
+from datetime import datetime
 from email.utils import parsedate_to_datetime
 
 app = Flask(__name__)
+
+def get_last_updated():
+    """Get last updated date from metadata file or fallback to today."""
+    if os.path.exists('last_updated.txt'):
+        with open('last_updated.txt', 'r') as f:
+            return f.read().strip()
+    return datetime.now().strftime('%B %d, %Y')
 
 def parse_date_safe(date_str):
     """Parse email date string, return epoch 0 if parsing fails."""
@@ -47,7 +55,8 @@ def index():
                           categories=sorted_categories,
                           total_emails=len(emails),
                           total_links=sum(len(e.get('links', [])) for e in emails),
-                          emails_json=json.dumps(emails_for_search))
+                          emails_json=json.dumps(emails_for_search),
+                          last_updated=get_last_updated())
 
 @app.route('/api/emails')
 def api_emails():
