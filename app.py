@@ -82,8 +82,38 @@ def tools_page():
 @app.route('/browse')
 def browse():
     """Original email browser view."""
+    from database import get_connection
+    
     with open('parsed_emails.json', 'r', encoding='utf-8') as f:
         emails = json.load(f)
+    
+    # Build a lookup of enriched links from SQLite
+    enriched_links = {}
+    with get_connection() as conn:
+        cursor = conn.cursor()
+        cursor.execute('''
+            SELECT url, title, description, domain 
+            FROM email_links WHERE title IS NOT NULL
+        ''')
+        for row in cursor.fetchall():
+            enriched_links[row['url']] = {
+                'url': row['url'],
+                'title': row['title'],
+                'description': row['description'],
+                'domain': row['domain']
+            }
+    
+    # Enrich email links
+    for email in emails:
+        if 'links' in email:
+            enriched = []
+            for link in email['links']:
+                if link in enriched_links:
+                    enriched.append(enriched_links[link])
+                else:
+                    # Fall back to just the URL
+                    enriched.append({'url': link, 'title': None, 'description': None, 'domain': None})
+            email['enriched_links'] = enriched
     
     categories = {}
     for email in emails:

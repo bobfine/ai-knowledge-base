@@ -232,7 +232,8 @@ def enrich_pending_links(limit=100, category=None):
         results[status] = results.get(status, 0) + 1
         
         if status == 'success':
-            print(f"✓ {result.get('title', '')[:40]}")
+            title = result.get('title') or ''
+            print(f"✓ {title[:40]}")
         else:
             print(f"✗ {result.get('error', 'unknown')}")
     
