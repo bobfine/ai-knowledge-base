@@ -247,12 +247,16 @@
                             <p class="text-sm text-gray-400 mb-2">${r.summary || 'No summary available'}</p>
                             ${r.links && r.links.length > 0 ? `
                                 <div class="flex flex-wrap gap-2 mt-2 mb-2">
-                                    ${r.links.map(link => `
-                                        <a href="${link}" target="_blank" 
-                                           class="text-xs text-indigo-400 hover:text-indigo-300 underline truncate max-w-xs">
-                                            🔗 ${link.length > 50 ? link.substring(0, 50) + '...' : link}
-                                        </a>
-                                    `).join('')}
+                                    ${r.links.map(link => {
+                        const displayText = link.title || link.domain || (link.url.length > 40 ? link.url.substring(0, 40) + '...' : link.url);
+                        return `
+                                            <a href="${link.url}" target="_blank" 
+                                               class="inline-flex items-center text-xs px-2 py-1 rounded bg-indigo-900/50 text-indigo-300 hover:bg-indigo-800/50 hover:text-indigo-200 transition"
+                                               title="${link.description || link.url}">
+                                                🔗 ${displayText}
+                                            </a>
+                                        `;
+                    }).join('')}
                                 </div>
                             ` : ''}
                             <div class="text-xs text-gray-500">${r.date || 'Unknown date'}</div>

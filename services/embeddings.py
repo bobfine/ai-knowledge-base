@@ -210,10 +210,18 @@ def semantic_search(query, limit=10):
         results.sort(key=lambda x: x['similarity'], reverse=True)
         results = results[:limit]
         
-        # Fetch links for top results
+        # Fetch links for top results (with enriched data)
         for r in results:
-            cursor.execute('SELECT url FROM email_links WHERE email_id = ? LIMIT 5', (r['id'],))
-            r['links'] = [row['url'] for row in cursor.fetchall()]
+            cursor.execute('''
+                SELECT url, domain, title, description 
+                FROM email_links WHERE email_id = ? LIMIT 5
+            ''', (r['id'],))
+            r['links'] = [{
+                'url': row['url'],
+                'domain': row['domain'],
+                'title': row['title'],
+                'description': row['description']
+            } for row in cursor.fetchall()]
         
         return results
 
@@ -241,9 +249,17 @@ def keyword_search(query, limit=10):
                 'date': row['date_parsed'][:10] if row['date_parsed'] else None,
                 'similarity': None  # Keyword search doesn't have similarity
             }
-            # Fetch links
-            cursor.execute('SELECT url FROM email_links WHERE email_id = ? LIMIT 5', (row['id'],))
-            r['links'] = [link['url'] for link in cursor.fetchall()]
+            # Fetch links with enriched data
+            cursor.execute('''
+                SELECT url, domain, title, description 
+                FROM email_links WHERE email_id = ? LIMIT 5
+            ''', (row['id'],))
+            r['links'] = [{
+                'url': link['url'],
+                'domain': link['domain'],
+                'title': link['title'],
+                'description': link['description']
+            } for link in cursor.fetchall()]
             results.append(r)
         
         return results

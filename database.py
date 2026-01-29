@@ -59,6 +59,11 @@ def init_database():
                 email_id INTEGER NOT NULL,
                 url TEXT NOT NULL,
                 domain TEXT,
+                title TEXT,
+                description TEXT,
+                content_excerpt TEXT,
+                fetch_status TEXT DEFAULT 'pending',
+                fetched_at DATETIME,
                 FOREIGN KEY (email_id) REFERENCES emails(id)
             )
         ''')
