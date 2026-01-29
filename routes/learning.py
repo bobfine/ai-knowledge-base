@@ -59,6 +59,60 @@ def api_complete_lesson(lesson_id):
     return jsonify({'error': 'Lesson not found'}), 404
 
 
+@learning_bp.route('/lessons/<int:lesson_id>')
+def api_lesson_detail(lesson_id):
+    """Get full lesson details including content and related emails."""
+    from database import get_connection
+    
+    with get_connection() as conn:
+        cursor = conn.cursor()
+        
+        # Get lesson info
+        cursor.execute('''
+            SELECT l.id, l.title, l.content, l.email_id, l.module_id,
+                   m.title as module_title
+            FROM lessons l
+            JOIN modules m ON l.module_id = m.id
+            WHERE l.id = ?
+        ''', (lesson_id,))
+        lesson = cursor.fetchone()
+        
+        if not lesson:
+            return jsonify({'error': 'Lesson not found'}), 404
+        
+        # Get the source email for this lesson
+        cursor.execute('''
+            SELECT id, subject, content, summary, date
+            FROM emails WHERE id = ?
+        ''', (lesson['email_id'],))
+        source_email = cursor.fetchone()
+        
+        # Get related emails by searching for similar topics
+        related = []
+        if source_email:
+            keywords = lesson['title'].split()[:3]
+            for keyword in keywords:
+                cursor.execute('''
+                    SELECT id, subject, summary, date FROM emails
+                    WHERE (subject LIKE ? OR content LIKE ?)
+                    AND id != ?
+                    LIMIT 3
+                ''', (f'%{keyword}%', f'%{keyword}%', lesson['email_id']))
+                for row in cursor.fetchall():
+                    if row['id'] not in [r['id'] for r in related]:
+                        related.append(dict(row))
+            related = related[:5]  # Limit to 5 related
+        
+        return jsonify({
+            'id': lesson['id'],
+            'title': lesson['title'],
+            'content': lesson['content'],
+            'module_title': lesson['module_title'],
+            'source_email': dict(source_email) if source_email else None,
+            'related_reading': related
+        })
+
+
 @learning_bp.route('/lessons/<int:lesson_id>/quiz')
 def api_get_quiz(lesson_id):
     """Get quiz for a lesson."""

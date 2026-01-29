@@ -113,6 +113,14 @@
             <div id="module-content"></div>
         </div>
 
+        <!-- Lesson View (hidden by default) -->
+        <div id="lesson-view" class="hidden">
+            <button id="back-to-module" class="flex items-center text-indigo-400 hover:text-indigo-300 mb-6">
+                <span class="mr-2">←</span> Back to Module
+            </button>
+            <div id="lesson-content"></div>
+        </div>
+
         <!-- Quiz View (hidden by default) -->
         <div id="quiz-view" class="hidden">
             <div class="card rounded-2xl p-6">
@@ -137,6 +145,7 @@
         // Load curriculum on page load
         document.addEventListener('DOMContentLoaded', loadCurriculum);
         document.getElementById('back-to-curriculum').addEventListener('click', showCurriculum);
+        document.getElementById('back-to-module').addEventListener('click', () => loadModule(currentModule.id));
         document.getElementById('submit-quiz').addEventListener('click', submitQuiz);
 
         async function loadCurriculum() {
@@ -185,6 +194,8 @@
                 currentModule = module;
 
                 document.getElementById('curriculum-view').classList.add('hidden');
+                document.getElementById('lesson-view').classList.add('hidden');
+                document.getElementById('quiz-view').classList.add('hidden');
                 document.getElementById('module-view').classList.remove('hidden');
 
                 document.getElementById('module-content').innerHTML = `
@@ -197,26 +208,22 @@
                     <h3 class="text-lg font-semibold mb-4">Lessons</h3>
                     <div class="space-y-4">
                         ${module.lessons.map((lesson, i) => `
-                            <div class="card rounded-xl p-4 flex items-center justify-between">
-                                <div class="flex items-center">
-                                    <div class="w-8 h-8 rounded-full flex items-center justify-center mr-4 ${lesson.progress?.status === 'completed'
+                            <div class="card rounded-xl p-4 cursor-pointer hover:border-indigo-500/50 transition" onclick="loadLesson(${lesson.id})">
+                                <div class="flex items-center justify-between">
+                                    <div class="flex items-center">
+                                        <div class="w-10 h-10 rounded-full flex items-center justify-center mr-4 ${lesson.progress?.status === 'completed'
                         ? 'bg-green-600'
                         : 'bg-white/10'
                     }">
-                                        ${lesson.progress?.status === 'completed' ? '✓' : i + 1}
+                                            ${lesson.progress?.status === 'completed' ? '✓' : i + 1}
+                                        </div>
+                                        <div>
+                                            <h4 class="font-medium">${lesson.title}</h4>
+                                            <p class="text-sm text-gray-400">${lesson.content?.substring(0, 80) || 'Click to start learning'}...</p>
+                                        </div>
                                     </div>
-                                    <div>
-                                        <h4 class="font-medium">${lesson.title}</h4>
-                                        <p class="text-sm text-gray-400">${lesson.content?.substring(0, 100) || 'Explore this topic'}...</p>
-                                    </div>
+                                    <span class="text-indigo-400 text-sm">${lesson.progress?.status === 'completed' ? 'Review →' : 'Start →'}</span>
                                 </div>
-                                <button onclick="startQuiz(${lesson.id})" 
-                                        class="px-4 py-2 rounded-lg ${lesson.progress?.status === 'completed'
-                        ? 'bg-white/10 hover:bg-white/20'
-                        : 'bg-indigo-600 hover:bg-indigo-500'
-                    } transition text-sm">
-                                    ${lesson.progress?.status === 'completed' ? 'Review' : 'Take Quiz'}
-                                </button>
                             </div>
                         `).join('')}
                     </div>
@@ -226,8 +233,67 @@
             }
         }
 
+        async function loadLesson(lessonId) {
+            try {
+                currentLesson = lessonId;
+                const response = await fetch(`/api/learn/lessons/${lessonId}`);
+                const lesson = await response.json();
+
+                document.getElementById('module-view').classList.add('hidden');
+                document.getElementById('lesson-view').classList.remove('hidden');
+
+                const relatedHtml = lesson.related_reading?.length > 0
+                    ? `
+                        <div class="card rounded-xl p-6">
+                            <h3 class="font-semibold mb-4">📖 Related Reading</h3>
+                            <div class="space-y-3">
+                                ${lesson.related_reading.map(r => `
+                                    <div class="p-3 rounded-lg bg-white/5">
+                                        <h4 class="font-medium text-sm">${r.subject?.substring(0, 80) || 'Related topic'}...</h4>
+                                        <p class="text-xs text-gray-500 mt-1">${r.date || ''}</p>
+                                    </div>
+                                `).join('')}
+                            </div>
+                        </div>
+                    ` : '';
+
+                document.getElementById('lesson-content').innerHTML = `
+                    <div class="card rounded-2xl p-6 mb-6">
+                        <div class="text-sm text-indigo-400 mb-2">${lesson.module_title}</div>
+                        <h2 class="text-2xl font-bold mb-4">${lesson.title}</h2>
+                        
+                        ${lesson.source_email ? `
+                            <div class="bg-indigo-900/30 rounded-xl p-5 mb-6 border-l-4 border-indigo-500">
+                                <h3 class="font-semibold mb-3">📚 Lesson Content</h3>
+                                ${lesson.source_email.summary ? `
+                                    <p class="text-gray-300 mb-4">${lesson.source_email.summary}</p>
+                                ` : ''}
+                                <div class="text-sm text-gray-400 whitespace-pre-wrap leading-relaxed">
+                                    ${lesson.source_email.content?.substring(0, 1500) || 'No content available'}${lesson.source_email.content?.length > 1500 ? '...' : ''}
+                                </div>
+                                <div class="text-xs text-gray-500 mt-4">Source: ${lesson.source_email.date}</div>
+                            </div>
+                        ` : `
+                            <div class="bg-indigo-900/30 rounded-xl p-5 mb-6">
+                                <p class="text-gray-300">${lesson.content || 'Study this topic and then take the quiz to test your understanding.'}</p>
+                            </div>
+                        `}
+                        
+                        <button onclick="startQuiz(${lessonId})" 
+                                class="w-full py-4 bg-gradient-to-r from-indigo-600 to-purple-600 hover:from-indigo-500 hover:to-purple-500 rounded-xl font-semibold transition text-lg">
+                            ✍️ Take Quiz
+                        </button>
+                    </div>
+                    ${relatedHtml}
+                `;
+            } catch (error) {
+                console.error('Failed to load lesson:', error);
+            }
+        }
+
         function showCurriculum() {
             document.getElementById('module-view').classList.add('hidden');
+            document.getElementById('lesson-view').classList.add('hidden');
             document.getElementById('quiz-view').classList.add('hidden');
             document.getElementById('curriculum-view').classList.remove('hidden');
             loadCurriculum();
