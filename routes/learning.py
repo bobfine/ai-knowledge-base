@@ -69,7 +69,7 @@ def api_lesson_detail(lesson_id):
         
         # Get lesson info
         cursor.execute('''
-            SELECT l.id, l.title, l.content, l.email_id, l.module_id,
+            SELECT l.id, l.title, l.content, l.module_id,
                    m.title as module_title
             FROM lessons l
             JOIN modules m ON l.module_id = m.id
@@ -80,28 +80,33 @@ def api_lesson_detail(lesson_id):
         if not lesson:
             return jsonify({'error': 'Lesson not found'}), 404
         
-        # Get the source email for this lesson
+        # Get the source email via lesson_sources table
         cursor.execute('''
-            SELECT id, subject, content, summary, date
-            FROM emails WHERE id = ?
-        ''', (lesson['email_id'],))
+            SELECT e.id, e.subject, e.content, e.summary, e.date
+            FROM emails e
+            JOIN lesson_sources ls ON e.id = ls.email_id
+            WHERE ls.lesson_id = ?
+            LIMIT 1
+        ''', (lesson_id,))
         source_email = cursor.fetchone()
         
         # Get related emails by searching for similar topics
         related = []
-        if source_email:
-            keywords = lesson['title'].split()[:3]
-            for keyword in keywords:
-                cursor.execute('''
-                    SELECT id, subject, summary, date FROM emails
-                    WHERE (subject LIKE ? OR content LIKE ?)
-                    AND id != ?
-                    LIMIT 3
-                ''', (f'%{keyword}%', f'%{keyword}%', lesson['email_id']))
-                for row in cursor.fetchall():
-                    if row['id'] not in [r['id'] for r in related]:
-                        related.append(dict(row))
-            related = related[:5]  # Limit to 5 related
+        keywords = lesson['title'].split()[:3]
+        for keyword in keywords:
+            if len(keyword) < 3:
+                continue
+            cursor.execute('''
+                SELECT id, subject, summary, date FROM emails
+                WHERE (subject LIKE ? OR content LIKE ?)
+                LIMIT 3
+            ''', (f'%{keyword}%', f'%{keyword}%'))
+            for row in cursor.fetchall():
+                if source_email and row['id'] == source_email['id']:
+                    continue
+                if row['id'] not in [r['id'] for r in related]:
+                    related.append(dict(row))
+        related = related[:5]  # Limit to 5 related
         
         return jsonify({
             'id': lesson['id'],
