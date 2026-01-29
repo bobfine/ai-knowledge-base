@@ -1,0 +1,10 @@
+# AI Knowledge Base - Requirements
+
+# Core
+flask>=3.0.0
+
+# OpenAI (for embeddings, briefings, quizzes)
+openai>=1.0.0
+
+# Production server (optional)
+gunicorn>=21.0.0

@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Search - AI Knowledge Base</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+
+        .gradient-bg {
+            background: linear-gradient(135deg, #1e1b4b 0%, #312e81 50%, #4c1d95 100%);
+        }
+
+        .card {
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .search-input {
+            background: rgba(255, 255, 255, 0.1);
+            border: 2px solid rgba(255, 255, 255, 0.2);
+        }
+
+        .search-input:focus {
+            border-color: rgba(99, 102, 241, 0.8);
+            outline: none;
+        }
+
+        .result-card {
+            transition: all 0.2s;
+        }
+
+        .result-card:hover {
+            transform: translateX(4px);
+            border-left: 3px solid #6366f1;
+        }
+
+        .similarity-bar {
+            height: 4px;
+            background: linear-gradient(90deg, #6366f1, #a855f7);
+        }
+
+        .entity-tag {
+            background: linear-gradient(135deg, #4f46e5 0%, #7c3aed 100%);
+        }
+
+        .loading {
+            display: none;
+        }
+
+        .loading.active {
+            display: flex;
+        }
+    </style>
+</head>
+
+<body class="gradient-bg min-h-screen text-white">
+    <!-- Navigation -->
+    <nav class="sticky top-0 z-50 backdrop-blur-lg bg-indigo-950/80 border-b border-white/10">
+        <div class="max-w-7xl mx-auto px-4 py-4">
+            <div class="flex items-center justify-between">
+                <div class="flex items-center space-x-3">
+                    <span class="text-2xl">🔍</span>
+                    <h1
+                        class="text-xl font-bold bg-gradient-to-r from-indigo-400 to-purple-400 bg-clip-text text-transparent">
+                        AI Knowledge Search
+                    </h1>
+                </div>
+                <div class="flex items-center space-x-4">
+                    <a href="/" class="px-4 py-2 rounded-lg hover:bg-white/10 transition font-medium text-sm">
+                        Dashboard
+                    </a>
+                    <a href="/browse" class="px-4 py-2 rounded-lg hover:bg-white/10 transition font-medium text-sm">
+                        Browse
+                    </a>
+                    <a href="/search"
+                        class="px-4 py-2 rounded-lg bg-indigo-600 hover:bg-indigo-500 transition font-medium text-sm">
+                        Search
+                    </a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <main class="max-w-4xl mx-auto px-4 py-8">
+        <!-- Search Box -->
+        <div class="mb-8">
+            <form id="search-form" class="relative">
+                <input type="text" id="search-input"
+                    class="search-input w-full px-6 py-4 rounded-xl text-lg text-white placeholder-gray-400"
+                    placeholder="Ask anything about AI tools, techniques, or trends..." autocomplete="off">
+                <button type="submit"
+                    class="absolute right-3 top-1/2 transform -translate-y-1/2 px-6 py-2 bg-indigo-600 hover:bg-indigo-500 rounded-lg font-medium transition">
+                    Search
+                </button>
+            </form>
+            <div class="mt-3 flex items-center space-x-4 text-sm text-gray-400">
+                <label class="flex items-center cursor-pointer">
+                    <input type="checkbox" id="ai-synthesis" class="mr-2 rounded">
+                    <span>AI-powered answer</span>
+                </label>
+            </div>
+        </div>
+
+        <!-- Loading State -->
+        <div id="loading" class="loading items-center justify-center py-12">
+            <div class="animate-spin rounded-full h-10 w-10 border-b-2 border-indigo-400"></div>
+            <span class="ml-4 text-gray-400">Searching knowledge base...</span>
+        </div>
+
+        <!-- AI Synthesis Panel -->
+        <div id="synthesis-panel" class="hidden card rounded-2xl p-6 mb-6">
+            <div class="flex items-center mb-3">
+                <span class="text-xl mr-2">✨</span>
+                <h2 class="font-semibold">AI Answer</h2>
+                <span class="ml-auto text-xs bg-indigo-600/50 px-2 py-1 rounded-full">AI Generated</span>
+            </div>
+            <div id="synthesis-content" class="prose prose-invert max-w-none text-gray-300">
+            </div>
+        </div>
+
+        <!-- Results -->
+        <div id="results-container">
+            <div id="results-count" class="text-gray-400 mb-4 hidden"></div>
+            <div id="results-list" class="space-y-4"></div>
+        </div>
+
+        <!-- Related Searches -->
+        <div id="related-panel" class="hidden mt-8">
+            <h3 class="text-sm text-gray-400 mb-3">Related Searches</h3>
+            <div id="related-list" class="flex flex-wrap gap-2"></div>
+        </div>
+
+        <!-- Empty State -->
+        <div id="empty-state" class="text-center py-16">
+            <div class="text-6xl mb-4">🔎</div>
+            <h2 class="text-xl font-semibold mb-2">Search the AI Knowledge Base</h2>
+            <p class="text-gray-400 mb-6">Find insights about AI tools, techniques, and industry trends</p>
+            <div class="flex flex-wrap justify-center gap-2">
+                <button class="suggestion-btn px-4 py-2 rounded-lg bg-white/5 hover:bg-white/10 transition text-sm">
+                    Claude Code best practices
+                </button>
+                <button class="suggestion-btn px-4 py-2 rounded-lg bg-white/5 hover:bg-white/10 transition text-sm">
+                    What is vibe coding?
+                </button>
+                <button class="suggestion-btn px-4 py-2 rounded-lg bg-white/5 hover:bg-white/10 transition text-sm">
+                    AI agents overview
+                </button>
+                <button class="suggestion-btn px-4 py-2 rounded-lg bg-white/5 hover:bg-white/10 transition text-sm">
+                    MCP servers
+                </button>
+            </div>
+        </div>
+    </main>
+
+    <script>
+        const searchForm = document.getElementById('search-form');
+        const searchInput = document.getElementById('search-input');
+        const aiSynthesis = document.getElementById('ai-synthesis');
+        const loading = document.getElementById('loading');
+        const synthesisPanel = document.getElementById('synthesis-panel');
+        const synthesisContent = document.getElementById('synthesis-content');
+        const resultsContainer = document.getElementById('results-container');
+        const resultsCount = document.getElementById('results-count');
+        const resultsList = document.getElementById('results-list');
+        const relatedPanel = document.getElementById('related-panel');
+        const relatedList = document.getElementById('related-list');
+        const emptyState = document.getElementById('empty-state');
+
+        // Search form submission
+        searchForm.addEventListener('submit', async function (e) {
+            e.preventDefault();
+            const query = searchInput.value.trim();
+            if (!query) return;
+
+            await performSearch(query);
+        });
+
+        // Suggestion buttons
+        document.querySelectorAll('.suggestion-btn').forEach(btn => {
+            btn.addEventListener('click', function () {
+                searchInput.value = this.textContent;
+                performSearch(this.textContent);
+            });
+        });
+
+        async function performSearch(query) {
+            // Show loading, hide other states
+            loading.classList.add('active');
+            emptyState.style.display = 'none';
+            synthesisPanel.classList.add('hidden');
+            resultsContainer.style.display = 'none';
+            relatedPanel.classList.add('hidden');
+
+            try {
+                const synthesize = aiSynthesis.checked;
+                const url = `/api/search?q=${encodeURIComponent(query)}&limit=10&synthesize=${synthesize}`;
+                const response = await fetch(url);
+                const data = await response.json();
+
+                loading.classList.remove('active');
+
+                if (data.error) {
+                    resultsList.innerHTML = `<div class="text-red-400">${data.error}</div>`;
+                    resultsContainer.style.display = 'block';
+                    return;
+                }
+
+                // Show AI synthesis if available
+                if (data.synthesis && data.synthesis.ai_generated) {
+                    synthesisContent.innerHTML = data.synthesis.answer.replace(/\n/g, '<br>');
+                    synthesisPanel.classList.remove('hidden');
+                }
+
+                // Show results
+                resultsCount.textContent = `Found ${data.total} results for "${query}"`;
+                resultsCount.classList.remove('hidden');
+
+                if (data.results.length === 0) {
+                    resultsList.innerHTML = '<div class="text-gray-400">No results found. Try a different query.</div>';
+                } else {
+                    resultsList.innerHTML = data.results.map((r, i) => `
+                        <div class="result-card card rounded-xl p-4">
+                            <div class="flex items-start justify-between">
+                                <h3 class="font-medium text-white mb-1">${r.subject || 'No subject'}</h3>
+                                ${r.similarity ? `
+                                    <span class="text-xs text-indigo-400 whitespace-nowrap ml-2">
+                                        ${(r.similarity * 100).toFixed(0)}% match
+                                    </span>
+                                ` : `
+                                    <span class="text-xs text-gray-500 whitespace-nowrap ml-2">
+                                        keyword match
+                                    </span>
+                                `}
+                            </div>
+                            ${r.similarity ? `
+                                <div class="w-full bg-white/10 rounded-full overflow-hidden mb-2">
+                                    <div class="similarity-bar" style="width: ${r.similarity * 100}%"></div>
+                                </div>
+                            ` : ''}
+                            <p class="text-sm text-gray-400 mb-2">${r.summary || 'No summary available'}</p>
+                            <div class="text-xs text-gray-500">${r.date || 'Unknown date'}</div>
+                        </div>
+                    `).join('');
+                }
+                resultsContainer.style.display = 'block';
+
+                // Show related searches
+                if (data.related_searches && data.related_searches.length > 0) {
+                    relatedList.innerHTML = data.related_searches.map(r => `
+                        <button class="related-btn px-3 py-1 rounded-full bg-white/5 hover:bg-white/10 text-sm transition">
+                            ${r.suggestion}
+                        </button>
+                    `).join('');
+                    relatedPanel.classList.remove('hidden');
+
+                    // Add click handlers to related buttons
+                    document.querySelectorAll('.related-btn').forEach(btn => {
+                        btn.addEventListener('click', function () {
+                            const match = this.textContent.match(/More about (.+)/);
+                            if (match) {
+                                searchInput.value = match[1];
+                                performSearch(match[1]);
+                            }
+                        });
+                    });
+                }
+
+            } catch (error) {
+                loading.classList.remove('active');
+                resultsList.innerHTML = `<div class="text-red-400">Search failed: ${error.message}</div>`;
+                resultsContainer.style.display = 'block';
+            }
+        }
+    </script>
+</body>
+
+</html>
