@@ -211,7 +211,7 @@
                         </div>
                         {% endfor %}
                     </div>
-                    <a href="/api/tools"
+                    <a href="/tools"
                         class="block mt-4 text-center text-sm text-indigo-400 hover:text-indigo-300 transition">
                         View all tools →
                     </a>
@@ -242,7 +242,7 @@
             try {
                 const response = await fetch('/api/timeline?days=30');
                 const data = await response.json();
-                
+
                 const ctx = document.getElementById('trendChart').getContext('2d');
                 new Chart(ctx, {
                     type: 'line',
@@ -278,7 +278,7 @@
             try {
                 const response = await fetch('/api/trending?limit=5');
                 const data = await response.json();
-                
+
                 const container = document.getElementById('trending-topics');
                 container.innerHTML = data.map(trend => {
                     const icon = trend.trend === 'up' ? '📈' : (trend.trend === 'down' ? '📉' : '➡️');
@@ -296,20 +296,20 @@
         }
 
         // Generate briefing
-        document.getElementById('generate-briefing').addEventListener('click', async function() {
+        document.getElementById('generate-briefing').addEventListener('click', async function () {
             const btn = this;
             const loading = document.getElementById('briefing-loading');
             const content = document.getElementById('briefing-content');
-            
+
             btn.disabled = true;
             btn.textContent = 'Generating...';
             loading.classList.add('active');
             content.style.display = 'none';
-            
+
             try {
                 const response = await fetch('/api/briefing/html?ai=false');
                 const html = await response.text();
-                
+
                 content.innerHTML = html;
                 content.style.display = 'block';
             } catch (error) {
@@ -323,7 +323,7 @@
         });
 
         // Initialize on page load
-        document.addEventListener('DOMContentLoaded', function() {
+        document.addEventListener('DOMContentLoaded', function () {
             loadTrendChart();
             loadTrendingTopics();
         });

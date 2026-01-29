@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Tools - AI Knowledge Base</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+
+        .gradient-bg {
+            background: linear-gradient(135deg, #1e1b4b 0%, #312e81 50%, #4c1d95 100%);
+        }
+
+        .card {
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .tool-card {
+            transition: all 0.2s;
+        }
+
+        .tool-card:hover {
+            transform: translateY(-2px);
+            border-color: rgba(99, 102, 241, 0.5);
+        }
+
+        .category-badge {
+            background: linear-gradient(135deg, #4f46e5 0%, #7c3aed 100%);
+        }
+    </style>
+</head>
+
+<body class="gradient-bg min-h-screen text-white">
+    <!-- Navigation -->
+    <nav class="sticky top-0 z-50 backdrop-blur-lg bg-indigo-950/80 border-b border-white/10">
+        <div class="max-w-7xl mx-auto px-4 py-4">
+            <div class="flex items-center justify-between">
+                <div class="flex items-center space-x-3">
+                    <span class="text-2xl">🛠️</span>
+                    <h1
+                        class="text-xl font-bold bg-gradient-to-r from-indigo-400 to-purple-400 bg-clip-text text-transparent">
+                        AI Tools Directory
+                    </h1>
+                </div>
+                <div class="flex items-center space-x-4">
+                    <a href="/" class="px-4 py-2 rounded-lg hover:bg-white/10 transition font-medium text-sm">
+                        Dashboard
+                    </a>
+                    <a href="/search" class="px-4 py-2 rounded-lg hover:bg-white/10 transition font-medium text-sm">
+                        🔍 Search
+                    </a>
+                    <a href="/learn" class="px-4 py-2 rounded-lg hover:bg-white/10 transition font-medium text-sm">
+                        📚 Learn
+                    </a>
+                    <a href="/browse" class="px-4 py-2 rounded-lg hover:bg-white/10 transition font-medium text-sm">
+                        Browse
+                    </a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <main class="max-w-7xl mx-auto px-4 py-8">
+        <!-- Summary -->
+        <div class="card rounded-2xl p-6 mb-8">
+            <h2 class="text-2xl font-bold mb-2">AI Tools Mentioned in Your Knowledge Base</h2>
+            <p class="text-gray-400" id="tool-summary">Loading...</p>
+        </div>
+
+        <!-- Category Filter -->
+        <div class="mb-6 flex flex-wrap gap-2" id="category-filters">
+            <button class="filter-btn px-4 py-2 rounded-lg bg-indigo-600 text-sm" data-category="all">All</button>
+        </div>
+
+        <!-- Tools Grid -->
+        <div id="tools-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+            <!-- Tools loaded dynamically -->
+        </div>
+    </main>
+
+    <script>
+        let allTools = [];
+        let activeCategory = 'all';
+
+        async function loadTools() {
+            try {
+                const response = await fetch('/api/tools?limit=100');
+                allTools = await response.json();
+
+                document.getElementById('tool-summary').textContent =
+                    `${allTools.length} tools tracked across your email collection`;
+
+                // Build category filters
+                const categories = [...new Set(allTools.map(t => t.category))].filter(Boolean);
+                const filterContainer = document.getElementById('category-filters');
+                categories.forEach(cat => {
+                    const btn = document.createElement('button');
+                    btn.className = 'filter-btn px-4 py-2 rounded-lg bg-white/10 hover:bg-white/20 text-sm transition';
+                    btn.dataset.category = cat;
+                    btn.textContent = cat;
+                    btn.onclick = () => filterByCategory(cat);
+                    filterContainer.appendChild(btn);
+                });
+
+                renderTools(allTools);
+            } catch (error) {
+                console.error('Failed to load tools:', error);
+            }
+        }
+
+        function filterByCategory(category) {
+            activeCategory = category;
+
+            // Update button styles
+            document.querySelectorAll('.filter-btn').forEach(btn => {
+                if (btn.dataset.category === category) {
+                    btn.className = 'filter-btn px-4 py-2 rounded-lg bg-indigo-600 text-sm';
+                } else {
+                    btn.className = 'filter-btn px-4 py-2 rounded-lg bg-white/10 hover:bg-white/20 text-sm transition';
+                }
+            });
+
+            const filtered = category === 'all'
+                ? allTools
+                : allTools.filter(t => t.category === category);
+            renderTools(filtered);
+        }
+
+        function renderTools(tools) {
+            const grid = document.getElementById('tools-grid');
+            grid.innerHTML = tools.map(tool => `
+                <div class="tool-card card rounded-xl p-5">
+                    <div class="flex items-start justify-between mb-3">
+                        <h3 class="font-semibold text-lg">${tool.name}</h3>
+                        <span class="text-2xl font-bold text-indigo-400">${tool.mentions}</span>
+                    </div>
+                    <span class="category-badge text-xs px-2 py-1 rounded-full">${tool.category || 'Other'}</span>
+                    <div class="mt-4 text-sm text-gray-400">
+                        <div class="flex justify-between">
+                            <span>First seen:</span>
+                            <span>${tool.first_seen || 'N/A'}</span>
+                        </div>
+                        <div class="flex justify-between mt-1">
+                            <span>Last seen:</span>
+                            <span>${tool.last_seen || 'N/A'}</span>
+                        </div>
+                    </div>
+                    <a href="/search?q=${encodeURIComponent(tool.name)}" 
+                       class="block mt-4 text-center py-2 rounded-lg bg-white/10 hover:bg-white/20 text-sm transition">
+                        Search for "${tool.name}" →
+                    </a>
+                </div>
+            `).join('');
+        }
+
+        document.addEventListener('DOMContentLoaded', loadTools);
+    </script>
+</body>
+
+</html>

@@ -73,6 +73,12 @@ def learn_page():
     return render_template('learn.html')
 
 
+@app.route('/tools')
+def tools_page():
+    """Tools directory page."""
+    return render_template('tools.html')
+
+
 @app.route('/browse')
 def browse():
     """Original email browser view."""
