@@ -208,7 +208,14 @@ def semantic_search(query, limit=10):
         
         # Sort by similarity
         results.sort(key=lambda x: x['similarity'], reverse=True)
-        return results[:limit]
+        results = results[:limit]
+        
+        # Fetch links for top results
+        for r in results:
+            cursor.execute('SELECT url FROM email_links WHERE email_id = ? LIMIT 5', (r['id'],))
+            r['links'] = [row['url'] for row in cursor.fetchall()]
+        
+        return results
 
 
 def keyword_search(query, limit=10):
@@ -225,16 +232,21 @@ def keyword_search(query, limit=10):
             LIMIT ?
         ''', (search_term, search_term, search_term, limit))
         
-        return [
-            {
+        results = []
+        for row in cursor.fetchall():
+            r = {
                 'id': row['id'],
                 'subject': row['subject'],
                 'summary': row['summary'],
                 'date': row['date_parsed'][:10] if row['date_parsed'] else None,
                 'similarity': None  # Keyword search doesn't have similarity
             }
-            for row in cursor.fetchall()
-        ]
+            # Fetch links
+            cursor.execute('SELECT url FROM email_links WHERE email_id = ? LIMIT 5', (row['id'],))
+            r['links'] = [link['url'] for link in cursor.fetchall()]
+            results.append(r)
+        
+        return results
 
 
 def get_embedding_stats():
