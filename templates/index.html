@@ -1,156 +1,191 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AI Development Guide 2026 - Comprehensive Resource</title>
-    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <title>Browse Emails - AI Knowledge Base</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
     <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+
         .gradient-bg {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            background: linear-gradient(135deg, #1e1b4b 0%, #312e81 50%, #4c1d95 100%);
         }
-        .category-card:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 10px 40px rgba(0,0,0,0.15);
+
+        .card {
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
         }
+
+        .stat-card {
+            background: linear-gradient(135deg, rgba(99, 102, 241, 0.2) 0%, rgba(168, 85, 247, 0.2) 100%);
+            border: 1px solid rgba(168, 85, 247, 0.3);
+        }
+
+        .category-header {
+            background: linear-gradient(135deg, rgba(99, 102, 241, 0.4) 0%, rgba(168, 85, 247, 0.4) 100%);
+        }
+
         .email-card {
-            transition: all 0.2s ease;
+            transition: all 0.2s;
         }
+
         .email-card:hover {
-            background-color: #f9fafb;
+            background: rgba(255, 255, 255, 0.08);
         }
-        .tab-active {
-            border-bottom: 3px solid #6366f1;
-            color: #6366f1;
+
+        .search-input {
+            background: rgba(255, 255, 255, 0.1);
+            border: 2px solid rgba(255, 255, 255, 0.2);
         }
-        .sidebar {
-            position: sticky;
-            top: 20px;
+
+        .search-input:focus {
+            border-color: rgba(99, 102, 241, 0.8);
+            outline: none;
         }
+
         html {
             scroll-behavior: smooth;
         }
-        .prose-content {
-            line-height: 1.8;
-        }
-        .prose-content h3 {
-            margin-top: 1.5rem;
-            margin-bottom: 0.75rem;
-        }
-        .prose-content ul {
-            list-style-type: disc;
-            padding-left: 1.5rem;
-        }
-        .prose-content li {
-            margin-bottom: 0.5rem;
-        }
-        .tool-badge {
-            display: inline-block;
-            padding: 0.25rem 0.75rem;
-            border-radius: 9999px;
-            font-size: 0.75rem;
-            font-weight: 600;
-            margin-right: 0.5rem;
-            margin-bottom: 0.5rem;
-        }
     </style>
 </head>
-<body class="bg-gray-50 min-h-screen">
-    <header class="gradient-bg text-white py-16">
-        <div class="container mx-auto px-6">
-            <h1 class="text-4xl md:text-5xl font-bold mb-2">AI Development Guide 2026</h1>
-            <p class="text-sm opacity-75 mb-4">Last Updated: {{ last_updated }}</p>
-            <p class="text-xl opacity-90 mb-6">A comprehensive resource compiled from {{ total_emails }} curated emails covering the latest in AI tools, techniques, and best practices.</p>
-            <div class="flex flex-wrap gap-4 mb-6">
-                <div class="bg-white bg-opacity-20 rounded-lg px-4 py-2">
-                    <span class="text-2xl font-bold">{{ total_emails }}</span>
-                    <span class="text-sm opacity-80 block">Emails Analyzed</span>
-                </div>
-                <div class="bg-white bg-opacity-20 rounded-lg px-4 py-2">
-                    <span class="text-2xl font-bold">{{ categories|length }}</span>
-                    <span class="text-sm opacity-80 block">Topic Categories</span>
-                </div>
-                <div class="bg-white bg-opacity-20 rounded-lg px-4 py-2">
-                    <span class="text-2xl font-bold">{{ total_links }}</span>
-                    <span class="text-sm opacity-80 block">Resource Links</span>
-                </div>
-            </div>
-            
-            <div class="bg-white bg-opacity-10 rounded-xl p-4">
-                <div class="flex flex-col md:flex-row gap-3">
-                    <div class="flex-grow relative">
-                        <input type="text" id="searchInput" placeholder="Search emails... (e.g., cursor AND agent, openai OR claude, NOT beta)" 
-                            class="w-full px-4 py-3 rounded-lg text-gray-800 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-indigo-400">
-                        <svg class="absolute right-3 top-3 w-6 h-6 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path>
-                        </svg>
-                    </div>
-                    <button onclick="performSearch()" class="bg-indigo-600 hover:bg-indigo-700 text-white px-6 py-3 rounded-lg font-medium transition-colors">
-                        Search
-                    </button>
-                    <button onclick="clearSearch()" class="bg-white bg-opacity-20 hover:bg-opacity-30 text-white px-4 py-3 rounded-lg font-medium transition-colors">
-                        Clear
-                    </button>
-                </div>
-                <p class="text-indigo-200 text-sm mt-2">Use AND, OR, NOT for boolean search. Example: "cursor AND agent" or "openai OR gpt NOT beta"</p>
-            </div>
-        </div>
-    </header>
-    
-    <div id="searchResults" class="hidden container mx-auto px-6 py-8">
-        <div class="bg-white rounded-xl shadow-lg p-6">
-            <div class="flex justify-between items-center mb-4">
-                <h2 class="text-2xl font-bold text-gray-800">Search Results</h2>
-                <span id="resultCount" class="text-gray-600"></span>
-            </div>
-            <div id="searchResultsList" class="divide-y divide-gray-100"></div>
-        </div>
-    </div>
 
-    <nav class="bg-white shadow-sm sticky top-0 z-50">
-        <div class="container mx-auto px-6">
-            <div class="flex space-x-6 overflow-x-auto py-4">
-                <a href="#categories" class="text-gray-700 hover:text-indigo-600 whitespace-nowrap font-medium">All Topics</a>
-                <a href="#resources" class="text-gray-700 hover:text-indigo-600 whitespace-nowrap font-medium">Learning Resources</a>
+<body class="gradient-bg min-h-screen text-white">
+    <!-- Navigation -->
+    <nav class="sticky top-0 z-50 backdrop-blur-lg bg-indigo-950/80 border-b border-white/10">
+        <div class="max-w-7xl mx-auto px-4 py-4">
+            <div class="flex items-center justify-between">
+                <div class="flex items-center space-x-3">
+                    <span class="text-2xl">📧</span>
+                    <h1
+                        class="text-xl font-bold bg-gradient-to-r from-indigo-400 to-purple-400 bg-clip-text text-transparent">
+                        Browse Emails
+                    </h1>
+                </div>
+                <div class="flex items-center space-x-4">
+                    <a href="/" class="px-4 py-2 rounded-lg hover:bg-white/10 transition font-medium text-sm">
+                        Dashboard
+                    </a>
+                    <a href="/search" class="px-4 py-2 rounded-lg hover:bg-white/10 transition font-medium text-sm">
+                        🔍 Search
+                    </a>
+                    <a href="/learn" class="px-4 py-2 rounded-lg hover:bg-white/10 transition font-medium text-sm">
+                        📚 Learn
+                    </a>
+                    <a href="/browse"
+                        class="px-4 py-2 rounded-lg bg-indigo-600 hover:bg-indigo-500 transition font-medium text-sm">
+                        Browse Emails
+                    </a>
+                </div>
             </div>
         </div>
     </nav>
 
-    <main class="container mx-auto px-6 py-12">
-        <section id="categories" class="mb-16">
-            <h2 class="text-3xl font-bold mb-8 text-gray-800">All Topics & Emails</h2>
-            
-            <div class="space-y-8">
+    <main class="max-w-7xl mx-auto px-4 py-8">
+        <!-- Stats Overview -->
+        <section class="mb-8">
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+                <div class="stat-card rounded-xl p-5">
+                    <div class="text-3xl font-bold text-indigo-300">{{ total_emails }}</div>
+                    <div class="text-sm text-gray-400 mt-1">Total Emails</div>
+                </div>
+                <div class="stat-card rounded-xl p-5">
+                    <div class="text-3xl font-bold text-purple-300">{{ categories|length }}</div>
+                    <div class="text-sm text-gray-400 mt-1">Categories</div>
+                </div>
+                <div class="stat-card rounded-xl p-5">
+                    <div class="text-3xl font-bold text-pink-300">{{ total_links }}</div>
+                    <div class="text-sm text-gray-400 mt-1">Resource Links</div>
+                </div>
+                <div class="stat-card rounded-xl p-5">
+                    <div class="text-3xl font-bold text-blue-300">{{ last_updated }}</div>
+                    <div class="text-sm text-gray-400 mt-1">Last Updated</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Search Box -->
+        <section class="mb-8">
+            <div class="card rounded-2xl p-6">
+                <div class="flex flex-col md:flex-row gap-3">
+                    <input type="text" id="searchInput"
+                        placeholder="Search emails... (e.g., cursor AND agent, openai OR claude, NOT beta)"
+                        class="search-input flex-grow px-4 py-3 rounded-lg text-white placeholder-gray-400">
+                    <button onclick="performSearch()"
+                        class="px-6 py-3 bg-indigo-600 hover:bg-indigo-500 rounded-lg font-medium transition">
+                        Search
+                    </button>
+                    <button onclick="clearSearch()"
+                        class="px-4 py-3 bg-white/10 hover:bg-white/20 rounded-lg font-medium transition">
+                        Clear
+                    </button>
+                </div>
+                <p class="text-gray-400 text-sm mt-3">💡 Use AND, OR, NOT for boolean search</p>
+            </div>
+        </section>
+
+        <!-- Search Results -->
+        <div id="searchResults" class="hidden mb-8">
+            <div class="card rounded-2xl p-6">
+                <div class="flex justify-between items-center mb-4">
+                    <h2 class="text-xl font-semibold">Search Results</h2>
+                    <span id="resultCount" class="text-gray-400"></span>
+                </div>
+                <div id="searchResultsList" class="divide-y divide-white/10"></div>
+            </div>
+        </div>
+
+        <!-- Categories -->
+        <section>
+            <h2 class="text-2xl font-bold mb-6">📁 All Categories</h2>
+            <div class="space-y-4">
                 {% for cat_name, items in categories.items() %}
-                <div class="bg-white rounded-xl shadow-lg overflow-hidden" id="cat-{{ loop.index }}">
-                    <div class="bg-gradient-to-r from-indigo-500 to-purple-500 px-6 py-4 cursor-pointer" onclick="toggleCategory('cat-content-{{ loop.index }}', 'toggle-icon-{{ loop.index }}')">
-                        <div class="flex justify-between items-center">
-                            <div>
-                                <h3 class="text-xl font-bold text-white">{{ cat_name }}</h3>
-                                <p class="text-indigo-100 text-sm">{{ items|length }} emails</p>
-                            </div>
-                            <svg id="toggle-icon-{{ loop.index }}" class="w-6 h-6 text-white transform transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
-                            </svg>
+                <div class="card rounded-xl overflow-hidden">
+                    <div class="category-header px-6 py-4 cursor-pointer flex justify-between items-center"
+                        onclick="toggleCategory('cat-{{ loop.index }}', 'icon-{{ loop.index }}')">
+                        <div>
+                            <h3 class="text-lg font-semibold">{{ cat_name }}</h3>
+                            <p class="text-gray-400 text-sm">{{ items|length }} emails</p>
                         </div>
+                        <svg id="icon-{{ loop.index }}" class="w-6 h-6 transform transition-transform" fill="none"
+                            stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7">
+                            </path>
+                        </svg>
                     </div>
-                    <div id="cat-content-{{ loop.index }}" class="divide-y divide-gray-100 max-h-screen overflow-y-auto hidden">
+                    <div id="cat-{{ loop.index }}" class="hidden divide-y divide-white/5 max-h-96 overflow-y-auto">
                         {% for email in items %}
                         <div class="email-card px-6 py-4">
-                            <h4 class="font-medium text-gray-800 mb-2">{{ email.subject[:150] }}{% if email.subject|length > 150 %}...{% endif %}</h4>
+                            <h4 class="font-medium mb-2">{{ email.subject[:120] }}{% if email.subject|length > 120
+                                %}...{% endif %}</h4>
                             {% if email.summary %}
-                            <p class="text-gray-700 text-sm mb-2 bg-indigo-50 p-3 rounded-lg border-l-4 border-indigo-400">{{ email.summary }}</p>
+                            <p
+                                class="text-gray-300 text-sm mb-3 bg-indigo-900/30 p-3 rounded-lg border-l-4 border-indigo-500">
+                                {{ email.summary }}
+                            </p>
                             {% else %}
-                            <p class="text-gray-600 text-sm mb-2">{{ email.content[:300]|e }}{% if email.content|length > 300 %}...{% endif %}</p>
+                            <p class="text-gray-400 text-sm mb-2">{{ email.content[:250]|e }}{% if email.content|length
+                                > 250 %}...{% endif %}</p>
                             {% endif %}
                             {% if email.links %}
                             <div class="flex flex-wrap gap-2 mt-2">
-                                {% for link in email.links %}
-                                <a href="{{ link }}" target="_blank" class="text-xs text-indigo-600 hover:text-indigo-800 underline truncate max-w-xs">{{ link[:60] }}{% if link|length > 60 %}...{% endif %}</a>
+                                {% for link in email.links[:3] %}
+                                <a href="{{ link }}" target="_blank"
+                                    class="text-xs text-indigo-400 hover:text-indigo-300 underline truncate max-w-xs">
+                                    {{ link[:50] }}{% if link|length > 50 %}...{% endif %}
+                                </a>
                                 {% endfor %}
+                                {% if email.links|length > 3 %}
+                                <span class="text-xs text-gray-500">+{{ email.links|length - 3 }} more</span>
+                                {% endif %}
                             </div>
                             {% endif %}
-                            <div class="text-xs text-gray-400 mt-2">{{ email.date }}</div>
+                            <div class="text-xs text-gray-500 mt-2">{{ email.date }}</div>
                         </div>
                         {% endfor %}
                     </div>
@@ -158,64 +193,21 @@
                 {% endfor %}
             </div>
         </section>
-
-        <section id="resources" class="mb-16">
-            <h2 class="text-3xl font-bold mb-8 text-gray-800">Learning Resources</h2>
-            
-            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-                <a href="https://github.com/anthropics/prompt-eng-interactive-tutorial" target="_blank" class="bg-white rounded-xl shadow-lg p-6 hover:shadow-xl transition-shadow">
-                    <h3 class="text-lg font-bold text-gray-800 mb-2">Anthropic Prompt Engineering Course</h3>
-                    <p class="text-gray-600 text-sm mb-4">Free 9-chapter interactive course covering beginner to advanced prompt engineering techniques.</p>
-                    <span class="text-indigo-600 text-sm font-medium">github.com/anthropics &rarr;</span>
-                </a>
-
-                <a href="https://www.anthropic.com/engineering/claude-code-best-practices" target="_blank" class="bg-white rounded-xl shadow-lg p-6 hover:shadow-xl transition-shadow">
-                    <h3 class="text-lg font-bold text-gray-800 mb-2">Claude Code Best Practices</h3>
-                    <p class="text-gray-600 text-sm mb-4">Official Anthropic guide for agentic coding with Claude Code, including CLAUDE.md configuration.</p>
-                    <span class="text-indigo-600 text-sm font-medium">anthropic.com &rarr;</span>
-                </a>
-
-                <a href="https://developers.google.com/opal" target="_blank" class="bg-white rounded-xl shadow-lg p-6 hover:shadow-xl transition-shadow">
-                    <h3 class="text-lg font-bold text-gray-800 mb-2">Google Opal Documentation</h3>
-                    <p class="text-gray-600 text-sm mb-4">Official docs for Google's no-code AI mini-app builder, now integrated with Gemini.</p>
-                    <span class="text-indigo-600 text-sm font-medium">developers.google.com &rarr;</span>
-                </a>
-
-                <a href="https://gemini-design-mcp.com/" target="_blank" class="bg-white rounded-xl shadow-lg p-6 hover:shadow-xl transition-shadow">
-                    <h3 class="text-lg font-bold text-gray-800 mb-2">Gemini Design MCP</h3>
-                    <p class="text-gray-600 text-sm mb-4">Premium frontend design generation for AI agents. Delegate UI work to Gemini.</p>
-                    <span class="text-indigo-600 text-sm font-medium">gemini-design-mcp.com &rarr;</span>
-                </a>
-
-                <a href="https://cursor.com/features" target="_blank" class="bg-white rounded-xl shadow-lg p-6 hover:shadow-xl transition-shadow">
-                    <h3 class="text-lg font-bold text-gray-800 mb-2">Cursor Features</h3>
-                    <p class="text-gray-600 text-sm mb-4">Explore the AI-native IDE with Agent Mode, Composer, and deep codebase understanding.</p>
-                    <span class="text-indigo-600 text-sm font-medium">cursor.com &rarr;</span>
-                </a>
-
-                <a href="https://lovable.dev/" target="_blank" class="bg-white rounded-xl shadow-lg p-6 hover:shadow-xl transition-shadow">
-                    <h3 class="text-lg font-bold text-gray-800 mb-2">Lovable</h3>
-                    <p class="text-gray-600 text-sm mb-4">Build full-stack React apps from natural language with instant deployment and GitHub sync.</p>
-                    <span class="text-indigo-600 text-sm font-medium">lovable.dev &rarr;</span>
-                </a>
-            </div>
-        </section>
     </main>
 
-    <footer class="bg-gray-800 text-white py-12">
-        <div class="container mx-auto px-6 text-center">
-            <p class="text-gray-400 mb-4">Generated from {{ total_emails }} curated AI development emails</p>
-            <p class="text-sm text-gray-500">Data collected September 2024 - January 2026</p>
-        </div>
+    <footer class="max-w-7xl mx-auto px-4 py-8 mt-8 border-t border-white/10">
+        <p class="text-center text-gray-500 text-sm">
+            AI Knowledge Base • {{ total_emails }} emails from Sept 2024 - Jan 2026
+        </p>
     </footer>
 
     <script>
-        const allEmails = {{ emails_json|safe }};
-        
+        const allEmails = {{ emails_json| safe }};
+
         function toggleCategory(contentId, iconId) {
             const content = document.getElementById(contentId);
             const icon = document.getElementById(iconId);
-            
+
             if (content.classList.contains('hidden')) {
                 content.classList.remove('hidden');
                 icon.classList.add('rotate-180');
@@ -225,106 +217,81 @@
             }
         }
 
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                document.querySelector(this.getAttribute('href')).scrollIntoView({
-                    behavior: 'smooth'
-                });
-            });
+        document.getElementById('searchInput').addEventListener('keypress', function (e) {
+            if (e.key === 'Enter') performSearch();
         });
-        
-        document.getElementById('searchInput').addEventListener('keypress', function(e) {
-            if (e.key === 'Enter') {
-                performSearch();
-            }
-        });
-        
+
         function parseBoolean(query) {
             query = query.trim();
             if (!query) return () => true;
-            
+
             const orGroups = query.split(/\s+OR\s+/i);
-            
+
             return (text) => {
                 text = text.toLowerCase();
-                
                 return orGroups.some(group => {
                     const andTerms = group.split(/\s+AND\s+/i);
-                    
                     return andTerms.every(term => {
                         term = term.trim();
-                        
                         if (term.toUpperCase().startsWith('NOT ')) {
-                            const notTerm = term.substring(4).trim().toLowerCase();
-                            return !text.includes(notTerm);
+                            return !text.includes(term.substring(4).trim().toLowerCase());
                         }
-                        
                         return text.includes(term.toLowerCase());
                     });
                 });
             };
         }
-        
+
         function performSearch() {
             const query = document.getElementById('searchInput').value;
             const matcher = parseBoolean(query);
-            
+
             const results = allEmails.filter(email => {
                 const searchText = (email.subject + ' ' + email.content + ' ' + (email.links || []).join(' ')).toLowerCase();
                 return matcher(searchText);
             });
-            
+
             displayResults(results, query);
         }
-        
+
         function displayResults(results, query) {
             const container = document.getElementById('searchResults');
             const list = document.getElementById('searchResultsList');
             const count = document.getElementById('resultCount');
-            
+
             container.classList.remove('hidden');
             count.textContent = `${results.length} email${results.length !== 1 ? 's' : ''} found`;
-            
+
             if (results.length === 0) {
-                list.innerHTML = '<p class="text-gray-500 py-4">No emails match your search criteria.</p>';
+                list.innerHTML = '<p class="text-gray-400 py-4">No emails match your search criteria.</p>';
                 return;
             }
-            
-            list.innerHTML = results.map(email => `
+
+            list.innerHTML = results.slice(0, 50).map(email => `
                 <div class="email-card py-4">
-                    <div class="flex items-start justify-between">
-                        <div class="flex-grow">
-                            <span class="inline-block px-2 py-1 text-xs font-medium bg-indigo-100 text-indigo-800 rounded mb-2">${escapeHtml(email.category)}</span>
-                            <h4 class="font-medium text-gray-800 mb-2">${escapeHtml(email.subject.substring(0, 150))}${email.subject.length > 150 ? '...' : ''}</h4>
-                            ${email.summary ? `
-                                <p class="text-gray-700 text-sm mb-2 bg-indigo-50 p-3 rounded-lg border-l-4 border-indigo-400">${escapeHtml(email.summary)}</p>
-                            ` : `
-                                <p class="text-gray-600 text-sm mb-2">${escapeHtml(email.content.substring(0, 400))}${email.content.length > 400 ? '...' : ''}</p>
-                            `}
-                            ${email.links && email.links.length > 0 ? `
-                                <div class="flex flex-wrap gap-2 mt-2">
-                                    ${email.links.slice(0, 5).map(link => `
-                                        <a href="${escapeHtml(link)}" target="_blank" class="text-xs text-indigo-600 hover:text-indigo-800 underline truncate max-w-xs">${escapeHtml(link.substring(0, 60))}${link.length > 60 ? '...' : ''}</a>
-                                    `).join('')}
-                                    ${email.links.length > 5 ? `<span class="text-xs text-gray-400">+${email.links.length - 5} more</span>` : ''}
-                                </div>
-                            ` : ''}
-                            <div class="text-xs text-gray-400 mt-2">${escapeHtml(email.date || '')}</div>
-                        </div>
-                    </div>
+                    <span class="inline-block px-2 py-1 text-xs font-medium bg-indigo-600/50 rounded mb-2">${escapeHtml(email.category)}</span>
+                    <h4 class="font-medium mb-2">${escapeHtml(email.subject.substring(0, 120))}${email.subject.length > 120 ? '...' : ''}</h4>
+                    ${email.summary ? `
+                        <p class="text-gray-300 text-sm mb-2 bg-indigo-900/30 p-3 rounded-lg border-l-4 border-indigo-500">${escapeHtml(email.summary)}</p>
+                    ` : `
+                        <p class="text-gray-400 text-sm mb-2">${escapeHtml(email.content.substring(0, 300))}${email.content.length > 300 ? '...' : ''}</p>
+                    `}
+                    <div class="text-xs text-gray-500 mt-2">${escapeHtml(email.date || '')}</div>
                 </div>
             `).join('');
-            
+
+            if (results.length > 50) {
+                list.innerHTML += `<p class="text-gray-400 text-sm py-4">Showing first 50 of ${results.length} results</p>`;
+            }
+
             container.scrollIntoView({ behavior: 'smooth' });
         }
-        
+
         function clearSearch() {
             document.getElementById('searchInput').value = '';
             document.getElementById('searchResults').classList.add('hidden');
-            document.getElementById('searchResultsList').innerHTML = '';
         }
-        
+
         function escapeHtml(text) {
             if (!text) return '';
             const div = document.createElement('div');
@@ -333,4 +300,5 @@
         }
     </script>
 </body>
+
 </html>
