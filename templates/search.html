@@ -278,6 +278,20 @@
                 resultsContainer.style.display = 'block';
             }
         }
+
+        // Check for URL parameters on page load
+        document.addEventListener('DOMContentLoaded', function () {
+            const urlParams = new URLSearchParams(window.location.search);
+            const query = urlParams.get('q');
+            const autorun = urlParams.get('autorun');
+
+            if (query) {
+                searchInput.value = query;
+                if (autorun === 'true') {
+                    performSearch(query);
+                }
+            }
+        });
     </script>
 </body>
 

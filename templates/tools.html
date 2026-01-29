@@ -144,15 +144,15 @@
                     <span class="category-badge text-xs px-2 py-1 rounded-full">${tool.category || 'Other'}</span>
                     <div class="mt-4 text-sm text-gray-400">
                         <div class="flex justify-between">
-                            <span>First seen:</span>
-                            <span>${tool.first_seen || 'N/A'}</span>
-                        </div>
-                        <div class="flex justify-between mt-1">
                             <span>Last seen:</span>
                             <span>${tool.last_seen || 'N/A'}</span>
                         </div>
+                        <div class="flex justify-between mt-1">
+                            <span>First seen:</span>
+                            <span>${tool.first_seen || 'N/A'}</span>
+                        </div>
                     </div>
-                    <a href="/search?q=${encodeURIComponent(tool.name)}" 
+                    <a href="/search?q=${encodeURIComponent(tool.name)}&autorun=true" 
                        class="block mt-4 text-center py-2 rounded-lg bg-white/10 hover:bg-white/20 text-sm transition">
                         Search for "${tool.name}" →
                     </a>
