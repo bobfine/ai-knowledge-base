@@ -75,18 +75,21 @@ pip install flask openai numpy python-dateutil
 
 ---
 
-## Step 4: Upload Database
+## Step 4: Database (Already Included!)
 
-Your SQLite database needs to be uploaded:
+✅ **Good news:** The database is already in the Git repository!
 
-1. Click **"Files"** tab in Replit
-2. Navigate to `data/` folder (create if missing)
-3. Upload `knowledge.db` from your local machine
+| File | Size | Status |
+|------|------|--------|
+| `data/knowledge.db` | 7.4 MB | ✅ Included in repo |
+| `data/emails.json` | 764 KB | ✅ Included in repo |
 
-**Alternative:** Run migration on Replit:
-```bash
-python3 scripts/migrate_to_sqlite.py
-```
+When you import from GitHub, these files come with it automatically. **No manual upload needed.**
+
+> **Note:** If you ever need to start fresh, you can regenerate the database by running:
+> ```bash
+> python3 scripts/migrate_to_sqlite.py
+> ```
 
 ---
 
