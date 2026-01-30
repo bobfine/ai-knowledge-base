@@ -1,6 +1,6 @@
 """
 Learning curriculum service for AI Knowledge Base.
-Generates personalized learning paths and content.
+Generates personalized learning paths based on categories.
 """
 
 import os
@@ -11,68 +11,101 @@ sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 from database import get_connection
 
 
-# Default curriculum modules for learning about AI
-DEFAULT_CURRICULUM = [
-    {
-        'order': 1,
-        'title': 'Introduction to AI & LLMs',
-        'description': 'Understanding the fundamentals of AI, machine learning, and large language models.',
-        'topics': ['AI basics', 'Machine Learning', 'LLM', 'GPT', 'Claude'],
-        'estimated_hours': 4
-    },
-    {
-        'order': 2,
-        'title': 'AI Coding Assistants',
-        'description': 'Learn to use AI-powered coding tools like Cursor, Claude Code, and GitHub Copilot.',
-        'topics': ['Cursor', 'Claude Code', 'GitHub Copilot', 'Windsurf', 'AI Coding IDEs'],
-        'estimated_hours': 6
-    },
-    {
-        'order': 3,
-        'title': 'Prompt Engineering',
-        'description': 'Master the art of writing effective prompts for AI systems.',
-        'topics': ['Prompt Engineering', 'Chain of Thought', 'Few-shot Learning'],
-        'estimated_hours': 5
-    },
-    {
-        'order': 4,
-        'title': 'AI Agents & Automation',
-        'description': 'Understanding and building AI agents for task automation.',
-        'topics': ['AI Agents', 'Agentic AI', 'MCP', 'Automation'],
-        'estimated_hours': 6
-    },
-    {
-        'order': 5,
-        'title': 'No-Code AI Development',
-        'description': 'Building applications with AI without traditional coding.',
-        'topics': ['Vibe Coding', 'Lovable', 'Bolt', 'v0', 'Replit'],
-        'estimated_hours': 4
-    },
-    {
-        'order': 6,
-        'title': 'RAG & Knowledge Systems',
-        'description': 'Building AI systems that integrate with your own data.',
-        'topics': ['RAG', 'Embeddings', 'Vector Database', 'Knowledge Graph'],
-        'estimated_hours': 5
-    }
-]
-
-
-def initialize_curriculum():
-    """Initialize the default curriculum in the database."""
+def get_category_based_curriculum():
+    """
+    Generate curriculum modules based on actual email categories.
+    Creates learning paths from the 27 granular categories.
+    """
     with get_connection() as conn:
         cursor = conn.cursor()
         
-        # Check if modules exist
-        cursor.execute('SELECT COUNT(*) FROM modules')
-        count = cursor.fetchone()[0]
+        # Get all categories with at least 3 emails
+        cursor.execute('''
+            SELECT category, COUNT(*) as count 
+            FROM email_categories 
+            GROUP BY category 
+            HAVING count >= 3
+            ORDER BY count DESC
+        ''')
+        categories = cursor.fetchall()
         
-        if count > 0:
-            print(f"Curriculum already initialized ({count} modules)")
-            return count
+        curriculum = []
+        order = 1
         
-        # Insert default modules
-        for module in DEFAULT_CURRICULUM:
+        # Define module descriptions and estimated hours for each category
+        category_meta = {
+            'Claude & Anthropic': ('Master Claude AI, Claude Code, and Anthropic products for development and productivity.', 5),
+            'OpenAI & GPT': ('Deep dive into ChatGPT, GPT-4, and the OpenAI ecosystem.', 5),
+            'Google & Gemini': ('Explore Google\'s AI tools including Gemini, NotebookLM, and AI Studio.', 4),
+            'AI Agents': ('Build and understand autonomous AI agents and agentic workflows.', 6),
+            'AI for Business': ('Apply AI to business productivity, workflows, and enterprise use cases.', 5),
+            'Tool Announcements': ('Stay current with the latest AI tool launches and updates.', 3),
+            'AI News & Industry': ('Understand AI industry trends, funding, and market dynamics.', 3),
+            'Prompt Engineering': ('Master the art and science of writing effective AI prompts.', 5),
+            'Learning Resources': ('Curated learning materials and educational content about AI.', 4),
+            'Developer Resources': ('API tutorials, documentation, and developer guides.', 4),
+            'AI Visual Tools': ('Image generation, video AI, and visual creative tools.', 4),
+            'AI Research & Reports': ('Academic papers, benchmarks, and industry research.', 4),
+            'No-Code/Low-Code': ('Build AI applications without traditional coding using Bolt, Lovable, v0.', 4),
+            'AI Coding IDEs': ('AI-powered code editors and development environments.', 4),
+            'Physical AI & Robotics': ('Robots, embodied AI, and physical world applications.', 3),
+            'AI Automation': ('Workflow automation with AI using n8n, Zapier, and similar tools.', 4),
+            'Vibe Coding': ('Natural language coding - describe what you want, AI builds it.', 4),
+            'Cursor': ('Master the Cursor IDE for AI-assisted development.', 3),
+            'MCP & Tool Integration': ('Model Context Protocol and tool integrations.', 3),
+            'LLM & Models': ('Understand large language models, architectures, and training.', 5),
+            'Replit': ('Build and deploy with Replit Agent and the Replit platform.', 3),
+            'AI Safety & Ethics': ('AI alignment, interpretability, and responsible AI.', 3),
+            'AI Audio & Music': ('Voice synthesis, music generation, and audio AI.', 3),
+            'RAG & Embeddings': ('Retrieval-augmented generation and vector databases.', 4),
+            'Perplexity': ('Master Perplexity AI for research and search.', 2),
+            'Windsurf': ('Windsurf/Codeium for AI-assisted coding.', 2),
+            'DeepSeek': ('Understanding DeepSeek models and capabilities.', 2),
+        }
+        
+        for cat_row in categories:
+            category = cat_row['category']
+            count = cat_row['count']
+            
+            if category in category_meta:
+                description, hours = category_meta[category]
+            else:
+                description = f'Learn about {category} through curated email content.'
+                hours = 3
+            
+            # Calculate lessons (1 per 8-10 emails, min 2, max 8)
+            lesson_count = max(2, min(8, count // 10 + 2))
+            
+            curriculum.append({
+                'order': order,
+                'title': category,
+                'description': description,
+                'category': category,  # Link to actual category
+                'estimated_hours': hours,
+                'target_lessons': lesson_count
+            })
+            order += 1
+        
+        return curriculum
+
+
+def initialize_curriculum():
+    """Initialize the category-based curriculum in the database."""
+    with get_connection() as conn:
+        cursor = conn.cursor()
+        
+        # Clear existing curriculum to regenerate
+        cursor.execute('DELETE FROM lesson_sources')
+        cursor.execute('DELETE FROM quiz_questions')
+        cursor.execute('DELETE FROM user_progress')
+        cursor.execute('DELETE FROM lessons')
+        cursor.execute('DELETE FROM modules')
+        conn.commit()
+        
+        # Get category-based curriculum
+        curriculum = get_category_based_curriculum()
+        
+        for module in curriculum:
             cursor.execute('''
                 INSERT INTO modules (title, description, order_index, estimated_hours, topics_json)
                 VALUES (?, ?, ?, ?, ?)
@@ -81,56 +114,53 @@ def initialize_curriculum():
                 module['description'],
                 module['order'],
                 module['estimated_hours'],
-                str(module['topics'])
+                str([module['category']])
             ))
             module_id = cursor.lastrowid
             
-            # Create lessons from related emails
-            create_lessons_for_module(cursor, module_id, module['topics'])
+            # Create lessons from emails in this category
+            create_lessons_for_category(cursor, module_id, module['category'], module['target_lessons'])
         
         conn.commit()
-        print(f"✅ Initialized {len(DEFAULT_CURRICULUM)} curriculum modules")
-        return len(DEFAULT_CURRICULUM)
+        print(f"✅ Initialized {len(curriculum)} curriculum modules from categories")
+        return len(curriculum)
 
 
-def create_lessons_for_module(cursor, module_id, topics):
-    """Create lessons from emails matching module topics."""
-    # Get emails matching any of the topics
-    lessons_created = 0
+def create_lessons_for_category(cursor, module_id, category, max_lessons):
+    """Create lessons from emails in a specific category."""
     
-    for topic in topics[:3]:  # Limit to 3 lessons per module initially
-        # Find emails related to this topic
-        search_term = f'%{topic}%'
-        cursor.execute('''
-            SELECT e.id, e.subject, e.summary, e.date_parsed
-            FROM emails e
-            WHERE e.subject LIKE ? OR e.summary LIKE ?
-            ORDER BY e.date_parsed DESC
-            LIMIT 1
-        ''', (search_term, search_term))
+    # Get emails in this category
+    cursor.execute('''
+        SELECT e.id, e.subject, e.summary, e.date_parsed
+        FROM emails e
+        JOIN email_categories ec ON e.id = ec.email_id
+        WHERE ec.category = ?
+        GROUP BY e.id
+        ORDER BY e.date_parsed DESC
+        LIMIT ?
+    ''', (category, max_lessons))
+    
+    emails = cursor.fetchall()
+    
+    for idx, email in enumerate(emails):
+        # Create a rich lesson title
+        title = email['subject'][:80] if email['subject'] else f"Lesson {idx + 1}: {category}"
         
-        email = cursor.fetchone()
-        if email:
-            cursor.execute('''
-                INSERT INTO lessons (module_id, title, content, order_index)
-                VALUES (?, ?, ?, ?)
-            ''', (
-                module_id,
-                f"Understanding {topic}",
-                email['summary'] or f"Learn about {topic} and its applications in AI.",
-                lessons_created + 1
-            ))
-            lesson_id = cursor.lastrowid
-            
-            # Link the source email
-            cursor.execute('''
-                INSERT OR IGNORE INTO lesson_sources (lesson_id, email_id)
-                VALUES (?, ?)
-            ''', (lesson_id, email['id']))
-            
-            lessons_created += 1
-    
-    return lessons_created
+        # Use summary as lesson content (enriched data is fetched at runtime)
+        content = email['summary'] if email['summary'] else f"Learn about {category} concepts and applications."
+        
+        cursor.execute('''
+            INSERT INTO lessons (module_id, title, content, order_index)
+            VALUES (?, ?, ?, ?)
+        ''', (module_id, title, content, idx + 1))
+        
+        lesson_id = cursor.lastrowid
+        
+        # Link source email
+        cursor.execute('''
+            INSERT OR IGNORE INTO lesson_sources (lesson_id, email_id)
+            VALUES (?, ?)
+        ''', (lesson_id, email['id']))
 
 
 def get_curriculum():
@@ -270,6 +300,7 @@ if __name__ == '__main__':
     import argparse
     parser = argparse.ArgumentParser()
     parser.add_argument('--init', action='store_true', help='Initialize curriculum')
+    parser.add_argument('--show', action='store_true', help='Show curriculum')
     args = parser.parse_args()
     
     if args.init:

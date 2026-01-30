@@ -61,7 +61,7 @@ def api_complete_lesson(lesson_id):
 
 @learning_bp.route('/lessons/<int:lesson_id>')
 def api_lesson_detail(lesson_id):
-    """Get full lesson details including content and related emails."""
+    """Get full lesson details including content, links, and related emails."""
     from database import get_connection
     
     with get_connection() as conn:
@@ -90,23 +90,40 @@ def api_lesson_detail(lesson_id):
         ''', (lesson_id,))
         source_email = cursor.fetchone()
         
-        # Get related emails by searching for similar topics
-        related = []
-        keywords = lesson['title'].split()[:3]
-        for keyword in keywords:
-            if len(keyword) < 3:
-                continue
+        # Get enriched links for the source email
+        enriched_links = []
+        if source_email:
             cursor.execute('''
-                SELECT id, subject, summary, date FROM emails
-                WHERE (subject LIKE ? OR content LIKE ?)
-                LIMIT 3
-            ''', (f'%{keyword}%', f'%{keyword}%'))
-            for row in cursor.fetchall():
-                if source_email and row['id'] == source_email['id']:
-                    continue
-                if row['id'] not in [r['id'] for r in related]:
-                    related.append(dict(row))
-        related = related[:5]  # Limit to 5 related
+                SELECT url, title, description, domain
+                FROM email_links
+                WHERE email_id = ? AND title IS NOT NULL
+                LIMIT 5
+            ''', (source_email['id'],))
+            enriched_links = [dict(row) for row in cursor.fetchall()]
+            
+            # Get tool mentions
+            cursor.execute('''
+                SELECT t.name, t.category
+                FROM tool_mentions tm
+                JOIN tools t ON tm.tool_id = t.id
+                WHERE tm.email_id = ?
+            ''', (source_email['id'],))
+            tools = [dict(row) for row in cursor.fetchall()]
+        else:
+            tools = []
+        
+        # Get related emails by searching for similar topics (same module/category)
+        related = []
+        cursor.execute('''
+            SELECT DISTINCT e.id, e.subject, e.summary, e.date
+            FROM emails e
+            JOIN email_categories ec ON e.id = ec.email_id
+            WHERE ec.category = (SELECT title FROM modules WHERE id = ?)
+            AND e.id != ?
+            ORDER BY e.date_parsed DESC
+            LIMIT 5
+        ''', (lesson['module_id'], source_email['id'] if source_email else 0))
+        related = [dict(row) for row in cursor.fetchall()]
         
         return jsonify({
             'id': lesson['id'],
@@ -114,6 +131,8 @@ def api_lesson_detail(lesson_id):
             'content': lesson['content'],
             'module_title': lesson['module_title'],
             'source_email': dict(source_email) if source_email else None,
+            'enriched_links': enriched_links,
+            'tools': tools,
             'related_reading': related
         })
 

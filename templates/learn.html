@@ -249,6 +249,35 @@
                 document.getElementById('module-view').classList.add('hidden');
                 document.getElementById('lesson-view').classList.remove('hidden');
 
+                // Enriched links section
+                const linksHtml = lesson.enriched_links?.length > 0
+                    ? `
+                        <div class="card rounded-xl p-6 mb-6">
+                            <h3 class="font-semibold mb-4">🔗 Key Resources</h3>
+                            <div class="space-y-3">
+                                ${lesson.enriched_links.map(link => `
+                                    <a href="${link.url}" target="_blank" rel="noopener"
+                                       class="block p-4 rounded-lg bg-gradient-to-r from-indigo-900/30 to-purple-900/30 hover:from-indigo-800/40 hover:to-purple-800/40 transition border border-white/10">
+                                        <h4 class="font-medium text-indigo-300 mb-1">${link.title || 'Resource'}</h4>
+                                        ${link.description ? `<p class="text-sm text-gray-400 line-clamp-2">${link.description.substring(0, 150)}...</p>` : ''}
+                                        <span class="text-xs text-gray-500 mt-2 block">${link.domain || ''}</span>
+                                    </a>
+                                `).join('')}
+                            </div>
+                        </div>
+                    ` : '';
+
+                // Tools mentioned section
+                const toolsHtml = lesson.tools?.length > 0
+                    ? `
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="text-sm text-gray-400">🛠️ Tools:</span>
+                            ${lesson.tools.map(t => `
+                                <span class="px-3 py-1 rounded-full bg-purple-600/30 text-purple-300 text-sm">${t.name}</span>
+                            `).join('')}
+                        </div>
+                    ` : '';
+
                 const relatedHtml = lesson.related_reading?.length > 0
                     ? `
                         <div class="card rounded-xl p-6">
@@ -272,6 +301,7 @@
                     <div class="card rounded-2xl p-6 mb-6">
                         <div class="text-sm text-indigo-400 mb-2">${lesson.module_title}</div>
                         <h2 class="text-2xl font-bold mb-4">${lesson.title}</h2>
+                        ${toolsHtml}
                         
                         ${lesson.source_email ? `
                             <div class="bg-indigo-900/30 rounded-xl p-5 mb-6 border-l-4 border-indigo-500">
@@ -295,6 +325,7 @@
                             ✍️ Take Quiz
                         </button>
                     </div>
+                    ${linksHtml}
                     ${relatedHtml}
                 `;
             } catch (error) {
