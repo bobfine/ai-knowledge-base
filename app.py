@@ -45,11 +45,11 @@ def download_template():
 @app.route('/')
 def index():
     """Main dashboard view - the new Research Dashboard."""
-    from services.analytics import get_overall_stats, get_category_stats, get_whats_hot
+    from services.analytics import get_overall_stats, get_category_stats, get_whats_hot, get_all_categories_alphabetical
     from services.tools import get_tool_rankings
     
     stats = get_overall_stats()
-    categories = get_category_stats()[:10]
+    categories = get_all_categories_alphabetical()  # All categories, alphabetized
     hot_topics = get_whats_hot(limit=5)
     top_tools = get_tool_rankings(limit=8)
     
@@ -83,6 +83,7 @@ def tools_page():
 def browse():
     """Original email browser view."""
     from database import get_connection
+    from services.analytics import get_all_categories_alphabetical
     
     with open('parsed_emails.json', 'r', encoding='utf-8') as f:
         emails = json.load(f)
@@ -102,8 +103,20 @@ def browse():
                 'description': row['description'],
                 'domain': row['domain']
             }
+        
+        # Get updated categories from database
+        cursor.execute('''
+            SELECT e.id, GROUP_CONCAT(ec.category, '|') as cats
+            FROM emails e
+            LEFT JOIN email_categories ec ON e.id = ec.email_id
+            GROUP BY e.id
+        ''')
+        email_categories = {}
+        for row in cursor.fetchall():
+            if row['cats']:
+                email_categories[row['id']] = row['cats'].split('|')
     
-    # Enrich email links
+    # Enrich email links and update categories from DB
     for email in emails:
         if 'links' in email:
             enriched = []
@@ -114,7 +127,13 @@ def browse():
                     # Fall back to just the URL
                     enriched.append({'url': link, 'title': None, 'description': None, 'domain': None})
             email['enriched_links'] = enriched
+        
+        # Use database categories if available
+        email_id = email.get('id')
+        if email_id and email_id in email_categories:
+            email['categories'] = email_categories[email_id]
     
+    # Build categories dict from enriched emails
     categories = {}
     for email in emails:
         for cat in email.get('categories', ['General AI']):
@@ -127,7 +146,8 @@ def browse():
     for cat in categories:
         categories[cat].sort(key=lambda e: parse_date_safe(e.get('date', '')), reverse=True)
     
-    sorted_categories = dict(sorted(categories.items(), key=lambda x: -len(x[1])))
+    # Sort categories alphabetically
+    sorted_categories = dict(sorted(categories.items(), key=lambda x: x[0].lower()))
     
     emails_for_search = []
     for email in emails:

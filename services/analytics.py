@@ -56,7 +56,7 @@ def get_overall_stats():
 
 
 def get_category_stats():
-    """Get category breakdown with counts."""
+    """Get category breakdown with counts (sorted by count)."""
     with get_connection() as conn:
         cursor = conn.cursor()
         cursor.execute('''
@@ -64,6 +64,19 @@ def get_category_stats():
             FROM email_categories 
             GROUP BY category 
             ORDER BY count DESC
+        ''')
+        return [{'category': row['category'], 'count': row['count']} for row in cursor.fetchall()]
+
+
+def get_all_categories_alphabetical():
+    """Get all categories alphabetically with counts."""
+    with get_connection() as conn:
+        cursor = conn.cursor()
+        cursor.execute('''
+            SELECT category, COUNT(*) as count 
+            FROM email_categories 
+            GROUP BY category 
+            ORDER BY category ASC
         ''')
         return [{'category': row['category'], 'count': row['count']} for row in cursor.fetchall()]
 
